@@ -6,6 +6,9 @@ import WhyChooseUs from "../components/home/WhyChooseUs";
 import Services from "../components/home/Services";
 import AboutCompany from "../components/home/AboutCompany";
 import MarketInsights from "../components/home/MarketInsights";
+import Testimonials from "../components/home/Testimonials";
+import FAQ from "../components/home/FAQ";
+import CTASection from "../components/home/CTASection";
 
 const Home = () => {
   return (
@@ -37,6 +40,9 @@ const Home = () => {
       <Services />
       <AboutCompany />
       <MarketInsights />
+      <Testimonials />
+      <FAQ />
+      <CTASection />
     </div>
   );
 };

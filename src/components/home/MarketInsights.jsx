@@ -394,32 +394,7 @@ const MarketInsights = () => {
         )}
 
 
-        {/* Newsletter Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="mt-16 bg-gradient-to-r from-success/10 to-secondary/10 backdrop-blur-sm rounded-2xl p-8 md:p-10 text-center border border-white/10"
-        >
-          <FaBullhorn className="text-success text-3xl mx-auto mb-4" />
-          <h3 className="text-2xl font-bold text-white mb-2">
-            Get Daily Market Insights
-          </h3>
-          <p className="text-gray-300 mb-6 max-w-lg mx-auto">
-            Subscribe to our newsletter and never miss important market updates
-          </p>
-          <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="flex-1 px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:border-success/50"
-            />
-            <button className="bg-success hover:bg-hover text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300">
-              Subscribe
-            </button>
-          </div>
-        </motion.div>
+       
       </div>
     </div>
   );

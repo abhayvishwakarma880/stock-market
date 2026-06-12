@@ -43,6 +43,7 @@ const Hero = ({
   // Optional Elements
   showStats = true,
   showBadge = true,
+  showButtons = true,
   animation = true,
 
   // Custom Classes
@@ -109,25 +110,31 @@ const Hero = ({
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fadeInUp animation-delay-300">
-            <a
-              href={primaryButton.link}
-              className="group inline-flex items-center justify-center gap-2 bg-success hover:bg-hover text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105"
-            >
-              {primaryButton.text}
-              <span className="group-hover:translate-x-1 transition-transform">
-                {primaryButton.icon}
-              </span>
-            </a>
+          {showButtons && (
+            <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fadeInUp animation-delay-300">
+              {primaryButton && (
+                <a
+                  href={primaryButton.link}
+                  className="group inline-flex items-center justify-center gap-2 bg-success hover:bg-hover text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105"
+                >
+                  {primaryButton.text}
+                  <span className="group-hover:translate-x-1 transition-transform">
+                    {primaryButton.icon}
+                  </span>
+                </a>
+              )}
 
-            <a
-              href={secondaryButton.link}
-              className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 border border-white/20"
-            >
-              {secondaryButton.icon}
-              {secondaryButton.text}
-            </a>
-          </div>
+              {secondaryButton && (
+                <a
+                  href={secondaryButton.link}
+                  className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 border border-white/20"
+                >
+                  {secondaryButton.icon}
+                  {secondaryButton.text}
+                </a>
+              )}
+            </div>
+          )}
 
           {/* Stats/Features */}
           {showStats && features && features.length > 0 && (
