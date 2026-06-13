@@ -74,13 +74,13 @@ const EquityServices = () => {
                 <FaRegLightbulb className="text-blue-400" size={14} />
                 <span className="text-sm font-medium text-blue-400">Our Approach</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-text mb-6">
                 Strategic Wealth Creation Through <span className="text-blue-400">Quality Equities</span>
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              <p className="text-text text-lg leading-relaxed mb-6">
                 We believe that successful equity investing requires a blend of top-down macroeconomic analysis and bottom-up stock picking. We don't just recommend stocks; we identify businesses with sustainable competitive advantages, strong corporate governance, and clear earnings visibility.
               </p>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-text text-lg leading-relaxed">
                 Whether you are looking to invest in established large-cap leaders for stability, or emerging mid-cap and small-cap companies for explosive growth, our research team provides actionable recommendations tailored to your risk profile.
               </p>
             </motion.div>
@@ -88,7 +88,7 @@ const EquityServices = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+              className="relative rounded-2xl overflow-hidden shadow-2xl border border-border"
             >
               <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800" alt="Equity Analysis" className="w-full h-full object-cover opacity-80" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
@@ -101,7 +101,7 @@ const EquityServices = () => {
       <div className="relative py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Key <span className="text-blue-400">Offerings</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">Our Key <span className="text-blue-400">Offerings</span></h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">Comprehensive equity solutions designed to maximize returns while managing downside risk.</p>
           </div>
           
@@ -113,12 +113,12 @@ const EquityServices = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-blue-500/30 transition-all duration-300"
+                className="bg-card backdrop-blur-sm rounded-2xl p-8 border border-border hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${offering.color} flex items-center justify-center mb-6`}>
-                  <div className="text-white text-2xl">{offering.icon}</div>
+                  <div className="text-text text-2xl">{offering.icon}</div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{offering.title}</h3>
+                <h3 className="text-2xl font-bold text-text mb-4">{offering.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{offering.description}</p>
               </motion.div>
             ))}
@@ -139,7 +139,7 @@ const EquityServices = () => {
               <div className="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center">
                 <FaUsers className="text-blue-400 text-xl" />
               </div>
-              <h2 className="text-3xl font-bold text-white">Who is this for?</h2>
+              <h2 className="text-3xl font-bold text-text">Who is this for?</h2>
             </div>
             <ul className="space-y-4">
               {targetAudience.map((item, idx) => (
@@ -152,7 +152,7 @@ const EquityServices = () => {
                   className="flex items-start gap-3"
                 >
                   <FaCheckCircle className="text-blue-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-200 text-lg">{item}</span>
+                  <span className="text-text text-lg">{item}</span>
                 </motion.li>
               ))}
             </ul>

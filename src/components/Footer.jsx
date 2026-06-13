@@ -106,10 +106,10 @@ const Footer = () => {
           <motion.div variants={itemVariants}>
             <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 bg-gradient-to-r from-success to-secondary rounded-lg flex items-center justify-center">
-                <FaChartLine className="text-white text-xl" />
+                <FaChartLine className="text-text text-xl" />
               </div>
               <div>
-                <h2 className="text-white font-bold text-xl">
+                <h2 className="text-text font-bold text-xl">
                   Tradevora<span className="text-success"> Market</span>
                 </h2>
                 <p className="text-gray-400 text-xs">Financial Advisory</p>
@@ -123,13 +123,13 @@ const Footer = () => {
 
             {/* Certifications */}
             <div className="flex flex-wrap gap-2 mb-4">
-              <span className="bg-white/5 text-success text-xs px-2 py-1 rounded">
+              <span className="bg-card text-success text-xs px-2 py-1 rounded">
                 SEBI Registered
               </span>
-              <span className="bg-white/5 text-success text-xs px-2 py-1 rounded">
+              <span className="bg-card text-success text-xs px-2 py-1 rounded">
                 ISO Certified
               </span>
-              <span className="bg-white/5 text-success text-xs px-2 py-1 rounded">
+              <span className="bg-card text-success text-xs px-2 py-1 rounded">
                 MSME Registered
               </span>
             </div>
@@ -142,7 +142,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 bg-white/5 hover:bg-success/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-success transition-all duration-300"
+                  className="w-8 h-8 bg-card hover:bg-success/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-success transition-all duration-300"
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -153,7 +153,7 @@ const Footer = () => {
 
           {/* Column 2 - Quick Links */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-white font-semibold text-lg mb-4 relative inline-block">
+            <h3 className="text-text font-semibold text-lg mb-4 relative inline-block">
               Quick Links
               <div className="absolute -bottom-1 left-0 w-12 h-0.5 bg-success rounded-full"></div>
             </h3>
@@ -174,7 +174,7 @@ const Footer = () => {
 
           {/* Column 3 - Our Services */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-white font-semibold text-lg mb-4 relative inline-block">
+            <h3 className="text-text font-semibold text-lg mb-4 relative inline-block">
               Our Services
               <div className="absolute -bottom-1 left-0 w-12 h-0.5 bg-success rounded-full"></div>
             </h3>
@@ -195,7 +195,7 @@ const Footer = () => {
 
           {/* Column 4 - Contact Info */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-white font-semibold text-lg mb-4 relative inline-block">
+            <h3 className="text-text font-semibold text-lg mb-4 relative inline-block">
               Get In Touch
               <div className="absolute -bottom-1 left-0 w-12 h-0.5 bg-success rounded-full"></div>
             </h3>
@@ -259,7 +259,7 @@ const Footer = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="border-t border-white/10 pt-8"
+          className="border-t border-border pt-8"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-gray-400 text-sm text-center md:text-left flex flex-wrap items-center justify-center md:justify-start gap-1.5">
@@ -311,7 +311,7 @@ const Footer = () => {
           href="https://wa.me/919876543210"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 bg-success hover:bg-hover text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-50 group"
+          className="fixed bottom-6 right-6 bg-success hover:bg-hover text-text w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-50 group"
         >
           <FaWhatsapp
             size={28}

@@ -1,16 +1,61 @@
 /* In your global CSS file (e.g., index.css or App.css) */
 @import "tailwindcss";
 
-@theme {
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* @theme {
   --color-primary: #0F172A;
   --color-secondary: #1E3A8A;
   --color-success: #10B981;
   --color-hover: #059669;
+  
+  --color-background: #0F172A;
+  --color-text: #FFFFFF;
+  --color-muted: #94A3B8;
+  
+  --color-card: rgba(255, 255, 255, 0.05);
+  --color-card-hover: rgba(255, 255, 255, 0.1);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-hover: rgba(255, 255, 255, 0.2);
+  
+  --color-nav-bg: #FFFFFF;
+  --color-nav-text: #0F172A;
+} */
+
+@theme {
+  --color-primary: #FFFFFF;
+  --color-secondary: #F1F5F9;
+  --color-success: #10B981;
+  --color-hover: #059669;
+  
   --color-background: #F8FAFC;
-  --color-card: #FFFFFF;
   --color-text: #0F172A;
-  --color-muted: #64748B;
+  --color-muted: #475569;
+  
+  --color-card: #FFFFFF;
+  --color-card-hover: #F1F5F9;
+  --color-border: #E2E8F0;
+  --color-border-hover: #CBD5E1;
+  
+  --color-nav-bg: #FFFFFF;
+  --color-nav-text: #0F172A;
 }
+
+/* 
+=======================================================
+WHITE MODE (LIGHT THEME) CODE 
+=======================================================
+Bhai jab aapko white mode chahiye hoga, to upar wale 
+@theme block ko comment kar dena aur niche wale ko 
+uncomment kar dena. 
+=======================================================
+
+
+*/
+
 
 @utility bg-primary-gradient {
   background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);

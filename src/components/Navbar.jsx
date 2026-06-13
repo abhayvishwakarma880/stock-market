@@ -51,20 +51,20 @@ const Navbar = () => {
           <div className="flex items-center justify-between min-w-max gap-8 lg:gap-0">
             {/* Left - Contact Info */}
             <div className="flex items-center gap-8">
-              <div className="flex items-center gap-2 text-muted hover:text-white transition-colors cursor-pointer group">
-                <div className="p-1 rounded-full bg-white/10 group-hover:bg-success/20 transition-colors">
+              <div className="flex items-center gap-2 text-muted hover:text-success transition-colors cursor-pointer group">
+                <div className="p-1 rounded-full bg-card-hover group-hover:bg-success/20 transition-colors">
                   <FiPhone size={12} className="text-success" />
                 </div>
                 <span className="text-sm">+91 98765 43210</span>
               </div>
-              <div className="flex items-center gap-2 text-muted hover:text-white transition-colors cursor-pointer group">
-                <div className="p-1 rounded-full bg-white/10 group-hover:bg-success/20 transition-colors">
+              <div className="flex items-center gap-2 text-muted hover:text-success transition-colors cursor-pointer group">
+                <div className="p-1 rounded-full bg-card-hover group-hover:bg-success/20 transition-colors">
                   <FiMail size={12} className="text-success" />
                 </div>
                 <span className="text-sm">info@tradevoramarket.com</span>
               </div>
               <div className="flex items-center gap-2 text-muted">
-                <div className="p-1 rounded-full bg-white/10">
+                <div className="p-1 rounded-full bg-card-hover">
                   <FiClock size={12} className="text-success" />
                 </div>
                 <span className="text-sm">Mon - Sat : 9:00 AM - 6:00 PM</span>
@@ -73,13 +73,13 @@ const Navbar = () => {
 
             {/* Right - Live Market Ticker */}
             <div className="flex items-center gap-6">
-              <div className="flex items-center gap-3 px-3 py-1 rounded-full bg-white/5">
+              <div className="flex items-center gap-3 px-3 py-1 rounded-full bg-card">
                 <div className="flex items-center gap-1">
                   <span className="text-xs text-muted">NIFTY 50</span>
                   <span className="text-xs text-success font-semibold">+245.30</span>
                   <FiArrowUpRight size={10} className="text-success" />
                 </div>
-                <div className="w-px h-3 bg-white/20"></div>
+                <div className="w-px h-3 bg-nav-bg/20"></div>
                 <div className="flex items-center gap-1">
                   <span className="text-xs text-muted">SENSEX</span>
                   <span className="text-xs text-success font-semibold">+812.45</span>
@@ -110,7 +110,7 @@ const Navbar = () => {
       {/* Main Navbar */}
       <nav 
         className={`sticky top-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'shadow-xl bg-white/95 backdrop-blur-sm' : 'bg-white shadow-sm'
+          isScrolled ? 'shadow-xl bg-nav-bg/95 backdrop-blur-sm' : 'bg-nav-bg shadow-sm'
         }`}
         style={{ borderBottom: '1px solid #E2E8F0' }}
       >
@@ -121,7 +121,7 @@ const Navbar = () => {
               <Link to="/" className="flex items-center gap-3">
                 {/* <img src="/logo.png" alt="Tradevora Market Private Limited" className="h-10 md:h-12 object-contain" /> */}
                 <div>
-                  <h1 className="font-bold text-lg md:text-xl tracking-tight text-text">
+                  <h1 className="font-bold text-lg md:text-xl tracking-tight text-nav-text">
                     Tradevora<span className="text-success"> Market</span>
                   </h1>
                   <p className="text-[10px] md:text-xs text-muted leading-tight">Financial Advisory</p>
@@ -145,7 +145,7 @@ const Navbar = () => {
                 <NavLink
                   key={link.name}
                   to={link.href}
-                  className={({ isActive }) => `relative px-5 py-2 font-medium rounded-lg transition-all duration-200 group ${isActive ? 'text-success bg-background' : 'text-text hover:bg-background'}`}
+                  className={({ isActive }) => `relative px-5 py-2 font-medium rounded-lg transition-all duration-200 group ${isActive ? 'text-success bg-background' : 'text-nav-text hover:bg-background'}`}
                 >
                   {({ isActive }) => (
                     <>
@@ -159,7 +159,7 @@ const Navbar = () => {
 
             {/* Right Side - CTA & Mobile Menu */}
             <div className="flex items-center gap-4">
-              <a href="tel:+919876543210" className="hidden md:flex items-center gap-2 bg-success hover:bg-hover text-white px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:scale-105">
+              <a href="tel:+919876543210" className="hidden md:flex items-center gap-2 bg-success hover:bg-hover text-nav-text px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:scale-105">
                 Get Free Consultation
                 <FiArrowUpRight size={16} />
               </a>
@@ -167,7 +167,7 @@ const Navbar = () => {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 rounded-lg hover:bg-background transition-colors text-text"
+                className="lg:hidden p-2 rounded-lg hover:bg-background transition-colors text-nav-text"
               >
                 {isMobileMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
               </button>
@@ -175,63 +175,70 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Mobile Menu Overlay */}
+        {/* Mobile Menu Container */}
         <div 
-          className={`fixed inset-0 bg-black/50 backdrop-blur-sm z-[60] lg:hidden transition-opacity duration-300 ${
-            isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          }`}
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-
-        {/* Mobile Menu - Slide from Right */}
-        <div 
-          className={`fixed top-0 right-0 h-full w-full bg-white z-[70] lg:hidden shadow-2xl transform transition-transform duration-300 ease-in-out ${
-            isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          className={`fixed inset-0 z-[70] lg:hidden transition-all duration-300 ${
+            isMobileMenuOpen ? 'visible' : 'invisible'
           }`}
         >
-          <div className="p-6 h-full flex flex-col">
-            <div className="flex justify-between items-center mb-8">
-              <h2 className="font-bold text-xl text-text">Menu</h2>
-              <button 
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="p-2 rounded-lg hover:bg-background text-text transition-colors"
-              >
-                <FiX size={24} />
-              </button>
-            </div>
-            
-            <div className="flex flex-col gap-2 flex-grow overflow-y-auto scrollbar-hide">
-              {navLinks.map((link) => (
-                <NavLink
-                  key={link.name}
-                  to={link.href}
-                  className={({ isActive }) => `px-4 py-3 font-medium rounded-xl transition-all duration-200 ${isActive ? 'bg-success/10 text-success' : 'text-text hover:bg-background hover:text-success'}`}
+          {/* Overlay */}
+          <div 
+            className={`absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
+              isMobileMenuOpen ? 'opacity-100' : 'opacity-0'
+            }`}
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+
+          {/* Menu Panel */}
+          <div 
+            className={`absolute top-0 right-0 h-full w-[80%] max-w-sm bg-nav-bg shadow-2xl transform transition-transform duration-300 ease-in-out ${
+              isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}
+          >
+            <div className="p-6 h-full flex flex-col">
+              <div className="flex justify-between items-center mb-8">
+                <h2 className="font-bold text-xl text-nav-text">Menu</h2>
+                <button 
                   onClick={() => setIsMobileMenuOpen(false)}
+                  className="p-2 rounded-lg hover:bg-background text-nav-text transition-colors"
                 >
-                  {link.name}
-                </NavLink>
-              ))}
-              <div className="h-px bg-gray-100 my-4"></div>
-              <a href="tel:+919876543210" className="flex items-center justify-center gap-2 bg-success hover:bg-hover text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 mt-2 shadow-md">
-                Get Free Consultation
-                <FiArrowUpRight size={16} />
-              </a>
+                  <FiX size={24} />
+                </button>
+              </div>
               
-              {/* Mobile Contact Info */}
-              <div className="mt-8 pt-6 border-t border-gray-100 space-y-4">
-                <div className="flex items-center gap-3 text-muted">
-                  <FiPhone size={14} className="text-success" />
-                  <span className="text-sm">+91 98765 43210</span>
-                </div>
-                <div className="flex items-center gap-3 text-muted">
-                  <FiMail size={14} className="text-success" />
-                  <span className="text-sm">info@tradevoramarket.com</span>
-                </div>
-                <div className="flex items-center gap-6 pt-4 pb-4">
-                  <FaFacebookF size={16} className="text-muted hover:text-success cursor-pointer transition-colors" />
-                  <FaInstagram size={16} className="text-muted hover:text-success cursor-pointer transition-colors" />
-                  <FaLinkedinIn size={16} className="text-muted hover:text-success cursor-pointer transition-colors" />
-                  <FaTwitter size={16} className="text-muted hover:text-success cursor-pointer transition-colors" />
+              <div className="flex flex-col gap-2 flex-grow overflow-y-auto scrollbar-hide">
+                {navLinks.map((link) => (
+                  <NavLink
+                    key={link.name}
+                    to={link.href}
+                    className={({ isActive }) => `px-4 py-3 font-medium rounded-xl transition-all duration-200 ${isActive ? 'bg-success/10 text-success' : 'text-nav-text hover:bg-background hover:text-success'}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    {link.name}
+                  </NavLink>
+                ))}
+                <div className="h-px bg-gray-100 my-4"></div>
+                <a href="tel:+919876543210" className="flex items-center justify-center gap-2 bg-success hover:bg-hover text-nav-text px-6 py-3 rounded-xl font-semibold transition-all duration-300 mt-2 shadow-md">
+                  Get Free Consultation
+                  <FiArrowUpRight size={16} />
+                </a>
+                
+                {/* Mobile Contact Info */}
+                <div className="mt-8 pt-6 border-t border-gray-100 space-y-4">
+                  <div className="flex items-center gap-3 text-muted">
+                    <FiPhone size={14} className="text-success" />
+                    <span className="text-sm">+91 98765 43210</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-muted">
+                    <FiMail size={14} className="text-success" />
+                    <span className="text-sm">info@tradevoramarket.com</span>
+                  </div>
+                  <div className="flex items-center gap-6 pt-4 pb-4">
+                    <FaFacebookF size={16} className="text-muted hover:text-success cursor-pointer transition-colors" />
+                    <FaInstagram size={16} className="text-muted hover:text-success cursor-pointer transition-colors" />
+                    <FaLinkedinIn size={16} className="text-muted hover:text-success cursor-pointer transition-colors" />
+                    <FaTwitter size={16} className="text-muted hover:text-success cursor-pointer transition-colors" />
+                  </div>
                 </div>
               </div>
             </div>

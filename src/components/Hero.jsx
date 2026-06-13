@@ -75,7 +75,7 @@ const Hero = ({
         <div className="absolute bottom-0 left-0 right-0 overflow-hidden opacity-10">
           <div className="flex gap-8 animate-marquee whitespace-nowrap py-4">
             {[...Array(6)].map((_, i) => (
-              <span key={i} className="text-white text-sm font-mono">
+              <span key={i} className="text-text text-sm font-mono">
                 NIFTY 50 ▲ 24,567.85 • SENSEX ▲ 81,234.56 • BANK NIFTY ▲
                 52,345.67
               </span>
@@ -89,16 +89,16 @@ const Hero = ({
         <div className={`max-w-3xl ${contentClassName}`}>
           {/* Badge */}
           {showBadge && badgeText && (
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-white/20 animate-fadeInUp">
+            <div className="inline-flex items-center gap-2 bg-card-hover backdrop-blur-sm rounded-full px-4 py-2 mb-6 border border-border-hover animate-fadeInUp">
               <span className="text-success">{badgeIcon}</span>
-              <span className="text-sm font-medium text-white">
+              <span className="text-sm font-medium text-text">
                 {badgeText}
               </span>
             </div>
           )}
 
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-3 animate-fadeInUp animation-delay-100">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text leading-tight mb-3 animate-fadeInUp animation-delay-100">
             {title}{" "}
             <span className="text-success relative inline-block">
               {highlightedTitle}
@@ -106,7 +106,7 @@ const Hero = ({
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl animate-fadeInUp animation-delay-200">
+          <p className="text-lg md:text-xl text-text mb-8 max-w-2xl animate-fadeInUp animation-delay-200">
             {subtitle}
           </p>
 
@@ -116,7 +116,7 @@ const Hero = ({
               {primaryButton && (
                 <a
                   href={primaryButton.link}
-                  className="group inline-flex items-center justify-center gap-2 bg-success hover:bg-hover text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105"
+                  className="group inline-flex items-center justify-center gap-2 bg-success hover:bg-hover text-text px-8 py-4 rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105"
                 >
                   {primaryButton.text}
                   <span className="group-hover:translate-x-1 transition-transform">
@@ -128,7 +128,7 @@ const Hero = ({
               {secondaryButton && (
                 <Link
                   to={secondaryButton.link}
-                  className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 border border-white/20"
+                  className="inline-flex items-center justify-center gap-2 bg-card-hover backdrop-blur-sm hover:bg-white/20 text-text px-8 py-4 rounded-xl font-semibold transition-all duration-300 border border-border-hover"
                 >
                   {secondaryButton.icon}
                   {secondaryButton.text}
@@ -143,9 +143,9 @@ const Hero = ({
               {features.map((feature, index) => (
                 <div 
                   key={index} 
-                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl md:rounded-2xl py-2 px-2 sm:px-4 md:py-3 md:px-6 text-center md:text-left hover:bg-white/10 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 cursor-default group flex flex-col justify-center"
+                  className="bg-card backdrop-blur-xl border border-border rounded-xl md:rounded-2xl py-2 px-2 sm:px-4 md:py-3 md:px-6 text-center md:text-left hover:bg-card-hover hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 cursor-default group flex flex-col justify-center"
                 >
-                  <div className="text-lg sm:text-xl md:text-3xl font-extrabold text-white mb-0.5 md:mb-1 group-hover:text-success transition-colors">
+                  <div className="text-lg sm:text-xl md:text-3xl font-extrabold text-text mb-0.5 md:mb-1 group-hover:text-success transition-colors">
                     {feature.value}
                   </div>
                   <div className="text-[9px] sm:text-[10px] md:text-xs font-medium text-gray-400 uppercase tracking-wider leading-tight">
@@ -184,11 +184,11 @@ export const HeroWithCards = (props) => {
         {cards.map((card, i) => (
           <div
             key={i}
-            className="bg-white/10 backdrop-blur-md rounded-xl p-6 border border-white/20 hover:bg-white/15 transition-all duration-300"
+            className="bg-card-hover backdrop-blur-md rounded-xl p-6 border border-border-hover hover:bg-white/15 transition-all duration-300"
           >
             <card.icon className="text-success text-2xl mb-3" />
-            <h3 className="text-white font-semibold mb-1">{card.title}</h3>
-            <p className="text-gray-300 text-sm">{card.desc}</p>
+            <h3 className="text-text font-semibold mb-1">{card.title}</h3>
+            <p className="text-text text-sm">{card.desc}</p>
           </div>
         ))}
       </div>
@@ -199,12 +199,12 @@ export const HeroWithCards = (props) => {
 export const HeroWithTestimonial = (props) => {
   return (
     <Hero {...props}>
-      <div className="mt-12 flex items-center gap-4 p-4 bg-white/5 backdrop-blur-sm rounded-xl max-w-md border border-white/10">
+      <div className="mt-12 flex items-center gap-4 p-4 bg-card backdrop-blur-sm rounded-xl max-w-md border border-border">
         <div className="flex -space-x-2">
           {[1, 2, 3, 4].map((i) => (
             <div
               key={i}
-              className="w-10 h-10 rounded-full bg-success/30 border-2 border-white flex items-center justify-center text-white text-xs font-bold"
+              className="w-10 h-10 rounded-full bg-success/30 border-2 border-white flex items-center justify-center text-text text-xs font-bold"
             >
               U
             </div>
@@ -212,7 +212,7 @@ export const HeroWithTestimonial = (props) => {
         </div>
         <div>
           <div className="flex text-success">{"★★★★★"}</div>
-          <p className="text-white text-sm">
+          <p className="text-text text-sm">
             "Best investment platform" - Rajesh K.
           </p>
         </div>

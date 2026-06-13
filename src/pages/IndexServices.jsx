@@ -74,13 +74,13 @@ const IndexServices = () => {
                 <FaRegLightbulb className="text-green-400" size={14} />
                 <span className="text-sm font-medium text-green-400">Our Approach</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-text mb-6">
                 Trading The Trend With <span className="text-green-400">Benchmark Indices</span>
               </h2>
-              <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              <p className="text-text text-lg leading-relaxed mb-6">
                 Trading benchmark indices offers superior liquidity, lower impact cost, and immunity from individual stock manipulation. Our research methodology is rooted in identifying key support and resistance levels, pivot points, and institutional (FII/DII) activity.
               </p>
-              <p className="text-gray-300 text-lg leading-relaxed">
+              <p className="text-text text-lg leading-relaxed">
                 We synthesize complex data points—including sector rotation, option chain analysis, and global market correlations—to generate high-conviction trading signals, helping you navigate the market with clarity and confidence.
               </p>
             </motion.div>
@@ -88,7 +88,7 @@ const IndexServices = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative rounded-2xl overflow-hidden shadow-2xl border border-white/10"
+              className="relative rounded-2xl overflow-hidden shadow-2xl border border-border"
             >
               <img src="https://akm-img-a-in.tosshub.com/businesstoday/images/story/202508/68a6be7d73690-axis-securities-said-the-retail-sector-remains-a-structural-growth-story--underpinned-by-rapid-forma-21364054-16x9.jpg" alt="Index Analysis" className="w-full h-full object-cover opacity-80" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
@@ -101,7 +101,7 @@ const IndexServices = () => {
       <div className="relative py-20 bg-primary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Our Key <span className="text-green-400">Offerings</span></h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">Our Key <span className="text-green-400">Offerings</span></h2>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto">Specialized advisory focused on maximizing opportunities in major market indices.</p>
           </div>
           
@@ -113,12 +113,12 @@ const IndexServices = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-green-500/30 transition-all duration-300"
+                className="bg-card backdrop-blur-sm rounded-2xl p-8 border border-border hover:border-green-500/30 transition-all duration-300"
               >
                 <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${offering.color} flex items-center justify-center mb-6`}>
-                  <div className="text-white text-2xl">{offering.icon}</div>
+                  <div className="text-text text-2xl">{offering.icon}</div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-4">{offering.title}</h3>
+                <h3 className="text-2xl font-bold text-text mb-4">{offering.title}</h3>
                 <p className="text-gray-400 leading-relaxed">{offering.description}</p>
               </motion.div>
             ))}
@@ -139,7 +139,7 @@ const IndexServices = () => {
               <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
                 <FaUsers className="text-green-400 text-xl" />
               </div>
-              <h2 className="text-3xl font-bold text-white">Who is this for?</h2>
+              <h2 className="text-3xl font-bold text-text">Who is this for?</h2>
             </div>
             <ul className="space-y-4">
               {targetAudience.map((item, idx) => (
@@ -152,7 +152,7 @@ const IndexServices = () => {
                   className="flex items-start gap-3"
                 >
                   <FaCheckCircle className="text-green-400 mt-1 flex-shrink-0" />
-                  <span className="text-gray-200 text-lg">{item}</span>
+                  <span className="text-text text-lg">{item}</span>
                 </motion.li>
               ))}
             </ul>

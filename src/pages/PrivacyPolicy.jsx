@@ -196,15 +196,15 @@ const PrivacyPolicy = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="bg-gradient-to-r from-success/10 to-secondary/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-12 border border-white/10"
+          className="bg-gradient-to-r from-success/10 to-secondary/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-12 border border-border"
         >
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 bg-success/20 rounded-xl flex items-center justify-center flex-shrink-0">
               <FaLock className="text-success text-xl" />
             </div>
             <div>
-              <h2 className="text-xl font-bold text-white mb-2">Our Commitment to Privacy</h2>
-              <p className="text-gray-300 leading-relaxed">
+              <h2 className="text-xl font-bold text-text mb-2">Our Commitment to Privacy</h2>
+              <p className="text-text leading-relaxed">
                 At Tradevora Market Private Limited, we are committed to protecting your privacy and ensuring the security of your personal information. 
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services. 
                 We comply with all applicable data protection laws and regulations, including the Information Technology Act, 2000, 
@@ -222,19 +222,19 @@ const PrivacyPolicy = () => {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12"
         >
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+          <div className="bg-card backdrop-blur-sm rounded-xl p-4 border border-border">
             <FaCheckCircle className="text-success text-xl mb-2" />
-            <h3 className="text-white font-semibold mb-1">Data Protection</h3>
+            <h3 className="text-text font-semibold mb-1">Data Protection</h3>
             <p className="text-gray-400 text-sm">256-bit SSL encryption for all your data</p>
           </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+          <div className="bg-card backdrop-blur-sm rounded-xl p-4 border border-border">
             <FaCheckCircle className="text-success text-xl mb-2" />
-            <h3 className="text-white font-semibold mb-1">No Data Selling</h3>
+            <h3 className="text-text font-semibold mb-1">No Data Selling</h3>
             <p className="text-gray-400 text-sm">We never sell your personal information</p>
           </div>
-          <div className="bg-white/5 backdrop-blur-sm rounded-xl p-4 border border-white/10">
+          <div className="bg-card backdrop-blur-sm rounded-xl p-4 border border-border">
             <FaCheckCircle className="text-success text-xl mb-2" />
-            <h3 className="text-white font-semibold mb-1">Your Rights</h3>
+            <h3 className="text-text font-semibold mb-1">Your Rights</h3>
             <p className="text-gray-400 text-sm">Full control over your personal data</p>
           </div>
         </motion.div>
@@ -251,18 +251,18 @@ const PrivacyPolicy = () => {
             <motion.div
               key={section.id}
               variants={itemVariants}
-              className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden hover:border-success/30 transition-all duration-300"
+              className="bg-card backdrop-blur-sm rounded-xl border border-border overflow-hidden hover:border-success/30 transition-all duration-300"
             >
               <div className="p-6">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-success/10 rounded-lg flex items-center justify-center">
                     <div className="text-success text-xl">{section.icon}</div>
                   </div>
-                  <h3 className="text-xl font-bold text-white">{section.title}</h3>
+                  <h3 className="text-xl font-bold text-text">{section.title}</h3>
                 </div>
                 <ul className="space-y-2 ml-4">
                   {section.content.map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-gray-300">
+                    <li key={idx} className="flex items-start gap-2 text-text">
                       <span className="text-success mt-1">•</span>
                       <span>{item}</span>
                     </li>
@@ -279,13 +279,13 @@ const PrivacyPolicy = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="bg-gradient-to-r from-success/10 to-secondary/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 mt-12 border border-white/10"
+          className="bg-gradient-to-r from-success/10 to-secondary/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 mt-12 border border-border"
         >
-          <h3 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+          <h3 className="text-xl font-bold text-text mb-4 flex items-center gap-2">
             <FaEnvelope className="text-success" />
             Contact Us About Privacy
           </h3>
-          <p className="text-gray-300 mb-4">
+          <p className="text-text mb-4">
             If you have any questions about this Privacy Policy or how we handle your data, please contact our Grievance Officer:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

@@ -206,9 +206,9 @@ const ServicesPage = () => {
 
                   {/* Icon Overlay */}
                   <div className={`absolute bottom-6 right-6 w-14 h-14 rounded-xl bg-gradient-to-r ${service.gradient} flex items-center justify-center shadow-lg`}>
-                    {service.id === 1 && <FaChartLine className="text-white text-2xl" />}
-                    {service.id === 2 && <FaChartBar className="text-white text-2xl" />}
-                    {service.id === 3 && <FaChartPie className="text-white text-2xl" />}
+                    {service.id === 1 && <FaChartLine className="text-text text-2xl" />}
+                    {service.id === 2 && <FaChartBar className="text-text text-2xl" />}
+                    {service.id === 3 && <FaChartPie className="text-text text-2xl" />}
                   </div>
                 </div>
 
@@ -236,7 +236,7 @@ const ServicesPage = () => {
                   {service.title}
                 </h2>
 
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                <p className="text-text text-lg leading-relaxed mb-6">
                   {service.description}
                 </p>
 
@@ -252,7 +252,7 @@ const ServicesPage = () => {
                       className="flex items-center gap-2 group"
                     >
                       <FaCheckCircle className={`${service.iconColor} text-sm flex-shrink-0 group-hover:scale-110 transition-transform`} />
-                      <span className="text-gray-200 text-sm">{feature}</span>
+                      <span className="text-text text-sm">{feature}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -281,10 +281,10 @@ const ServicesPage = () => {
               <FaUsers className="text-success" size={14} />
               <span className="text-sm font-medium text-success">Why Choose Us</span>
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
               Why Choose Our <span className="text-success">Advisory Services?</span>
             </h2>
-            <p className="text-gray-300 text-lg">
+            <p className="text-text text-lg">
               Our services are built on a foundation of research, transparency, and disciplined market analysis. 
               We focus on delivering actionable insights, helping clients understand market opportunities, manage risk, 
               and pursue their financial objectives through informed decision-making.
@@ -304,12 +304,12 @@ const ServicesPage = () => {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
-                className="bg-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-success/30 transition-all duration-300 group"
+                className="bg-card backdrop-blur-sm rounded-2xl p-6 border border-border hover:border-success/30 transition-all duration-300 group"
               >
                 <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <div className="text-white text-2xl">{item.icon}</div>
+                  <div className="text-text text-2xl">{item.icon}</div>
                 </div>
-                <h3 className="text-white font-bold text-xl mb-2">{item.title}</h3>
+                <h3 className="text-text font-bold text-xl mb-2">{item.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
@@ -333,10 +333,10 @@ const ServicesPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
               Ready To Take Your Market Decisions To The Next Level?
             </h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-text/90 text-lg mb-8 max-w-2xl mx-auto">
               Get access to professional market research, strategic guidance, and personalized advisory support designed to help you navigate financial markets with confidence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -352,7 +352,7 @@ const ServicesPage = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white/10 border border-white/20 text-white hover:bg-white/20 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
+                className="bg-card-hover border border-border-hover text-text hover:bg-white/20 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
               >
                 Contact Our Experts
                 <FaWhatsapp />

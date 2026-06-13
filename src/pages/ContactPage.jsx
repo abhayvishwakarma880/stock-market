@@ -179,10 +179,10 @@ const ContactPage = () => {
               <FaBuilding className="text-success" size={14} />
               <span className="text-sm font-medium text-success">Get In Touch</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-text">
               Connect With <span className="text-success">Our Team</span>
             </h2>
-            <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
+            <p className="text-text mt-4 max-w-2xl mx-auto">
               Multiple ways to reach us. Choose what works best for you.
             </p>
           </motion.div>
@@ -199,20 +199,20 @@ const ContactPage = () => {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ y: -8 }}
-                className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-success/30 transition-all duration-300"
+                className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl p-6 border border-border hover:border-success/30 transition-all duration-300"
               >
                 {/* Icon */}
                 <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${card.color} flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                  <div className="text-white text-2xl">{card.icon}</div>
+                  <div className="text-text text-2xl">{card.icon}</div>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-3">{card.title}</h3>
+                <h3 className="text-xl font-bold text-text mb-3">{card.title}</h3>
 
                 {/* Details */}
                 <div className="space-y-1 mb-4">
                   {card.details.map((detail, idx) => (
-                    <p key={idx} className="text-gray-300 text-sm">
+                    <p key={idx} className="text-text text-sm">
                       {detail}
                     </p>
                   ))}
@@ -253,11 +253,11 @@ const ContactPage = () => {
               <FaUserCheck className="text-success" size={14} />
               <span className="text-sm font-medium text-success">How We Can Help</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-text">
               Professional Guidance For{' '}
               <span className="text-success">Your Financial Journey</span>
             </h2>
-            <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
+            <p className="text-text mt-4 max-w-2xl mx-auto">
               Our team provides expert insights across multiple domains to support your investment decisions
             </p>
           </motion.div>
@@ -274,12 +274,12 @@ const ContactPage = () => {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:border-success/30 transition-all duration-300 group"
+                className="bg-card backdrop-blur-sm rounded-xl p-6 text-center border border-border hover:border-success/30 transition-all duration-300 group"
               >
                 <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <div className="text-white text-xl">{service.icon}</div>
+                  <div className="text-text text-xl">{service.icon}</div>
                 </div>
-                <h3 className="text-white font-bold text-lg mb-2">{service.title}</h3>
+                <h3 className="text-text font-bold text-lg mb-2">{service.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
               </motion.div>
             ))}
@@ -300,11 +300,11 @@ const ContactPage = () => {
               <FaMapMarkerAlt className="text-success" size={14} />
               <span className="text-sm font-medium text-success">Find Us</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-text">
               Visit Our{' '}
               <span className="text-success">Office</span>
             </h2>
-            <p className="text-gray-300 mt-4">
+            <p className="text-text mt-4">
               Conveniently located to serve clients and investors. Visit our office during business hours.
             </p>
           </motion.div>
@@ -315,20 +315,20 @@ const ContactPage = () => {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10"
+              className="bg-card backdrop-blur-sm rounded-2xl p-8 border border-border"
             >
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-success/20 rounded-xl flex items-center justify-center flex-shrink-0">
                   <FaRegBuilding className="text-success text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-xl mb-2">Tradevora Market Private Limited</h3>
-                  <p className="text-gray-300 leading-relaxed">
+                  <h3 className="text-text font-bold text-xl mb-2">Tradevora Market Private Limited</h3>
+                  <p className="text-text leading-relaxed">
                     Business Tower, Financial District<br />
                     Lucknow, Uttar Pradesh – 226010<br />
                     India
                   </p>
-                  <div className="mt-4 pt-4 border-t border-white/10">
+                  <div className="mt-4 pt-4 border-t border-border">
                     <p className="text-gray-400 text-sm">
                       <span className="text-success">Landmark:</span> Near Phoenix Mall
                     </p>
@@ -342,7 +342,7 @@ const ContactPage = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 h-80"
+              className="bg-card backdrop-blur-sm rounded-2xl overflow-hidden border border-border h-80"
             >
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1x3558.563454469641!2x80.9467375!3x26.8461818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd6b463c9cf9%3A0x5a2d5b9c3e3d9e3a!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
@@ -373,11 +373,11 @@ const ContactPage = () => {
               <FaWhatsapp className="text-success" size={14} />
               <span className="text-sm font-medium text-success">Connect With Us Online</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-text">
               Follow Us On{' '}
               <span className="text-success">Social Media</span>
             </h2>
-            <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
+            <p className="text-text mt-4 max-w-2xl mx-auto">
               Stay updated with market trends, company updates, and educational content through our social channels.
             </p>
           </motion.div>
@@ -399,8 +399,8 @@ const ContactPage = () => {
                 rel="noopener noreferrer"
                 className={`${social.color} w-16 h-16 rounded-2xl flex flex-col items-center justify-center gap-1 transition-all duration-300 shadow-lg hover:shadow-xl`}
               >
-                <div className="text-white text-xl">{social.icon}</div>
-                <span className="text-white text-xs font-medium">{social.name}</span>
+                <div className="text-text text-xl">{social.icon}</div>
+                <span className="text-text text-xs font-medium">{social.name}</span>
               </motion.a>
             ))}
           </motion.div>
@@ -423,10 +423,10 @@ const ContactPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
               Ready To Discuss Your Financial Journey?
             </h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-text/90 text-lg mb-8 max-w-2xl mx-auto">
               Our team is available to answer your questions, provide information about our services, and help you understand how professional market research can support your financial objectives.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -443,7 +443,7 @@ const ContactPage = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="mailto:info@tradevoramarket.com"
-                className="bg-white/10 border border-white/20 text-white hover:bg-white/20 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
+                className="bg-card-hover border border-border-hover text-text hover:bg-white/20 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
               >
                 <FaEnvelope />
                 Email Us
@@ -454,7 +454,7 @@ const ContactPage = () => {
                 href="https://wa.me/919876543210"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-white/10 border border-white/20 text-white hover:bg-white/20 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
+                className="bg-card-hover border border-border-hover text-text hover:bg-white/20 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
               >
                 <FaWhatsapp />
                 WhatsApp

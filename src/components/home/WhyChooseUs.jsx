@@ -157,7 +157,7 @@ const WhyChooseUs = () => {
             <span className="text-sm font-medium text-success">Trusted By 10,000+ Investors</span>
           </motion.div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
             Why Investors{' '}
             <span className="text-success relative inline-block">
               Choose Us
@@ -174,7 +174,7 @@ const WhyChooseUs = () => {
             </span>
           </h2>
           
-          <p className="text-gray-300 text-lg">
+          <p className="text-text text-lg">
             Experience the difference with our comprehensive approach to wealth management
           </p>
         </motion.div>
@@ -192,7 +192,7 @@ const WhyChooseUs = () => {
           >
             <motion.h3 
               variants={itemVariants}
-              className="text-3xl md:text-4xl font-bold text-white mb-6 text-center lg:text-left"
+              className="text-3xl md:text-4xl font-bold text-text mb-6 text-center lg:text-left"
             >
               Our <span className="text-success">Achievements</span>
             </motion.h3>
@@ -203,7 +203,7 @@ const WhyChooseUs = () => {
                   key={index}
                   variants={itemVariants}
                   whileHover={{ scale: 1.05 }}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl p-4 text-center border border-white/10 hover:bg-white/10 transition-all duration-300 h-[140px] flex flex-col justify-center"
+                  className="bg-card backdrop-blur-sm rounded-2xl p-4 text-center border border-border hover:bg-card-hover transition-all duration-300 h-[140px] flex flex-col justify-center"
                 >
                   <motion.div 
                     initial={{ scale: 0, rotate: -180 }}
@@ -219,11 +219,11 @@ const WhyChooseUs = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: stat.delay }}
-                    className="text-2xl md:text-3xl font-bold text-white mb-1"
+                    className="text-2xl md:text-3xl font-bold text-text mb-1"
                   >
                     {stat.value}
                   </motion.div>
-                  <div className="text-gray-300 text-xs">{stat.label}</div>
+                  <div className="text-text text-xs">{stat.label}</div>
                 </motion.div>
               ))}
             </div>
@@ -250,7 +250,7 @@ const WhyChooseUs = () => {
                   key={feature.id}
                   variants={cardVariants}
                   whileHover="hover"
-                  className="group relative bg-white/5 backdrop-blur-sm rounded-2xl p-4 border border-white/10 hover:bg-white/10 transition-all duration-300 cursor-pointer h-[140px] flex flex-col"
+                  className="group relative bg-card backdrop-blur-sm rounded-2xl p-4 border border-border hover:bg-card-hover transition-all duration-300 cursor-pointer h-[140px] flex flex-col"
                 >
                   {/* Icon */}
                   <motion.div 
@@ -264,12 +264,12 @@ const WhyChooseUs = () => {
                   </motion.div>
                   
                   {/* Title */}
-                  <h3 className="text-white font-bold text-base mb-1">
+                  <h3 className="text-text font-bold text-base mb-1">
                     {feature.title}
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-gray-300 text-xs leading-relaxed flex-grow">
+                  <p className="text-text text-xs leading-relaxed flex-grow">
                     {feature.description}
                   </p>
 

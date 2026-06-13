@@ -239,7 +239,7 @@ const Testimonials = () => {
             <FaQuoteRight className="text-success" size={14} />
           </motion.div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
             What Our{' '}
             <span className="text-success relative inline-block">
               Clients Say
@@ -256,7 +256,7 @@ const Testimonials = () => {
             </span>
           </h2>
           
-          <p className="text-gray-300 text-lg">
+          <p className="text-text text-lg">
             Trusted by 10,000+ investors across India
           </p>
         </motion.div>
@@ -269,35 +269,35 @@ const Testimonials = () => {
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16"
         >
-          <motion.div variants={itemVariants} className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10">
+          <motion.div variants={itemVariants} className="bg-card backdrop-blur-sm rounded-xl p-4 text-center border border-border">
             <div className="text-yellow-400 flex justify-center mb-2">
               {renderStars(overallStats.averageRating)}
             </div>
-            <div className="text-2xl font-bold text-white">{overallStats.averageRating}</div>
+            <div className="text-2xl font-bold text-text">{overallStats.averageRating}</div>
             <div className="text-xs text-gray-400">Average Rating</div>
           </motion.div>
           
-          <motion.div variants={itemVariants} className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10">
+          <motion.div variants={itemVariants} className="bg-card backdrop-blur-sm rounded-xl p-4 text-center border border-border">
             <div className="text-success text-2xl mb-2 flex justify-center">
               <FaUserCircle />
             </div>
-            <div className="text-2xl font-bold text-white">{overallStats.totalReviews.toLocaleString()}+</div>
+            <div className="text-2xl font-bold text-text">{overallStats.totalReviews.toLocaleString()}+</div>
             <div className="text-xs text-gray-400">Total Reviews</div>
           </motion.div>
           
-          <motion.div variants={itemVariants} className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10">
+          <motion.div variants={itemVariants} className="bg-card backdrop-blur-sm rounded-xl p-4 text-center border border-border">
             <div className="text-success text-2xl mb-2 flex justify-center">
               <FaShieldAlt />
             </div>
-            <div className="text-2xl font-bold text-white">{overallStats.satisfiedClients}</div>
+            <div className="text-2xl font-bold text-text">{overallStats.satisfiedClients}</div>
             <div className="text-xs text-gray-400">Satisfied Clients</div>
           </motion.div>
           
-          <motion.div variants={itemVariants} className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10">
+          <motion.div variants={itemVariants} className="bg-card backdrop-blur-sm rounded-xl p-4 text-center border border-border">
             <div className="text-success text-2xl mb-2 flex justify-center">
               <FaRegGem />
             </div>
-            <div className="text-2xl font-bold text-white">{overallStats.yearsExperience}+</div>
+            <div className="text-2xl font-bold text-text">{overallStats.yearsExperience}+</div>
             <div className="text-xs text-gray-400">Years Experience</div>
           </motion.div>
         </motion.div>
@@ -311,7 +311,7 @@ const Testimonials = () => {
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -100 }}
               transition={{ duration: 0.5 }}
-              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-8 md:p-10 border border-white/10 shadow-2xl"
+              className="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-md rounded-2xl p-8 md:p-10 border border-border shadow-2xl"
             >
               {/* Quotation Marks */}
               <FaQuoteLeft className="text-success/20 text-6xl absolute top-6 left-6" />
@@ -319,10 +319,10 @@ const Testimonials = () => {
               
               {/* Platform Badge */}
               <div className="flex justify-between items-start mb-6">
-                <div className="flex items-center gap-2 bg-white/10 rounded-full px-3 py-1">
-                  <span className="text-gray-300 text-xs">Verified via</span>
+                <div className="flex items-center gap-2 bg-card-hover rounded-full px-3 py-1">
+                  <span className="text-text text-xs">Verified via</span>
                   <span className="text-success">{testimonials[currentIndex].platformIcon}</span>
-                  <span className="text-white text-xs font-medium">{testimonials[currentIndex].platform}</span>
+                  <span className="text-text text-xs font-medium">{testimonials[currentIndex].platform}</span>
                 </div>
                 <div className="flex">
                   {renderStars(testimonials[currentIndex].rating)}
@@ -330,7 +330,7 @@ const Testimonials = () => {
               </div>
 
               {/* Testimonial Text */}
-              <p className="text-gray-200 text-lg md:text-xl leading-relaxed mb-8 relative z-10">
+              <p className="text-text text-lg md:text-xl leading-relaxed mb-8 relative z-10">
                 "{testimonials[currentIndex].testimonial}"
               </p>
 
@@ -359,7 +359,7 @@ const Testimonials = () => {
                     className="w-14 h-14 rounded-full object-cover border-2 border-success"
                   />
                   <div>
-                    <h4 className="text-white font-bold text-lg">{testimonials[currentIndex].name}</h4>
+                    <h4 className="text-text font-bold text-lg">{testimonials[currentIndex].name}</h4>
                     <p className="text-gray-400 text-sm">{testimonials[currentIndex].role}, {testimonials[currentIndex].location}</p>
                     <p className="text-gray-500 text-xs">{testimonials[currentIndex].date}</p>
                   </div>
@@ -368,7 +368,7 @@ const Testimonials = () => {
                 {/* Tags */}
                 <div className="hidden md:flex gap-2">
                   {testimonials[currentIndex].tags.map((tag, idx) => (
-                    <span key={idx} className="bg-white/5 text-gray-300 text-xs px-2 py-1 rounded-full">
+                    <span key={idx} className="bg-card text-text text-xs px-2 py-1 rounded-full">
                       {tag}
                     </span>
                   ))}
@@ -380,15 +380,15 @@ const Testimonials = () => {
           {/* Navigation Buttons */}
           <button
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 lg:-translate-x-6 bg-white/10 hover:bg-success/20 rounded-full p-3 backdrop-blur-sm transition-all duration-300"
+            className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-4 lg:-translate-x-6 bg-card-hover hover:bg-success/20 rounded-full p-3 backdrop-blur-sm transition-all duration-300"
           >
-            <FaChevronLeft className="text-white" />
+            <FaChevronLeft className="text-text" />
           </button>
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 lg:translate-x-6 bg-white/10 hover:bg-success/20 rounded-full p-3 backdrop-blur-sm transition-all duration-300"
+            className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-4 lg:translate-x-6 bg-card-hover hover:bg-success/20 rounded-full p-3 backdrop-blur-sm transition-all duration-300"
           >
-            <FaChevronRight className="text-white" />
+            <FaChevronRight className="text-text" />
           </button>
         </div>
 
@@ -424,12 +424,12 @@ const Testimonials = () => {
               key={testimonial.id}
               variants={itemVariants}
               whileHover={{ y: -5 }}
-              className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-success/30 transition-all duration-300"
+              className="bg-card backdrop-blur-sm rounded-xl p-6 border border-border hover:border-success/30 transition-all duration-300"
             >
               <div className="flex items-center gap-2 mb-3">
                 {renderStars(testimonial.rating)}
               </div>
-              <p className="text-gray-300 text-sm mb-4 line-clamp-3">
+              <p className="text-text text-sm mb-4 line-clamp-3">
                 "{testimonial.testimonial}"
               </p>
               <div className="flex items-center gap-3">
@@ -439,7 +439,7 @@ const Testimonials = () => {
                   className="w-10 h-10 rounded-full object-cover"
                 />
                 <div>
-                  <h5 className="text-white font-medium text-sm">{testimonial.name}</h5>
+                  <h5 className="text-text font-medium text-sm">{testimonial.name}</h5>
                   <p className="text-gray-400 text-xs">{testimonial.role}</p>
                 </div>
               </div>

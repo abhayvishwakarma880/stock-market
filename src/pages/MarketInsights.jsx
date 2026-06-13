@@ -179,7 +179,7 @@ const MarketInsights = () => {
               <FaEye className="text-success" size={14} />
               <span className="text-sm font-medium text-success">Featured Insight</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-text">
               Editor's <span className="text-success">Pick</span>
             </h2>
           </motion.div>
@@ -188,7 +188,7 @@ const MarketInsights = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-success/30 transition-all duration-500"
+            className="group relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-border hover:border-success/30 transition-all duration-500"
           >
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
               {/* Image */}
@@ -200,7 +200,7 @@ const MarketInsights = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent lg:hidden"></div>
                 <div className="absolute top-4 left-4">
-                  <span className="bg-success/90 text-white text-xs px-3 py-1 rounded-full">
+                  <span className="bg-success/90 text-text text-xs px-3 py-1 rounded-full">
                     {featuredInsight.category}
                   </span>
                 </div>
@@ -214,10 +214,10 @@ const MarketInsights = () => {
                     {featuredInsight.readTime}
                   </span>
                 </div>
-                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 group-hover:text-success transition-colors">
+                <h3 className="text-2xl md:text-3xl font-bold text-text mb-4 group-hover:text-success transition-colors">
                   {featuredInsight.title}
                 </h3>
-                <p className="text-gray-300 leading-relaxed mb-6">
+                <p className="text-text leading-relaxed mb-6">
                   {featuredInsight.description}
                 </p>
                 <button className="inline-flex items-center gap-2 text-success font-semibold group/btn hover:gap-3 transition-all">
@@ -243,10 +243,10 @@ const MarketInsights = () => {
               <FaChartLine className="text-success" size={14} />
               <span className="text-sm font-medium text-success">Latest Resources</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-text">
               Latest Market <span className="text-success">Insights</span>
             </h2>
-            <p className="text-gray-300 mt-4 max-w-2xl mx-auto">
+            <p className="text-text mt-4 max-w-2xl mx-auto">
               Expert analysis, educational guides, and research insights to help you make informed investment decisions
             </p>
           </motion.div>
@@ -263,7 +263,7 @@ const MarketInsights = () => {
                 key={insight.id}
                 variants={itemVariants}
                 whileHover={{ y: -8 }}
-                className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-success/30 transition-all duration-300"
+                className="group bg-card backdrop-blur-sm rounded-xl overflow-hidden border border-border hover:border-success/30 transition-all duration-300"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img 
@@ -272,7 +272,7 @@ const MarketInsights = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute top-3 left-3">
-                    <span className="bg-success/90 text-white text-xs px-2 py-1 rounded-full">
+                    <span className="bg-success/90 text-text text-xs px-2 py-1 rounded-full">
                       {insight.category}
                     </span>
                   </div>
@@ -286,7 +286,7 @@ const MarketInsights = () => {
                     <span>•</span>
                     <span>{insight.date}</span>
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-2 line-clamp-2 group-hover:text-success transition-colors">
+                  <h3 className="text-lg font-bold text-text mb-2 line-clamp-2 group-hover:text-success transition-colors">
                     {insight.title}
                   </h3>
                   <p className="text-gray-400 text-sm mb-4 line-clamp-2">
@@ -307,7 +307,7 @@ const MarketInsights = () => {
             viewport={{ once: true }}
             className="text-center mt-10"
           >
-            <button className="inline-flex items-center gap-2 px-6 py-3 bg-white/5 border border-white/10 rounded-xl text-white font-semibold hover:bg-white/10 transition-all duration-300">
+            <button className="inline-flex items-center gap-2 px-6 py-3 bg-card border border-border rounded-xl text-text font-semibold hover:bg-card-hover transition-all duration-300">
               View All Insights
               <FaArrowRight size={14} />
             </button>
@@ -329,11 +329,11 @@ const MarketInsights = () => {
                 <FaBookOpen className="text-success" size={14} />
                 <span className="text-sm font-medium text-success">Investor Education Corner</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
                 Financial Literacy is the Foundation of{' '}
                 <span className="text-success">Successful Investing</span>
               </h2>
-              <p className="text-gray-300 text-lg mb-6">
+              <p className="text-text text-lg mb-6">
                 Explore beginner-friendly resources and guides designed to simplify complex market concepts.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -347,13 +347,13 @@ const MarketInsights = () => {
                     className="flex items-center gap-2"
                   >
                     <FaCheckCircle className="text-success text-sm" />
-                    <span className="text-gray-300 text-sm">{topic}</span>
+                    <span className="text-text text-sm">{topic}</span>
                   </motion.div>
                 ))}
               </div>
               <motion.button
                 whileHover={{ scale: 1.05 }}
-                className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-success to-secondary rounded-xl text-white font-semibold shadow-lg"
+                className="mt-8 inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-success to-secondary rounded-xl text-text font-semibold shadow-lg"
               >
                 Download Free Guide
                 <FaDownload size={14} />
@@ -367,10 +367,10 @@ const MarketInsights = () => {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <div className="bg-gradient-to-br from-success/10 to-secondary/10 rounded-2xl p-8 border border-white/10">
+              <div className="bg-gradient-to-br from-success/10 to-secondary/10 rounded-2xl p-8 border border-border">
                 <FaRegLightbulb className="text-success text-3xl mb-4" />
-                <h3 className="text-white font-bold text-xl mb-3">Start Your Learning Journey</h3>
-                <p className="text-gray-300 mb-4">
+                <h3 className="text-text font-bold text-xl mb-3">Start Your Learning Journey</h3>
+                <p className="text-text mb-4">
                   Get access to our comprehensive library of educational resources, video tutorials, and beginner guides.
                 </p>
                 <div className="flex items-center gap-2 text-success">
@@ -396,29 +396,29 @@ const MarketInsights = () => {
               <FaBrain className="text-success" size={14} />
               <span className="text-sm font-medium text-success">Our Research Philosophy</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
               Building Insights on{' '}
               <span className="text-success">Reliable Research</span>
             </h2>
-            <p className="text-gray-300 text-lg leading-relaxed mb-8">
+            <p className="text-text text-lg leading-relaxed mb-8">
               At Tradevora Market Private Limited, we believe that informed decisions are built on reliable research. Our analysis combines market trends, technical studies, economic developments, and risk assessment to provide valuable insights that support disciplined investing.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              <div className="bg-white/5 rounded-xl p-4">
+              <div className="bg-card rounded-xl p-4">
                 <FaChartLine className="text-success text-2xl mx-auto mb-2" />
-                <div className="text-white font-bold">Market Trends</div>
+                <div className="text-text font-bold">Market Trends</div>
               </div>
-              <div className="bg-white/5 rounded-xl p-4">
+              <div className="bg-card rounded-xl p-4">
                 <FaBalanceScale className="text-success text-2xl mx-auto mb-2" />
-                <div className="text-white font-bold">Technical Studies</div>
+                <div className="text-text font-bold">Technical Studies</div>
               </div>
-              <div className="bg-white/5 rounded-xl p-4">
+              <div className="bg-card rounded-xl p-4">
                 <FaWallet className="text-success text-2xl mx-auto mb-2" />
-                <div className="text-white font-bold">Economic Dev.</div>
+                <div className="text-text font-bold">Economic Dev.</div>
               </div>
-              <div className="bg-white/5 rounded-xl p-4">
+              <div className="bg-card rounded-xl p-4">
                 <FaShieldAlt className="text-success text-2xl mx-auto mb-2" />
-                <div className="text-white font-bold">Risk Assessment</div>
+                <div className="text-text font-bold">Risk Assessment</div>
               </div>
             </div>
           </motion.div>
@@ -438,7 +438,7 @@ const MarketInsights = () => {
               <FaUsers className="text-success" size={14} />
               <span className="text-sm font-medium text-success">Common Questions</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-text">
               Frequently Asked <span className="text-success">Questions</span>
             </h2>
           </motion.div>
@@ -451,13 +451,13 @@ const MarketInsights = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 overflow-hidden"
+                className="bg-card backdrop-blur-sm rounded-xl border border-border overflow-hidden"
               >
                 <button
                   onClick={() => toggleFaq(index)}
                   className="w-full px-6 py-4 flex items-center justify-between text-left"
                 >
-                  <span className="text-white font-semibold">{faq.q}</span>
+                  <span className="text-text font-semibold">{faq.q}</span>
                   {openFaq === index ? (
                     <FaMinus className="text-success" />
                   ) : (
@@ -473,7 +473,7 @@ const MarketInsights = () => {
                       transition={{ duration: 0.3 }}
                       className="px-6 pb-4"
                     >
-                      <p className="text-gray-300">{faq.a}</p>
+                      <p className="text-text">{faq.a}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
@@ -499,10 +499,10 @@ const MarketInsights = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
               Stay Ahead With Professional Market Insights
             </h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-text/90 text-lg mb-8 max-w-2xl mx-auto">
               Gain access to valuable market perspectives, educational resources, and research-driven insights that help support confident investment decisions.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -517,7 +517,7 @@ const MarketInsights = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white/10 border border-white/20 text-white hover:bg-white/20 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
+                className="bg-card-hover border border-border-hover text-text hover:bg-white/20 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
               >
                 Contact Our Team
                 <FaWhatsapp />

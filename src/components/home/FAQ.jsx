@@ -181,7 +181,7 @@ const FAQ = () => {
             <span className="text-sm font-medium text-success">FAQ</span>
           </motion.div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
             Frequently Asked{' '}
             <span className="text-success relative inline-block">
               Questions
@@ -198,7 +198,7 @@ const FAQ = () => {
             </span>
           </h2>
           
-          <p className="text-gray-300 text-lg">
+          <p className="text-text text-lg">
             Find answers to common questions about our services and platform
           </p>
         </motion.div>
@@ -219,8 +219,8 @@ const FAQ = () => {
               }}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium transition-all duration-300 ${
                 activeCategory === category.id
-                  ? 'bg-success text-white shadow-lg'
-                  : 'bg-white/5 text-gray-300 hover:bg-white/10 border border-white/10'
+                  ? 'bg-success text-text shadow-lg'
+                  : 'bg-card text-text hover:bg-card-hover border border-border'
               }`}
             >
               {category.icon}
@@ -249,17 +249,17 @@ const FAQ = () => {
                 className={`w-full text-left p-5 rounded-xl transition-all duration-300 ${
                   openIndex === index
                     ? 'bg-gradient-to-r from-success/20 to-secondary/20 border border-success/30'
-                    : 'bg-white/5 border border-white/10 hover:border-success/20'
+                    : 'bg-card border border-border hover:border-success/20'
                 }`}
               >
                 <div className="flex items-center justify-between gap-4">
                   <h3 className={`font-semibold ${
-                    openIndex === index ? 'text-success' : 'text-white'
+                    openIndex === index ? 'text-success' : 'text-text'
                   }`}>
                     {faq.question}
                   </h3>
                   <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
-                    openIndex === index ? 'bg-success text-white' : 'bg-white/10 text-gray-300'
+                    openIndex === index ? 'bg-success text-text' : 'bg-card-hover text-text'
                   }`}>
                     {openIndex === index ? <FaMinus size={12} /> : <FaPlus size={12} />}
                   </div>
@@ -275,7 +275,7 @@ const FAQ = () => {
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <div className="p-5 pt-2 text-gray-300 leading-relaxed border-l-2 border-success/30 ml-5">
+                    <div className="p-5 pt-2 text-text leading-relaxed border-l-2 border-success/30 ml-5">
                       {faq.answer}
                     </div>
                   </motion.div>
@@ -292,24 +292,24 @@ const FAQ = () => {
           viewport={{ once: true }}
           className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto mt-12"
         >
-          <div className="bg-white/5 rounded-xl p-3 text-center border border-white/10">
+          <div className="bg-card rounded-xl p-3 text-center border border-border">
             <FaClock className="text-success mx-auto mb-2" />
-            <div className="text-white font-bold">24/7</div>
+            <div className="text-text font-bold">24/7</div>
             <div className="text-gray-400 text-xs">Support Available</div>
           </div>
-          <div className="bg-white/5 rounded-xl p-3 text-center border border-white/10">
+          <div className="bg-card rounded-xl p-3 text-center border border-border">
             <FaShieldAlt className="text-success mx-auto mb-2" />
-            <div className="text-white font-bold">100%</div>
+            <div className="text-text font-bold">100%</div>
             <div className="text-gray-400 text-xs">Secure & Safe</div>
           </div>
-          <div className="bg-white/5 rounded-xl p-3 text-center border border-white/10">
+          <div className="bg-card rounded-xl p-3 text-center border border-border">
             <FaRegLightbulb className="text-success mx-auto mb-2" />
-            <div className="text-white font-bold">15-min</div>
+            <div className="text-text font-bold">15-min</div>
             <div className="text-gray-400 text-xs">Quick Response</div>
           </div>
-          <div className="bg-white/5 rounded-xl p-3 text-center border border-white/10">
+          <div className="bg-card rounded-xl p-3 text-center border border-border">
             <FaUserCheck className="text-success mx-auto mb-2" />
-            <div className="text-white font-bold">5000+</div>
+            <div className="text-text font-bold">5000+</div>
             <div className="text-gray-400 text-xs">Happy Clients</div>
           </div>
         </motion.div>
@@ -320,19 +320,19 @@ const FAQ = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="mt-16 bg-gradient-to-r from-success/10 to-secondary/10 backdrop-blur-sm rounded-2xl p-8 md:p-10 text-center border border-white/10 max-w-3xl mx-auto"
+          className="mt-16 bg-gradient-to-r from-success/10 to-secondary/10 backdrop-blur-sm rounded-2xl p-8 md:p-10 text-center border border-border max-w-3xl mx-auto"
         >
           <FaHeadset className="text-success text-4xl mx-auto mb-4" />
-          <h3 className="text-2xl font-bold text-white mb-2">
+          <h3 className="text-2xl font-bold text-text mb-2">
             Still Have Questions?
           </h3>
-          <p className="text-gray-300 mb-6">
+          <p className="text-text mb-6">
             Can't find the answer you're looking for? Please chat with our friendly team.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a 
               href="tel:+919876543210"
-              className="inline-flex items-center gap-2 bg-success hover:bg-hover text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-success hover:bg-hover text-text px-6 py-3 rounded-xl font-semibold transition-all duration-300"
             >
               <FaPhoneAlt />
               Call Us Now
@@ -341,14 +341,14 @@ const FAQ = () => {
               href="https://wa.me/919876543210"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 border border-white/10"
+              className="inline-flex items-center gap-2 bg-card-hover hover:bg-white/20 text-text px-6 py-3 rounded-xl font-semibold transition-all duration-300 border border-border"
             >
               <FaWhatsapp />
               WhatsApp Us
             </a>
             <a 
               href="mailto:support@tradevoramarket.com"
-              className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 border border-white/10"
+              className="inline-flex items-center gap-2 bg-card-hover hover:bg-white/20 text-text px-6 py-3 rounded-xl font-semibold transition-all duration-300 border border-border"
             >
               <FaEnvelope />
               Email Support

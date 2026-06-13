@@ -170,8 +170,8 @@ const AboutUs = () => {
                 />
                 {/* <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 bg-success/90 backdrop-blur-sm rounded-xl p-4">
-                  <div className="text-white font-bold text-lg">Founded in 2019</div>
-                  <div className="text-white/80 text-sm">5+ Years of Excellence</div>
+                  <div className="text-text font-bold text-lg">Founded in 2019</div>
+                  <div className="text-text/80 text-sm">5+ Years of Excellence</div>
                 </div> */}
               </div>
             </motion.div>
@@ -187,10 +187,10 @@ const AboutUs = () => {
                 <FaRegLightbulb className="text-success" size={14} />
                 <span className="text-sm font-medium text-success">Our Story</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
                 Our <span className="text-success">Journey</span>
               </h2>
-              <div className="space-y-4 text-gray-300 leading-relaxed">
+              <div className="space-y-4 text-text leading-relaxed">
                 <p>
                   Tradevora Market Private Limited was founded with a simple goal: to help investors navigate financial markets with confidence.
                 </p>
@@ -221,8 +221,8 @@ const AboutUs = () => {
               <div className="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4">
                 <FaEye className="text-blue-500 text-2xl" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-3">Our Mission</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-2xl font-bold text-text mb-3">Our Mission</h3>
+              <p className="text-text leading-relaxed">
                 To simplify investing by delivering transparent, research-driven financial guidance that enables investors to make confident and informed decisions.
               </p>
             </motion.div>
@@ -238,8 +238,8 @@ const AboutUs = () => {
               <div className="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-4">
                 <FaBullseye className="text-green-500 text-2xl" />
               </div>
-              <h3 className="text-2xl font-bold text-white mb-3">Our Vision</h3>
-              <p className="text-gray-300 leading-relaxed">
+              <h3 className="text-2xl font-bold text-text mb-3">Our Vision</h3>
+              <p className="text-text leading-relaxed">
                 To become a trusted financial advisory partner, helping investors achieve sustainable wealth creation through knowledge, discipline, and strategic planning.
               </p>
             </motion.div>
@@ -260,7 +260,7 @@ const AboutUs = () => {
               <FaUsers className="text-success" size={14} />
               <span className="text-sm font-medium text-success">Why Choose Us</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-text">
               Why Investors Trust <span className="text-success">Tradevora Market Private Limited</span>
             </h2>
           </motion.div>
@@ -277,12 +277,12 @@ const AboutUs = () => {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ y: -5 }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:border-success/30 transition-all duration-300"
+                className="bg-card backdrop-blur-sm rounded-xl p-6 border border-border hover:border-success/30 transition-all duration-300"
               >
                 <div className={`w-12 h-12 bg-gradient-to-r ${item.color} rounded-lg flex items-center justify-center mb-4`}>
-                  <div className="text-white text-xl">{item.icon}</div>
+                  <div className="text-text text-xl">{item.icon}</div>
                 </div>
-                <h3 className="text-white font-bold text-lg mb-2">{item.title}</h3>
+                <h3 className="text-text font-bold text-lg mb-2">{item.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
               </motion.div>
             ))}
@@ -304,10 +304,10 @@ const AboutUs = () => {
                 <FaChartLine className="text-success" size={14} />
                 <span className="text-sm font-medium text-success">Our Philosophy</span>
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-text mb-4">
                 Our Investment <span className="text-success">Philosophy</span>
               </h2>
-              <div className="space-y-4 text-gray-300 leading-relaxed">
+              <div className="space-y-4 text-text leading-relaxed">
                 <p>
                   Financial markets are driven by opportunity, but successful investing requires discipline.
                 </p>
@@ -350,7 +350,7 @@ const AboutUs = () => {
               <FaClipboardList className="text-success" size={14} />
               <span className="text-sm font-medium text-success">How We Work</span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-white">
+            <h2 className="text-3xl md:text-4xl font-bold text-text">
               Our <span className="text-success">Process</span>
             </h2>
           </motion.div>
@@ -365,12 +365,12 @@ const AboutUs = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="relative"
               >
-                <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:border-success/30 transition-all duration-300">
+                <div className="bg-card backdrop-blur-sm rounded-xl p-6 text-center border border-border hover:border-success/30 transition-all duration-300">
                   <div className="text-4xl font-bold text-success/30 mb-2">{step.number}</div>
                   <div className="w-14 h-14 bg-success/20 rounded-full flex items-center justify-center mx-auto mb-4">
                     <div className="text-success text-xl">{step.icon}</div>
                   </div>
-                  <h3 className="text-white font-bold text-lg mb-2">{step.title}</h3>
+                  <h3 className="text-text font-bold text-lg mb-2">{step.title}</h3>
                   <p className="text-gray-400 text-sm">{step.description}</p>
                 </div>
                 {index < processSteps.length - 1 && (
@@ -395,10 +395,10 @@ const AboutUs = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:border-success/30 transition-all duration-300"
+                className="bg-card backdrop-blur-sm rounded-xl p-6 text-center border border-border hover:border-success/30 transition-all duration-300"
               >
                 <div className="text-success text-3xl mb-3 flex justify-center">{stat.icon}</div>
-                <div className="text-2xl md:text-3xl font-bold text-white mb-1">{stat.value}</div>
+                <div className="text-2xl md:text-3xl font-bold text-text mb-1">{stat.value}</div>
                 <div className="text-gray-400 text-sm">{stat.label}</div>
               </motion.div>
             ))}
@@ -413,21 +413,21 @@ const AboutUs = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="bg-gradient-to-r from-success/10 to-secondary/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10 text-center"
+            className="bg-gradient-to-r from-success/10 to-secondary/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-border text-center"
           >
             <FaQuoteLeft className="text-success/30 text-5xl mx-auto mb-4" />
             <div className="inline-flex items-center gap-2 bg-success/20 rounded-full px-4 py-2 mb-4">
               <FaUserCheck className="text-success" size={14} />
               <span className="text-sm font-medium text-success">Message From Our Leadership</span>
             </div>
-            <p className="text-gray-200 text-lg md:text-xl leading-relaxed mb-6">
+            <p className="text-text text-lg md:text-xl leading-relaxed mb-6">
               "Our objective is not simply to provide market recommendations but to help investors develop confidence and clarity in their financial journey. By combining research, experience, and disciplined decision-making, we strive to create long-term value for every client we serve."
             </p>
             <div>
               <div className="w-16 h-16 bg-gradient-to-r from-success to-secondary rounded-full flex items-center justify-center mx-auto mb-2">
-                <FaUserCheck className="text-white text-2xl" />
+                <FaUserCheck className="text-text text-2xl" />
               </div>
-              <h4 className="text-white font-bold">Rahul Sharma</h4>
+              <h4 className="text-text font-bold">Rahul Sharma</h4>
               <p className="text-gray-400 text-sm">Founder & CEO, Tradevora Market Private Limited</p>
             </div>
           </motion.div>
@@ -450,10 +450,10 @@ const AboutUs = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
               Ready To Take The Next Step In Your Financial Journey?
             </h2>
-            <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-text/90 text-lg mb-8 max-w-2xl mx-auto">
               Partner with Tradevora Market Private Limited and gain access to professional market research, personalized guidance, and strategic investment insights.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -461,7 +461,7 @@ const AboutUs = () => {
                 Get Free Consultation
                 <FaArrowRight />
               </a>
-              <Link to="/contact" className="bg-white/10 border border-white/20 text-white hover:bg-white/20 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300">
+              <Link to="/contact" className="bg-card-hover border border-border-hover text-text hover:bg-white/20 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300">
                 Contact Our Team
                 <FaWhatsapp />
               </Link>

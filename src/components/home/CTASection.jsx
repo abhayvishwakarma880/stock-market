@@ -33,8 +33,8 @@ const CTASection = () => {
 
       {/* Floating Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-20 left-10 w-64 h-64 bg-white/10 rounded-full filter blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 right-10 w-80 h-80 bg-white/10 rounded-full filter blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-20 left-10 w-64 h-64 bg-card-hover rounded-full filter blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-10 w-80 h-80 bg-card-hover rounded-full filter blur-3xl animate-pulse delay-1000"></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -47,7 +47,7 @@ const CTASection = () => {
           transition={{ duration: 0.5 }}
           className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6"
         >
-          <span className="text-white text-sm font-medium">🚀 Limited Time Offer</span>
+          <span className="text-text text-sm font-medium">🚀 Limited Time Offer</span>
         </motion.div>
 
         {/* Heading */}
@@ -56,12 +56,12 @@ const CTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4"
         >
           Ready to Start Your{' '}
           <span className="relative inline-block">
             Investment Journey?
-            <svg className="absolute -bottom-2 left-0 w-full h-3 text-white/30" viewBox="0 0 100 10">
+            <svg className="absolute -bottom-2 left-0 w-full h-3 text-text/30" viewBox="0 0 100 10">
               <path d="M0 5 Q 25 0, 50 5 T 100 5" stroke="currentColor" fill="none" strokeWidth="2"/>
             </svg>
           </span>
@@ -73,7 +73,7 @@ const CTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-white/90 text-lg md:text-xl max-w-2xl mx-auto mb-8"
+          className="text-text/90 text-lg md:text-xl max-w-2xl mx-auto mb-8"
         >
           Join 10,000+ successful investors and start your wealth creation journey with expert guidance
         </motion.p>
@@ -88,8 +88,8 @@ const CTASection = () => {
         >
           {benefits.map((benefit, idx) => (
             <div key={idx} className="flex items-center gap-2">
-              <div className="text-white text-lg">{benefit.icon}</div>
-              <span className="text-white/90 text-sm">{benefit.text}</span>
+              <div className="text-text text-lg">{benefit.icon}</div>
+              <span className="text-text/90 text-sm">{benefit.text}</span>
             </div>
           ))}
         </motion.div>
@@ -111,7 +111,7 @@ const CTASection = () => {
             href="https://wa.me/919876543210"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
+            className="bg-card-hover hover:bg-white/20 border border-border-hover text-text px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
           >
             <FaWhatsapp />
             Chat on WhatsApp
@@ -124,7 +124,7 @@ const CTASection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="mt-10 flex justify-center items-center gap-6 text-white/80 text-sm"
+          className="mt-10 flex justify-center items-center gap-6 text-text/80 text-sm"
         >
           <div className="flex items-center gap-1">
             {[...Array(5)].map((_, i) => (

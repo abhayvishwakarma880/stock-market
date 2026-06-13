@@ -157,7 +157,7 @@ const Services = () => {
             <span className="text-sm font-medium text-success">Our Services</span>
           </motion.div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
             Comprehensive{' '}
             <span className="text-success relative inline-block">
               Trading Solutions
@@ -174,7 +174,7 @@ const Services = () => {
             </span>
           </h2>
           
-          <p className="text-gray-300 text-lg">
+          <p className="text-text text-lg">
             Professional trading and investment services tailored to your financial goals
           </p>
         </motion.div>
@@ -210,7 +210,7 @@ const Services = () => {
                   <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-30 group-hover:opacity-20 transition-opacity`}></div>
                   
                   {/* Badge */}
-                  <div className={`absolute top-4 right-4 bg-primary/90 backdrop-blur-sm rounded-full px-4 py-1.5 border border-white/10`}>
+                  <div className={`absolute top-4 right-4 bg-primary/90 backdrop-blur-sm rounded-full px-4 py-1.5 border border-border`}>
                     <span className={`text-sm font-bold bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}>
                       {service.badge}
                     </span>
@@ -239,7 +239,7 @@ const Services = () => {
                 </motion.h3>
 
                 {/* Description */}
-                <p className="text-gray-300 text-lg mb-6 leading-relaxed">
+                <p className="text-text text-lg mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
@@ -255,7 +255,7 @@ const Services = () => {
                       className="flex items-center gap-2 group"
                     >
                       <FaCheckCircle className={`${service.iconColor} text-sm flex-shrink-0 group-hover:scale-110 transition-transform`} />
-                      <span className="text-gray-200 text-sm">{feature}</span>
+                      <span className="text-text text-sm">{feature}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -274,7 +274,7 @@ const Services = () => {
                       <span className={service.iconColor}>
                         {benefit.icon}
                       </span>
-                      <span className="text-gray-200 text-sm font-medium">{benefit.text}</span>
+                      <span className="text-text text-sm font-medium">{benefit.text}</span>
                     </motion.div>
                   ))}
                 </div>
@@ -283,7 +283,7 @@ const Services = () => {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className={`group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r ${service.color} shadow-lg hover:shadow-2xl transition-all duration-300`}
+                  className={`group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-text bg-gradient-to-r ${service.color} shadow-lg hover:shadow-2xl transition-all duration-300`}
                 >
                   {service.ctaText}
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform" />

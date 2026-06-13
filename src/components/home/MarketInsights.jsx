@@ -204,7 +204,7 @@ const MarketInsights = () => {
             <span className="text-sm font-medium text-success">Market Insights</span>
           </motion.div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
             Latest{' '}
             <span className="text-success relative inline-block">
               Market Updates
@@ -221,7 +221,7 @@ const MarketInsights = () => {
             </span>
           </h2>
           
-          <p className="text-gray-300 text-lg">
+          <p className="text-text text-lg">
             Stay ahead with expert analysis, trading tips, and real-time market insights
           </p>
         </motion.div>
@@ -236,7 +236,7 @@ const MarketInsights = () => {
             viewport={{ once: true }}
             className="mb-16"
           >
-            <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
+            <h3 className="text-xl font-bold text-text mb-6 flex items-center gap-2">
               <FaRegStar className="text-success" />
               Featured Insights
             </h3>
@@ -249,7 +249,7 @@ const MarketInsights = () => {
                   whileInView="visible"
                   viewport={{ once: true }}
                   whileHover={{ y: -5 }}
-                  className="bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-success/30 transition-all duration-300 group"
+                  className="bg-card backdrop-blur-sm rounded-2xl overflow-hidden border border-border hover:border-success/30 transition-all duration-300 group"
                 >
                   <div className="relative h-56 overflow-hidden">
                     <img 
@@ -259,7 +259,7 @@ const MarketInsights = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
                     <div className="absolute top-4 left-4">
-                      <span className="bg-success/90 text-white text-xs px-3 py-1 rounded-full">
+                      <span className="bg-success/90 text-text text-xs px-3 py-1 rounded-full">
                         Featured
                       </span>
                     </div>
@@ -275,19 +275,19 @@ const MarketInsights = () => {
                         {insight.readTime}
                       </span>
                     </div>
-                    <h4 className="text-xl font-bold text-white mb-3 group-hover:text-success transition-colors">
+                    <h4 className="text-xl font-bold text-text mb-3 group-hover:text-success transition-colors">
                       {insight.title}
                     </h4>
-                    <p className="text-gray-300 mb-4 line-clamp-2">
+                    <p className="text-text mb-4 line-clamp-2">
                       {insight.excerpt}
                     </p>
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-2">
                         <div className="w-8 h-8 rounded-full bg-gradient-to-r from-success to-secondary flex items-center justify-center">
-                          <FaUserTie size={14} className="text-white" />
+                          <FaUserTie size={14} className="text-text" />
                         </div>
                         <div>
-                          <div className="text-white text-sm font-medium">{insight.author}</div>
+                          <div className="text-text text-sm font-medium">{insight.author}</div>
                           <div className="text-gray-400 text-xs">{insight.authorRole}</div>
                         </div>
                       </div>
@@ -318,7 +318,7 @@ const MarketInsights = () => {
                 whileHover={{ y: -5 }}
                 layout
                 exit={{ opacity: 0, scale: 0.9 }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden border border-white/10 hover:border-success/30 transition-all duration-300 group"
+                className="bg-card backdrop-blur-sm rounded-xl overflow-hidden border border-border hover:border-success/30 transition-all duration-300 group"
               >
                 <div className="relative h-48 overflow-hidden">
                   <img 
@@ -343,24 +343,24 @@ const MarketInsights = () => {
                       {insight.readTime}
                     </span>
                   </div>
-                  <h4 className="text-lg font-bold text-white mb-2 line-clamp-2 group-hover:text-success transition-colors">
+                  <h4 className="text-lg font-bold text-text mb-2 line-clamp-2 group-hover:text-success transition-colors">
                     {insight.title}
                   </h4>
-                  <p className="text-gray-300 text-sm mb-4 line-clamp-2">
+                  <p className="text-text text-sm mb-4 line-clamp-2">
                     {insight.excerpt}
                   </p>
                   
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {insight.tags.map((tag, idx) => (
-                      <span key={idx} className="text-xs text-gray-400 bg-white/5 px-2 py-1 rounded-full">
+                      <span key={idx} className="text-xs text-gray-400 bg-card px-2 py-1 rounded-full">
                         #{tag}
                       </span>
                     ))}
                   </div>
 
                   {/* Engagement Stats */}
-                  <div className="flex items-center justify-between pt-3 border-t border-white/10">
+                  <div className="flex items-center justify-between pt-3 border-t border-border">
                     <div className="flex items-center gap-3 text-xs text-gray-400">
                       <span className="flex items-center gap-1">
                         <FaEye size={12} />

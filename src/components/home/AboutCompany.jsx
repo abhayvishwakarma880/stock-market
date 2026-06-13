@@ -144,7 +144,7 @@ const AboutCompany = () => {
             <span className="text-sm font-medium text-success">About Company</span>
           </motion.div>
           
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
             India's Most Trusted{' '}
             <span className="text-success relative inline-block">
               Financial Partner
@@ -161,7 +161,7 @@ const AboutCompany = () => {
             </span>
           </h2>
           
-          <p className="text-gray-300 text-lg">
+          <p className="text-text text-lg">
             Empowering investors since 2019 with expert advisory and innovative financial solutions
           </p>
         </motion.div>
@@ -178,10 +178,10 @@ const AboutCompany = () => {
           <motion.div variants={itemVariants}>
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-24 h-24 bg-success/20 rounded-full filter blur-2xl"></div>
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 relative">
+              <h3 className="text-2xl md:text-3xl font-bold text-text mb-4 relative">
                 Our Journey
               </h3>
-              <div className="space-y-4 text-gray-300">
+              <div className="space-y-4 text-text">
                 <p className="leading-relaxed">
                   Founded in 2019 with a vision to simplify stock market investing, <span className="text-success font-semibold">Tradevora Market Private Limited</span> has grown into one of India's most trusted financial advisory platforms. We've helped over 10,000+ investors achieve their financial goals through our research-driven approach.
                 </p>
@@ -199,12 +199,12 @@ const AboutCompany = () => {
                   <motion.div
                     key={idx}
                     whileHover={{ scale: 1.05 }}
-                    className="bg-white/5 backdrop-blur-sm rounded-xl p-4 text-center border border-white/10"
+                    className="bg-card backdrop-blur-sm rounded-xl p-4 text-center border border-border"
                   >
                     <div className={`${achievement.color} text-2xl mb-2 flex justify-center`}>
                       {achievement.icon}
                     </div>
-                    <div className="text-xl font-bold text-white">{achievement.value}</div>
+                    <div className="text-xl font-bold text-text">{achievement.value}</div>
                     <div className="text-xs text-gray-400">{achievement.label}</div>
                   </motion.div>
                 ))}
@@ -241,15 +241,15 @@ const AboutCompany = () => {
               key={index}
               variants={itemVariants}
               whileHover={{ y: -10 }}
-              className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 hover:border-success/30 transition-all duration-300"
+              className="bg-card backdrop-blur-sm rounded-2xl p-8 border border-border hover:border-success/30 transition-all duration-300"
             >
               <div className={`w-16 h-16 rounded-xl bg-gradient-to-r ${value.gradient} p-0.5 mb-6`}>
                 <div className="w-full h-full bg-primary rounded-xl flex items-center justify-center">
-                  <div className="text-white text-2xl">{value.icon}</div>
+                  <div className="text-text text-2xl">{value.icon}</div>
                 </div>
               </div>
-              <h3 className="text-xl font-bold text-white mb-3">{value.title}</h3>
-              <p className="text-gray-300 leading-relaxed">{value.description}</p>
+              <h3 className="text-xl font-bold text-text mb-3">{value.title}</h3>
+              <p className="text-text leading-relaxed">{value.description}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -263,10 +263,10 @@ const AboutCompany = () => {
           className="mb-20"
         >
           <motion.div variants={itemVariants} className="text-center mb-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
+            <h3 className="text-2xl md:text-3xl font-bold text-text mb-3">
               Why Choose <span className="text-success">Tradevora Market Private Limited</span>
             </h3>
-            <p className="text-gray-300">What makes us different from the rest</p>
+            <p className="text-text">What makes us different from the rest</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -275,12 +275,12 @@ const AboutCompany = () => {
                 key={index}
                 variants={itemVariants}
                 whileHover={{ scale: 1.05 }}
-                className="bg-white/5 backdrop-blur-sm rounded-xl p-6 text-center border border-white/10 hover:border-success/30 transition-all duration-300"
+                className="bg-card backdrop-blur-sm rounded-xl p-6 text-center border border-border hover:border-success/30 transition-all duration-300"
               >
                 <div className={`${item.bgColor} w-14 h-14 rounded-xl flex items-center justify-center mx-auto mb-4`}>
                   <div className={`${item.color} text-2xl`}>{item.icon}</div>
                 </div>
-                <h4 className="text-white font-bold mb-2">{item.title}</h4>
+                <h4 className="text-text font-bold mb-2">{item.title}</h4>
                 <p className="text-gray-400 text-sm">{item.description}</p>
               </motion.div>
             ))}
@@ -293,7 +293,7 @@ const AboutCompany = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-success/10 to-secondary/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/10"
+          className="bg-gradient-to-r from-success/10 to-secondary/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-border"
         >
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {teamStats.map((stat, index) => (
@@ -306,16 +306,16 @@ const AboutCompany = () => {
                 <div className="text-3xl md:text-4xl font-bold text-success mb-2">
                   {stat.number}
                 </div>
-                <div className="text-gray-300 text-sm">{stat.label}</div>
+                <div className="text-text-text text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>
           
           <motion.div 
             variants={itemVariants}
-            className="text-center mt-8 pt-8 border-t border-white/10"
+            className="text-center mt-8 pt-8 border-t border-border"
           >
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-300">
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-text-text">
               <span className="flex items-center gap-2">
                 <FaCheckCircle className="text-success" size={14} />
                 SEBI Registered
