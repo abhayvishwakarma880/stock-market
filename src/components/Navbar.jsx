@@ -145,7 +145,7 @@ const Navbar = () => {
                 <NavLink
                   key={link.name}
                   to={link.href}
-                  className={({ isActive }) => `relative px-5 py-2 font-medium rounded-lg transition-all duration-200 group ${isActive ? 'text-success bg-background' : 'text-nav-text hover:bg-background'}`}
+                  className={({ isActive }) => `relative px-5 py-2 font-medium rounded-lg transition-all duration-200 group ${isActive ? 'text-success bg-background' : 'text-nav-text hover:text-success hover:bg-background'}`}
                 >
                   {({ isActive }) => (
                     <>

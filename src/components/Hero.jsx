@@ -66,7 +66,7 @@ const Hero = ({
       >
         {/* Overlay Gradient */}
         <div
-          className={`absolute inset-0 ${overlayOpacity} bg-gradient-to-r from-primary/90 via-primary/70 to-transparent`}
+          className={`absolute inset-0 ${overlayOpacity} bg-gradient-to-r from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.5)] to-transparent`}
         ></div>
       </div>
 
@@ -98,7 +98,7 @@ const Hero = ({
           )}
 
           {/* Title */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text leading-tight mb-3 animate-fadeInUp animation-delay-100">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-3 animate-fadeInUp animation-delay-100">
             {title}{" "}
             <span className="text-success relative inline-block">
               {highlightedTitle}
@@ -106,7 +106,7 @@ const Hero = ({
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg md:text-xl text-text mb-8 max-w-2xl animate-fadeInUp animation-delay-200">
+          <p className="text-lg md:text-xl text-white mb-8 max-w-2xl animate-fadeInUp animation-delay-200">
             {subtitle}
           </p>
 
@@ -148,7 +148,7 @@ const Hero = ({
                   <div className="text-lg sm:text-xl md:text-3xl font-extrabold text-text mb-0.5 md:mb-1 group-hover:text-success transition-colors">
                     {feature.value}
                   </div>
-                  <div className="text-[9px] sm:text-[10px] md:text-xs font-medium text-gray-400 uppercase tracking-wider leading-tight">
+                  <div className="text-[9px] sm:text-[10px] md:text-xs font-medium text-text uppercase tracking-wider leading-tight">
                     {feature.label}
                   </div>
                 </div>

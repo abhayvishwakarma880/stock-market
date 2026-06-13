@@ -223,7 +223,7 @@ const AboutCompany = () => {
                 alt="Trading Floor"
                 className="w-full h-96 object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.4)] to-transparent"></div>
             </div>
           </motion.div>
         </motion.div>

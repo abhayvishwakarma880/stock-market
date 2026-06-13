@@ -168,7 +168,7 @@ const AboutUs = () => {
                   alt="Our Journey"
                   className="w-full h-96 object-cover"
                 />
-                {/* <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
+                {/* <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.4)] to-transparent"></div>
                 <div className="absolute bottom-6 left-6 right-6 bg-success/90 backdrop-blur-sm rounded-xl p-4">
                   <div className="text-text font-bold text-lg">Founded in 2019</div>
                   <div className="text-text/80 text-sm">5+ Years of Excellence</div>

@@ -257,7 +257,7 @@ const MarketInsights = () => {
                       alt={insight.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.4)] to-transparent"></div>
                     <div className="absolute top-4 left-4">
                       <span className="bg-success/90 text-text text-xs px-3 py-1 rounded-full">
                         Featured

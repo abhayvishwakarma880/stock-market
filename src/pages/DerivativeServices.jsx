@@ -91,7 +91,7 @@ const DerivativeServices = () => {
               className="relative rounded-2xl overflow-hidden shadow-2xl border border-border"
             >
               <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800" alt="Derivative Analysis" className="w-full h-full object-cover opacity-80" />
-              <div className="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.8)] via-transparent to-transparent"></div>
             </motion.div>
           </div>
         </div>
