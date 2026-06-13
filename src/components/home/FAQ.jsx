@@ -32,13 +32,13 @@ const FAQ = () => {
     general: [
       {
         id: 1,
-        question: "What is StockWise and how does it work?",
-        answer: "StockWise is a SEBI-registered financial advisory platform that provides expert guidance for stock market investments. We offer research-backed recommendations, portfolio management services, and personalized advisory to help you achieve your financial goals. Our team of experts analyzes market trends and provides actionable insights through our platform, WhatsApp, and email."
+        question: "What is Tradevora Market Private Limited and how does it work?",
+        answer: "Tradevora Market Private Limited is a SEBI-registered financial advisory platform that provides expert guidance for stock market investments. We offer research-backed recommendations, portfolio management services, and personalized advisory to help you achieve your financial goals. Our team of experts analyzes market trends and provides actionable insights through our platform, WhatsApp, and email."
       },
       {
         id: 2,
-        question: "Is StockWise SEBI registered?",
-        answer: "Yes, StockWise is fully SEBI registered (Registration No: INA000012345). We comply with all SEBI regulations and guidelines to ensure complete transparency and security for our clients. Our advisors are certified professionals with years of market experience."
+        question: "Is Tradevora Market Private Limited SEBI registered?",
+        answer: "Yes, Tradevora Market Private Limited is fully SEBI registered (Registration No: INA000012345). We comply with all SEBI regulations and guidelines to ensure complete transparency and security for our clients. Our advisors are certified professionals with years of market experience."
       },
       {
         id: 3,
@@ -54,7 +54,7 @@ const FAQ = () => {
     account: [
       {
         id: 5,
-        question: "How do I open an account with StockWise?",
+        question: "How do I open an account with Tradevora Market Private Limited?",
         answer: "Opening an account is simple! Click on 'Get Started' button, fill in your basic details, complete KYC verification online, and choose your subscription plan. The entire process takes less than 15 minutes. Our team will assist you at every step."
       },
       {
@@ -109,7 +109,7 @@ const FAQ = () => {
       {
         id: 15,
         question: "What is your refund policy?",
-        answer: "We offer a 15-day money-back guarantee if you're not satisfied with our services. No questions asked! For annual plans, we provide pro-rata refunds for the unused period. Just email us at support@stockwise.com."
+        answer: "We offer a 15-day money-back guarantee if you're not satisfied with our services. No questions asked! For annual plans, we provide pro-rata refunds for the unused period. Just email us at support@tradevoramarket.com."
       },
       {
         id: 16,
@@ -231,6 +231,7 @@ const FAQ = () => {
 
         {/* FAQ Accordion */}
         <motion.div 
+          key={activeCategory}
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -346,7 +347,7 @@ const FAQ = () => {
               WhatsApp Us
             </a>
             <a 
-              href="mailto:support@stockwise.com"
+              href="mailto:support@tradevoramarket.com"
               className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 border border-white/10"
             >
               <FaEnvelope />

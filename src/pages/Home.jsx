@@ -26,13 +26,13 @@ const Home = () => {
           { value: "1000+", label: "Stocks" },
         ]}
         primaryButton={{
-          text: "Open Demat Account",
-          link: "/open-account",
+          text: "Get Free Consultation",
+          link: "tel:+919876543210",
           icon: <FiArrowRight />,
         }}
         secondaryButton={{
-          text: "Learn More",
-          link: "/learn",
+          text: "Contact",
+          link: "/contact",
           icon: <FiPlay />,
         }}
       />

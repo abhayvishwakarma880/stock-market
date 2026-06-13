@@ -40,12 +40,12 @@ const ContactPage = () => {
       icon: <FaEnvelope />,
       title: "Email Us",
       details: [
-        "info@stockwise.com",
-        "support@stockwise.com"
+        "info@tradevoramarket.com",
+        "support@tradevoramarket.com"
       ],
       description: "Send your queries and receive professional assistance from our team.",
       action: "Send Email",
-      link: "mailto:info@stockwise.com",
+      link: "mailto:info@tradevoramarket.com",
       color: "from-blue-500 to-cyan-500",
       bgColor: "bg-blue-500/10"
     },
@@ -53,7 +53,7 @@ const ContactPage = () => {
       icon: <FaMapMarkerAlt />,
       title: "Office Address",
       details: [
-        "StockWise Financial Advisory",
+        "Tradevora Market Private Limited",
         "Business Tower, Financial District",
         "Lucknow, Uttar Pradesh – 226010",
         "India"
@@ -155,7 +155,7 @@ const ContactPage = () => {
         }}
         secondaryButton={{
           text: "Email Us",
-          link: "mailto:info@stockwise.com",
+          link: "mailto:info@tradevoramarket.com",
           icon: <FaEnvelope />
         }}
         showStats={false}
@@ -322,7 +322,7 @@ const ContactPage = () => {
                   <FaRegBuilding className="text-success text-xl" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold text-xl mb-2">StockWise Financial Advisory</h3>
+                  <h3 className="text-white font-bold text-xl mb-2">Tradevora Market Private Limited</h3>
                   <p className="text-gray-300 leading-relaxed">
                     Business Tower, Financial District<br />
                     Lucknow, Uttar Pradesh – 226010<br />
@@ -352,7 +352,7 @@ const ContactPage = () => {
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="StockWise Office Location"
+                title="Tradevora Market Private Limited Office Location"
                 className="w-full h-full"
               ></iframe>
             </motion.div>
@@ -442,7 +442,7 @@ const ContactPage = () => {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="mailto:info@stockwise.com"
+                href="mailto:info@tradevoramarket.com"
                 className="bg-white/10 border border-white/20 text-white hover:bg-white/20 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
               >
                 <FaEnvelope />

@@ -183,7 +183,7 @@ const AboutCompany = () => {
               </h3>
               <div className="space-y-4 text-gray-300">
                 <p className="leading-relaxed">
-                  Founded in 2019 with a vision to simplify stock market investing, <span className="text-success font-semibold">StockWise</span> has grown into one of India's most trusted financial advisory platforms. We've helped over 10,000+ investors achieve their financial goals through our research-driven approach.
+                  Founded in 2019 with a vision to simplify stock market investing, <span className="text-success font-semibold">Tradevora Market Private Limited</span> has grown into one of India's most trusted financial advisory platforms. We've helped over 10,000+ investors achieve their financial goals through our research-driven approach.
                 </p>
                 <p className="leading-relaxed">
                   Our team of SEBI-registered experts combines decades of market experience with cutting-edge technology to provide actionable insights and personalized investment strategies.
@@ -224,18 +224,6 @@ const AboutCompany = () => {
                 className="w-full h-96 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/50 to-transparent"></div>
-              
-              {/* Experience Badge */}
-              <div className="absolute bottom-6 left-6 right-6 bg-success/90 backdrop-blur-sm rounded-xl p-4 flex items-center justify-between">
-                <div>
-                  <div className="text-white text-sm font-semibold">Years of Excellence</div>
-                  <div className="text-white text-2xl font-bold">5+ Years</div>
-                </div>
-                <div className="text-right">
-                  <div className="text-white text-sm font-semibold">Client Satisfaction</div>
-                  <div className="text-white text-2xl font-bold">98%</div>
-                </div>
-              </div>
             </div>
           </motion.div>
         </motion.div>
@@ -276,7 +264,7 @@ const AboutCompany = () => {
         >
           <motion.div variants={itemVariants} className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-3">
-              Why Choose <span className="text-success">StockWise</span>
+              Why Choose <span className="text-success">Tradevora Market Private Limited</span>
             </h3>
             <p className="text-gray-300">What makes us different from the rest</p>
           </motion.div>

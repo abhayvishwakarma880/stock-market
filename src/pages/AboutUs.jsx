@@ -22,6 +22,7 @@ import {
   FaPhoneAlt
 } from 'react-icons/fa';
 import Hero from '../components/Hero';
+import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
   const stats = [
@@ -125,11 +126,11 @@ const AboutUs = () => {
       {/* Hero Section */}
       <Hero 
         backgroundImage="https://t4.ftcdn.net/jpg/05/86/35/21/360_F_586352183_IC5sCdejPHQmmFMQomOJdOipIltpO00Z.jpg"
-        badgeText="ABOUT STOCKWISE"
+        badgeText="ABOUT TRADEVORA MARKET PRIVATE LIMITED"
         badgeIcon={<FaChartLine />}
         title="Empowering Investors With"
         // highlightedTitle="Research-Driven Financial Guidance"
-        subtitle="At StockWise Financial Advisory, we believe that successful investing begins with informed decision-making. Our mission is to provide investors with reliable market research, actionable insights, and personalized advisory solutions that help build long-term financial growth."
+        subtitle="At Tradevora Market Private Limited, we believe that successful investing begins with informed decision-making. Our mission is to provide investors with reliable market research, actionable insights, and personalized advisory solutions that help build long-term financial growth."
         // primaryButton={{
         //   text: "Get Started Free",
         //   link: "/get-started",
@@ -191,7 +192,7 @@ const AboutUs = () => {
               </h2>
               <div className="space-y-4 text-gray-300 leading-relaxed">
                 <p>
-                  StockWise Financial Advisory was founded with a simple goal: to help investors navigate financial markets with confidence.
+                  Tradevora Market Private Limited was founded with a simple goal: to help investors navigate financial markets with confidence.
                 </p>
                 <p>
                   Over the years, we have worked with individuals, traders, and long-term investors by providing research-backed market insights and practical investment strategies.
@@ -260,7 +261,7 @@ const AboutUs = () => {
               <span className="text-sm font-medium text-success">Why Choose Us</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-white">
-              Why Investors Trust <span className="text-success">StockWise</span>
+              Why Investors Trust <span className="text-success">Tradevora Market Private Limited</span>
             </h2>
           </motion.div>
 
@@ -311,7 +312,7 @@ const AboutUs = () => {
                   Financial markets are driven by opportunity, but successful investing requires discipline.
                 </p>
                 <p>
-                  At StockWise, we focus on identifying quality opportunities through market research, technical analysis, and risk assessment.
+                  At Tradevora Market Private Limited, we focus on identifying quality opportunities through market research, technical analysis, and risk assessment.
                 </p>
                 <p>
                   We believe that consistent decision-making, portfolio diversification, and a long-term perspective are essential components of wealth creation.
@@ -427,7 +428,7 @@ const AboutUs = () => {
                 <FaUserCheck className="text-white text-2xl" />
               </div>
               <h4 className="text-white font-bold">Rahul Sharma</h4>
-              <p className="text-gray-400 text-sm">Founder & CEO, StockWise</p>
+              <p className="text-gray-400 text-sm">Founder & CEO, Tradevora Market Private Limited</p>
             </div>
           </motion.div>
         </div>
@@ -453,17 +454,17 @@ const AboutUs = () => {
               Ready To Take The Next Step In Your Financial Journey?
             </h2>
             <p className="text-white/90 text-lg mb-8 max-w-2xl mx-auto">
-              Partner with StockWise and gain access to professional market research, personalized guidance, and strategic investment insights.
+              Partner with Tradevora Market Private Limited and gain access to professional market research, personalized guidance, and strategic investment insights.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <button className="bg-white text-success hover:bg-gray-100 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg">
+              <a href="tel:+919876543210" className="bg-white text-success hover:bg-gray-100 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg">
                 Get Free Consultation
                 <FaArrowRight />
-              </button>
-              <button className="bg-white/10 border border-white/20 text-white hover:bg-white/20 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300">
+              </a>
+              <Link to="/contact" className="bg-white/10 border border-white/20 text-white hover:bg-white/20 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300">
                 Contact Our Team
                 <FaWhatsapp />
-              </button>
+              </Link>
             </div>
           </motion.div>
         </div>

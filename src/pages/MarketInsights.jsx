@@ -401,7 +401,7 @@ const MarketInsights = () => {
               <span className="text-success">Reliable Research</span>
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-8">
-              At StockWise, we believe that informed decisions are built on reliable research. Our analysis combines market trends, technical studies, economic developments, and risk assessment to provide valuable insights that support disciplined investing.
+              At Tradevora Market Private Limited, we believe that informed decisions are built on reliable research. Our analysis combines market trends, technical studies, economic developments, and risk assessment to provide valuable insights that support disciplined investing.
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
               <div className="bg-white/5 rounded-xl p-4">

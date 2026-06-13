@@ -30,7 +30,7 @@ const TermsConditions = () => {
       title: "Acceptance of Terms",
       icon: <FaHandshake />,
       content: [
-        "By accessing or using StockWise Financial Advisory services, you agree to be bound by these Terms & Conditions",
+        "By accessing or using Tradevora Market Private Limited services, you agree to be bound by these Terms & Conditions",
         "If you do not agree with any part of these terms, you must not use our services",
         "We reserve the right to modify these terms at any time without prior notice",
         "Continued use of our services after changes constitutes acceptance of modified terms"
@@ -119,7 +119,7 @@ const TermsConditions = () => {
       content: [
         "All content, research reports, and recommendations are our intellectual property",
         "You may not reproduce, distribute, or sell our content without permission",
-        "StockWise name, logo, and branding are registered trademarks",
+        "Tradevora Market Private Limited name, logo, and branding are registered trademarks",
         "Unauthorized use of our intellectual property will result in legal action"
       ]
     },
@@ -131,7 +131,7 @@ const TermsConditions = () => {
         "7-day free trial available for new users",
         "Monthly plans: No refund after 7 days of subscription",
         "Annual plans: Pro-rata refund available for unused period",
-        "To cancel, email us at support@stockwise.com",
+        "To cancel, email us at support@tradevoramarket.com",
         "Refunds processed within 7-10 business days"
       ]
     },
@@ -235,7 +235,7 @@ const TermsConditions = () => {
               <h2 className="text-xl font-bold text-white mb-2">Legal Agreement</h2>
               <p className="text-gray-300 leading-relaxed">
                 These Terms & Conditions constitute a legally binding agreement between you ("User", "Client") 
-                and StockWise Financial Advisory ("Company", "We", "Us", "Our"). By accessing or using our services, 
+                and Tradevora Market Private Limited ("Company", "We", "Us", "Our"). By accessing or using our services, 
                 you acknowledge that you have read, understood, and agree to be bound by these terms.
               </p>
             </div>
@@ -341,7 +341,7 @@ const TermsConditions = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <p className="text-gray-400 text-sm">📧 Email: <a href="mailto:legal@stockwise.com" className="text-success hover:underline">legal@stockwise.com</a></p>
+              <p className="text-gray-400 text-sm">📧 Email: <a href="mailto:legal@tradevoramarket.com" className="text-success hover:underline">legal@tradevoramarket.com</a></p>
               <p className="text-gray-400 text-sm mt-2">📞 Phone: <a href="tel:+919876543210" className="text-success hover:underline">+91 98765 43210</a></p>
             </div>
             <div>
@@ -360,7 +360,7 @@ const TermsConditions = () => {
           className="mt-8 text-center"
         >
           <p className="text-gray-500 text-xs">
-            © {new Date().getFullYear()} StockWise Financial Advisory. All rights reserved.
+            © {new Date().getFullYear()} Tradevora Market Private Limited. All rights reserved.
           </p>
         </motion.div>
       </div>

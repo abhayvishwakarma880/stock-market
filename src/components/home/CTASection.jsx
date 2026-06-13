@@ -102,10 +102,10 @@ const CTASection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4"
         >
-          <button className="group bg-white text-success hover:bg-gray-100 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl">
+          <a href="tel:+919876543210" className="group bg-white text-success hover:bg-gray-100 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl">
             Get Started for Free
             <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
           
           <a 
             href="https://wa.me/919876543210"

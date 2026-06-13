@@ -34,7 +34,7 @@ const Testimonials = () => {
       date: "March 2024",
       platform: "Google",
       platformIcon: <FaGoogle />,
-      testimonial: "I've been trading with StockWise for over 2 years now. Their equity advisory has been spot-on, helping me generate consistent returns of 25%+ annually. The team is highly professional and always available for guidance.",
+      testimonial: "I've been trading with Tradevora Market Private Limited for over 2 years now. Their equity advisory has been spot-on, helping me generate consistent returns of 25%+ annually. The team is highly professional and always available for guidance.",
       stats: {
         returns: "+32%",
         period: "1 Year",
@@ -52,7 +52,7 @@ const Testimonials = () => {
       date: "February 2024",
       platform: "LinkedIn",
       platformIcon: <FaLinkedin />,
-      testimonial: "The derivatives strategies provided by StockWise are exceptional. Their risk management approach helped me hedge my portfolio effectively during volatile markets. Highly recommended for serious investors.",
+      testimonial: "The derivatives strategies provided by Tradevora Market Private Limited are exceptional. Their risk management approach helped me hedge my portfolio effectively during volatile markets. Highly recommended for serious investors.",
       stats: {
         returns: "+45%",
         period: "6 Months",
@@ -124,7 +124,7 @@ const Testimonials = () => {
       date: "February 2024",
       platform: "LinkedIn",
       platformIcon: <FaLinkedin />,
-      testimonial: "I recommend StockWise to all my clients. Their research-backed strategies and personalized advisory approach align perfectly with long-term wealth creation goals. Truly a trusted partner.",
+      testimonial: "I recommend Tradevora Market Private Limited to all my clients. Their research-backed strategies and personalized advisory approach align perfectly with long-term wealth creation goals. Truly a trusted partner.",
       stats: {
         returns: "+22%",
         period: "1 Year",

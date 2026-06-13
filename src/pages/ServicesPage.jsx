@@ -92,7 +92,7 @@ const ServicesPage = () => {
         "Risk Management Guidance",
         "Strategy-Based Market Approach"
       ],
-      image: "https://images.unsplash.com/photo-1642543348745-0d4db81d3b52?w=800",
+      image: "https://bl-i.thgim.com/public/incoming/1fi8vo/article65914840.ece/alternates/FREE_1200/IMG_Po05_markets_2_1_188UO57P.jpg",
       imageSide: "right",
       gradient: "from-purple-500 to-pink-500",
       bgGradient: "from-purple-500/10 to-pink-500/5",
@@ -151,10 +151,10 @@ const ServicesPage = () => {
         badgeIcon={<FaChartLine />}
         title="Professional Market Research &"
         highlightedTitle="Advisory Services"
-        subtitle="At StockWise Financial Advisory, we provide research-driven market insights and strategic guidance across equity, derivative, and index segments. Our objective is to help investors and traders make informed decisions with confidence and discipline."
+        subtitle="At Tradevora Market Private Limited, we provide research-driven market insights and strategic guidance across equity, derivative, and index segments. Our objective is to help investors and traders make informed decisions with confidence and discipline."
         primaryButton={{
           text: "Get Free Consultation",
-          link: "/get-started",
+          link: "tel:+919876543210",
           icon: <FaArrowRight />
         }}
         secondaryButton={{
@@ -167,7 +167,7 @@ const ServicesPage = () => {
 
       {/* Services Sections */}
       {services.map((service, index) => (
-        <div key={service.id} className="relative py-24 md:py-32 overflow-hidden">
+        <div key={service.id} className="relative py-12 md:py-16 overflow-hidden">
           {/* Background Gradient */}
           <div className={`absolute inset-0 bg-gradient-to-br ${service.bgGradient} opacity-50`}></div>
           
@@ -177,7 +177,7 @@ const ServicesPage = () => {
           </div>
 
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center ${
+            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center ${
               service.imageSide === 'right' ? 'lg:flex-row-reverse' : ''
             }`}>
               
@@ -241,7 +241,7 @@ const ServicesPage = () => {
                 </p>
 
                 {/* Features Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
                   {service.features.map((feature, idx) => (
                     <motion.div 
                       key={idx}
@@ -256,16 +256,6 @@ const ServicesPage = () => {
                     </motion.div>
                   ))}
                 </div>
-
-                {/* CTA Button */}
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-white bg-gradient-to-r ${service.gradient} shadow-lg hover:shadow-xl transition-all duration-300`}
-                >
-                  Learn More About {service.title}
-                  <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-                </motion.button>
               </motion.div>
             </div>
           </div>
@@ -273,7 +263,7 @@ const ServicesPage = () => {
       ))}
 
       {/* Why Choose Our Advisory Services Section */}
-      <div className="relative py-24 md:py-32 bg-gradient-to-b from-primary to-primary/95">
+      <div className="relative py-6 md:py-8 bg-gradient-to-b from-primary to-primary/95">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-96 h-96 bg-success/5 rounded-full filter blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full filter blur-3xl"></div>
@@ -350,14 +340,15 @@ const ServicesPage = () => {
               Get access to professional market research, strategic guidance, and personalized advisory support designed to help you navigate financial markets with confidence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.button
+              <motion.a
+                href="tel:+919876543210"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-success hover:bg-gray-100 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg"
               >
                 Get Free Consultation
                 <FaArrowRight />
-              </motion.button>
+              </motion.a>
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

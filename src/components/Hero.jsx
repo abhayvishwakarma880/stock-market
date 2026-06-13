@@ -6,6 +6,7 @@ import {
   FiShield,
   FiClock,
 } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Hero = ({
   // Background
@@ -31,7 +32,7 @@ const Hero = ({
   // Buttons
   primaryButton = {
     text: "Get Started Free",
-    link: "/get-started",
+    link: "tel:+919876543210",
     icon: <FiArrowRight />,
   },
   secondaryButton = {
@@ -125,29 +126,29 @@ const Hero = ({
               )}
 
               {secondaryButton && (
-                <a
-                  href={secondaryButton.link}
+                <Link
+                  to={secondaryButton.link}
                   className="inline-flex items-center justify-center gap-2 bg-white/10 backdrop-blur-sm hover:bg-white/20 text-white px-8 py-4 rounded-xl font-semibold transition-all duration-300 border border-white/20"
                 >
                   {secondaryButton.icon}
                   {secondaryButton.text}
-                </a>
+                </Link>
               )}
             </div>
           )}
 
           {/* Stats/Features */}
           {showStats && features && features.length > 0 && (
-            <div className="flex flex-wrap gap-3 md:gap-5 animate-fadeInUp animation-delay-400 mb-10">
+            <div className="grid grid-cols-3 gap-2 md:flex md:flex-wrap md:gap-5 animate-fadeInUp animation-delay-400 mb-10">
               {features.map((feature, index) => (
                 <div 
                   key={index} 
-                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl py-3 px-5 md:px-6 text-center md:text-left hover:bg-white/10 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 cursor-default group"
+                  className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl md:rounded-2xl py-2 px-2 sm:px-4 md:py-3 md:px-6 text-center md:text-left hover:bg-white/10 hover:-translate-y-1 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] transition-all duration-300 cursor-default group flex flex-col justify-center"
                 >
-                  <div className="text-2xl md:text-3xl font-extrabold text-white mb-1 group-hover:text-success transition-colors">
+                  <div className="text-lg sm:text-xl md:text-3xl font-extrabold text-white mb-0.5 md:mb-1 group-hover:text-success transition-colors">
                     {feature.value}
                   </div>
-                  <div className="text-xs font-medium text-gray-400 uppercase tracking-wider">
+                  <div className="text-[9px] sm:text-[10px] md:text-xs font-medium text-gray-400 uppercase tracking-wider leading-tight">
                     {feature.label}
                   </div>
                 </div>

@@ -205,7 +205,7 @@ const PrivacyPolicy = () => {
             <div>
               <h2 className="text-xl font-bold text-white mb-2">Our Commitment to Privacy</h2>
               <p className="text-gray-300 leading-relaxed">
-                At StockWise, we are committed to protecting your privacy and ensuring the security of your personal information. 
+                At Tradevora Market Private Limited, we are committed to protecting your privacy and ensuring the security of your personal information. 
                 This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our services. 
                 We comply with all applicable data protection laws and regulations, including the Information Technology Act, 2000, 
                 and the proposed Digital Personal Data Protection Bill, 2023.
@@ -290,7 +290,7 @@ const PrivacyPolicy = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <p className="text-gray-400 text-sm">📧 Email: <a href="mailto:privacy@stockwise.com" className="text-success hover:underline">privacy@stockwise.com</a></p>
+              <p className="text-gray-400 text-sm">📧 Email: <a href="mailto:privacy@tradevoramarket.com" className="text-success hover:underline">privacy@tradevoramarket.com</a></p>
               <p className="text-gray-400 text-sm mt-2">📞 Phone: <a href="tel:+919876543210" className="text-success hover:underline">+91 98765 43210</a></p>
             </div>
             <div>
@@ -309,7 +309,7 @@ const PrivacyPolicy = () => {
           className="mt-8 text-center"
         >
           <p className="text-gray-500 text-xs">
-            © {new Date().getFullYear()} StockWise Financial Advisory. All rights reserved.
+            © {new Date().getFullYear()} Tradevora Market Private Limited. All rights reserved.
           </p>
         </motion.div>
       </div>

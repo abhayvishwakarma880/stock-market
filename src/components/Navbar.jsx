@@ -46,7 +46,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className={`block transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`} style={{ backgroundColor: '#0F172A' }}>
+      <div className={`hidden md:block transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`} style={{ backgroundColor: '#0F172A' }}>
         <div className="max-w-7xl mx-auto px-4 lg:px-6 overflow-x-auto scrollbar-hide">
           <div className="flex items-center justify-between min-w-max gap-8 lg:gap-0">
             {/* Left - Contact Info */}
@@ -61,7 +61,7 @@ const Navbar = () => {
                 <div className="p-1 rounded-full bg-white/10 group-hover:bg-success/20 transition-colors">
                   <FiMail size={12} className="text-success" />
                 </div>
-                <span className="text-sm">info@stockwise.com</span>
+                <span className="text-sm">info@tradevoramarket.com</span>
               </div>
               <div className="flex items-center gap-2 text-muted">
                 <div className="p-1 rounded-full bg-white/10">
@@ -114,17 +114,17 @@ const Navbar = () => {
         }`}
         style={{ borderBottom: '1px solid #E2E8F0' }}
       >
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="flex items-center justify-between h-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo Section with Live Chart */}
             <div className="flex items-center gap-3">
               <Link to="/" className="flex items-center gap-3">
-                {/* <img src="/logo.png" alt="StockWise" className="h-10 md:h-12 object-contain" /> */}
+                {/* <img src="/logo.png" alt="Tradevora Market Private Limited" className="h-10 md:h-12 object-contain" /> */}
                 <div>
-                  <h1 className="font-bold text-xl tracking-tight text-text">
-                    Stock<span className="text-success">Wise</span>
+                  <h1 className="font-bold text-lg md:text-xl tracking-tight text-text">
+                    Tradevora<span className="text-success"> Market</span>
                   </h1>
-                  <p className="text-xs text-muted">Financial Advisory</p>
+                  <p className="text-[10px] md:text-xs text-muted leading-tight">Financial Advisory</p>
                 </div>
               </Link>
               
@@ -159,10 +159,10 @@ const Navbar = () => {
 
             {/* Right Side - CTA & Mobile Menu */}
             <div className="flex items-center gap-4">
-              <button className="hidden md:flex items-center gap-2 bg-success hover:bg-hover text-white px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:scale-105">
+              <a href="tel:+919876543210" className="hidden md:flex items-center gap-2 bg-success hover:bg-hover text-white px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:scale-105">
                 Get Free Consultation
                 <FiArrowUpRight size={16} />
-              </button>
+              </a>
 
               {/* Mobile Menu Button */}
               <button
@@ -212,10 +212,10 @@ const Navbar = () => {
                 </NavLink>
               ))}
               <div className="h-px bg-gray-100 my-4"></div>
-              <button className="flex items-center justify-center gap-2 bg-success hover:bg-hover text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 mt-2 shadow-md">
+              <a href="tel:+919876543210" className="flex items-center justify-center gap-2 bg-success hover:bg-hover text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 mt-2 shadow-md">
                 Get Free Consultation
                 <FiArrowUpRight size={16} />
-              </button>
+              </a>
               
               {/* Mobile Contact Info */}
               <div className="mt-8 pt-6 border-t border-gray-100 space-y-4">
@@ -225,7 +225,7 @@ const Navbar = () => {
                 </div>
                 <div className="flex items-center gap-3 text-muted">
                   <FiMail size={14} className="text-success" />
-                  <span className="text-sm">info@stockwise.com</span>
+                  <span className="text-sm">info@tradevoramarket.com</span>
                 </div>
                 <div className="flex items-center gap-6 pt-4 pb-4">
                   <FaFacebookF size={16} className="text-muted hover:text-success cursor-pointer transition-colors" />
