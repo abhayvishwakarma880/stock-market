@@ -11,9 +11,15 @@ export default defineConfig({
   build: {
     rollupOptions: {
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom', 'react-router-dom'],
-          ui: ['framer-motion', 'recharts', 'react-icons'],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react/') || id.includes('react-dom/') || id.includes('react-router-dom/')) {
+              return 'vendor';
+            }
+            if (id.includes('framer-motion/') || id.includes('recharts/') || id.includes('react-icons/')) {
+              return 'ui';
+            }
+          }
         }
       }
     }
