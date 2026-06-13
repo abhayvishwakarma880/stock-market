@@ -272,7 +272,7 @@ const Footer = () => {
                 href="https://www.codecrafter.co.in/"
                 className="inline-flex items-center hover:opacity-80 transition-opacity"
               >
-                <img
+                <img loading="lazy"
                   src="https://mango.codecrafter.co.in/assets/ccws-l-lAMUu5.png"
                   alt="CodeCrafter Logo"
                   className="h-6 object-contain"

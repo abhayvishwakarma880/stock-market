@@ -90,7 +90,7 @@ const EquityServices = () => {
               viewport={{ once: true }}
               className="relative rounded-2xl overflow-hidden shadow-2xl border border-border"
             >
-              <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800" alt="Equity Analysis" className="w-full h-full object-cover opacity-80" />
+              <img loading="lazy" src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800" alt="Equity Analysis" className="w-full h-full object-cover opacity-80" />
               <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.8)] via-transparent to-transparent"></div>
             </motion.div>
           </div>

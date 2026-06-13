@@ -252,7 +252,7 @@ const MarketInsights = () => {
                   className="bg-card backdrop-blur-sm rounded-2xl overflow-hidden border border-border hover:border-success/30 transition-all duration-300 group"
                 >
                   <div className="relative h-56 overflow-hidden">
-                    <img 
+                    <img loading="lazy" 
                       src={insight.image} 
                       alt={insight.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
@@ -321,7 +321,7 @@ const MarketInsights = () => {
                 className="bg-card backdrop-blur-sm rounded-xl overflow-hidden border border-border hover:border-success/30 transition-all duration-300 group"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img 
+                  <img loading="lazy" 
                     src={insight.image} 
                     alt={insight.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

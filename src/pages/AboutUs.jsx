@@ -163,7 +163,7 @@ const AboutUs = () => {
               className="relative"
             >
               <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                <img 
+                <img loading="lazy" 
                   src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800"
                   alt="Our Journey"
                   className="w-full h-96 object-cover"
@@ -327,7 +327,7 @@ const AboutUs = () => {
               transition={{ duration: 0.6 }}
               className="relative"
             >
-              <img 
+              <img loading="lazy" 
                 src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800"
                 alt="Investment Philosophy"
                 className="rounded-2xl shadow-2xl"

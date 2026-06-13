@@ -1,14 +1,16 @@
-import ColorCheck from "./ColorCheck";
-import AboutUs from "./pages/AboutUs";
-import ContactPage from "./pages/ContactPage";
-import Home from "./pages/Home";
-import MarketInsights from "./pages/MarketInsights";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import ServicesPage from "./pages/ServicesPage";
-import TermsConditions from "./pages/TermsConditions";
-import EquityServices from "./pages/EquityServices";
-import DerivativeServices from "./pages/DerivativeServices";
-import IndexServices from "./pages/IndexServices";
+import { lazy } from "react";
+
+const ColorCheck = lazy(() => import("./ColorCheck"));
+const AboutUs = lazy(() => import("./pages/AboutUs"));
+const ContactPage = lazy(() => import("./pages/ContactPage"));
+const Home = lazy(() => import("./pages/Home"));
+const MarketInsights = lazy(() => import("./pages/MarketInsights"));
+const PrivacyPolicy = lazy(() => import("./pages/PrivacyPolicy"));
+const ServicesPage = lazy(() => import("./pages/ServicesPage"));
+const TermsConditions = lazy(() => import("./pages/TermsConditions"));
+const EquityServices = lazy(() => import("./pages/EquityServices"));
+const DerivativeServices = lazy(() => import("./pages/DerivativeServices"));
+const IndexServices = lazy(() => import("./pages/IndexServices"));
 
 const AppRoute = [
     { path: "/", element: Home, name: "Home" },

@@ -119,7 +119,7 @@ const Navbar = () => {
             {/* Logo Section with Live Chart */}
             <div className="flex items-center gap-3">
               <Link to="/" className="flex items-center gap-3">
-                {/* <img src="/logo.png" alt="Tradevora Market Private Limited" className="h-10 md:h-12 object-contain" /> */}
+                {/* <img loading="lazy" src="/logo.png" alt="Tradevora Market Private Limited" className="h-10 md:h-12 object-contain" /> */}
                 <div>
                   <h1 className="font-bold text-lg md:text-xl tracking-tight text-nav-text">
                     Tradevora<span className="text-success"> Market</span>

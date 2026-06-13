@@ -218,7 +218,7 @@ const AboutCompany = () => {
             className="relative"
           >
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img 
+              <img loading="lazy" 
                 src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"
                 alt="Trading Floor"
                 className="w-full h-96 object-cover"
@@ -306,7 +306,7 @@ const AboutCompany = () => {
                 <div className="text-3xl md:text-4xl font-bold text-success mb-2">
                   {stat.number}
                 </div>
-                <div className="text-text-text text-sm">{stat.label}</div>
+                <div className="text-text text-sm">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -315,7 +315,7 @@ const AboutCompany = () => {
             variants={itemVariants}
             className="text-center mt-8 pt-8 border-t border-border"
           >
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-text-text">
+            <div className="flex flex-wrap justify-center gap-6 text-sm text-text">
               <span className="flex items-center gap-2">
                 <FaCheckCircle className="text-success" size={14} />
                 SEBI Registered

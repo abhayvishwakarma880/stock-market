@@ -353,7 +353,7 @@ const Testimonials = () => {
               {/* Client Info */}
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-4">
-                  <img 
+                  <img loading="lazy" 
                     src={testimonials[currentIndex].image} 
                     alt={testimonials[currentIndex].name}
                     className="w-14 h-14 rounded-full object-cover border-2 border-success"
@@ -433,7 +433,7 @@ const Testimonials = () => {
                 "{testimonial.testimonial}"
               </p>
               <div className="flex items-center gap-3">
-                <img 
+                <img loading="lazy" 
                   src={testimonial.image} 
                   alt={testimonial.name}
                   className="w-10 h-10 rounded-full object-cover"
