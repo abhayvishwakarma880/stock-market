@@ -6,7 +6,7 @@ html, body {
   width: 100%;
 }
 
-/* @theme {
+@theme {
   --color-primary: #0F172A;
   --color-secondary: #1E3A8A;
   --color-success: #10B981;
@@ -23,10 +23,10 @@ html, body {
   
   --color-nav-bg: #FFFFFF;
   --color-nav-text: #0F172A;
-} */
+}
 
-@theme {
-  --color-primary: #FFFFFF;
+/* @theme {
+  --color-primary: #F4F4F4;
   --color-secondary: #F1F5F9;
   --color-success: #10B981;
   --color-hover: #059669;
@@ -42,7 +42,7 @@ html, body {
   
   --color-nav-bg: #FFFFFF;
   --color-nav-text: #0F172A;
-}
+} */
 
 /* 
 =======================================================

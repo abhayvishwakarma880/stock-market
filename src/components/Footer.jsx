@@ -112,10 +112,10 @@ const Footer = () => {
                 <h2 className="text-text font-bold text-xl">
                   Tradevora<span className="text-success"> Market</span>
                 </h2>
-                <p className="text-gray-400 text-xs">Financial Advisory</p>
+                <p className="text-text text-xs">Financial Advisory</p>
               </div>
             </div>
-            <p className="text-gray-400 text-sm mb-4 leading-relaxed">
+            <p className="text-text text-sm mb-4 leading-relaxed">
               India's most trusted financial advisory platform. We help
               investors achieve their financial goals through expert guidance
               and research-backed strategies.
@@ -142,7 +142,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 bg-card hover:bg-success/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-success transition-all duration-300"
+                  className="w-8 h-8 bg-card hover:bg-success/20 rounded-lg flex items-center justify-center text-text hover:text-success transition-all duration-300"
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -162,7 +162,7 @@ const Footer = () => {
                 <li key={idx}>
                   <Link
                     to={link.href}
-                    className="text-gray-400 hover:text-success transition-colors duration-300 flex items-center gap-2 group"
+                    className="text-text hover:text-success transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <FaArrowRight className="text-success opacity-0 group-hover:opacity-100 transition-all duration-300 text-xs" />
                     {link.name}
@@ -183,7 +183,7 @@ const Footer = () => {
                 <li key={idx}>
                   <Link
                     to={service.href}
-                    className="text-gray-400 hover:text-success transition-colors duration-300 flex items-center gap-2 group"
+                    className="text-text hover:text-success transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <FaArrowRight className="text-success opacity-0 group-hover:opacity-100 transition-all duration-300 text-xs" />
                     {service.name}
@@ -203,8 +203,8 @@ const Footer = () => {
               <div className="flex items-start gap-3 group">
                 <FaMapMarkerAlt className="text-success mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-gray-400 text-sm">801, Business Hub,</p>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-text text-sm">801, Business Hub,</p>
+                  <p className="text-text text-sm">
                     Andheri East, Mumbai - 400069
                   </p>
                 </div>
@@ -214,7 +214,7 @@ const Footer = () => {
                 <FaPhoneAlt className="text-success group-hover:scale-110 transition-transform" />
                 <a
                   href="tel:+919876543210"
-                  className="text-gray-400 hover:text-success transition-colors text-sm"
+                  className="text-text hover:text-success transition-colors text-sm"
                 >
                   +91 98765 43210
                 </a>
@@ -224,7 +224,7 @@ const Footer = () => {
                 <FaEnvelope className="text-success group-hover:scale-110 transition-transform" />
                 <a
                   href="mailto:info@tradevoramarket.com"
-                  className="text-gray-400 hover:text-success transition-colors text-sm"
+                  className="text-text hover:text-success transition-colors text-sm"
                 >
                   info@tradevoramarket.com
                 </a>
@@ -234,7 +234,7 @@ const Footer = () => {
                 <FaRegEnvelope className="text-success group-hover:scale-110 transition-transform" />
                 <a
                   href="mailto:support@tradevoramarket.com"
-                  className="text-gray-400 hover:text-success transition-colors text-sm"
+                  className="text-text hover:text-success transition-colors text-sm"
                 >
                   support@tradevoramarket.com
                 </a>
@@ -243,10 +243,10 @@ const Footer = () => {
               <div className="flex items-center gap-3 group">
                 <FaClock className="text-success group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-gray-400 text-sm">
+                  <p className="text-text text-sm">
                     Mon - Sat: 9:00 AM - 6:00 PM
                   </p>
-                  <p className="text-gray-500 text-xs">Sunday Closed</p>
+                  <p className="text-text text-xs">Sunday Closed</p>
                 </div>
               </div>
             </div>
@@ -262,7 +262,7 @@ const Footer = () => {
           className="border-t border-border pt-8"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-gray-400 text-sm text-center md:text-left flex flex-wrap items-center justify-center md:justify-start gap-1.5">
+            <div className="text-text text-sm text-center md:text-left flex flex-wrap items-center justify-center md:justify-start gap-1.5">
               <span>
                 © {currentYear} Tradevora Market Private Limited. Crafted by
               </span>
@@ -283,14 +283,14 @@ const Footer = () => {
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <Link
                 to="/privacy-policy"
-                className="text-gray-400 hover:text-success transition-colors"
+                className="text-text hover:text-success transition-colors"
               >
                 Privacy Policy
               </Link>
               <span className="text-gray-600">|</span>
               <Link
                 to="/terms-conditions"
-                className="text-gray-400 hover:text-success transition-colors"
+                className="text-text hover:text-success transition-colors"
               >
                 Terms & Conditions
               </Link>
@@ -298,7 +298,7 @@ const Footer = () => {
           </div>
 
           <div className="text-center mt-4">
-            <p className="text-gray-500 text-xs">
+            <p className="text-text text-xs">
               Disclaimer: Stock market investments are subject to market risks.
               Please read all scheme related documents carefully before
               investing.
