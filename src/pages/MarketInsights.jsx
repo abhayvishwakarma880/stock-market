@@ -146,11 +146,15 @@ const MarketInsights = () => {
       
       {/* Hero Section */}
       <Hero 
-        backgroundImage="https://t4.ftcdn.net/jpg/13/66/21/03/360_F_1366210358_k0tZvltJSG3trmtm1hhys8o5kd4froXC.jpg"
+        images={[
+          "/assets/images/mi.png",
+          "/assets/images/m2.png",
+          "/assets/images/m3.png",
+        ]}
         badgeText="MARKET INSIGHTS"
         badgeIcon={<FaChartLine />}
-        title="Stay Informed With"
-        highlightedTitle="Market Trends & Investment Insights"
+        title="Stay Informed"
+        // highlightedTitle="Market Trends & Investment Insights"
         subtitle="Explore expert perspectives, market analysis, and educational resources designed to help investors and traders better understand financial markets and make informed decisions."
         // primaryButton={{
         //   text: "Explore Insights",

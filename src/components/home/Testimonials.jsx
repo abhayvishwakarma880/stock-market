@@ -203,7 +203,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-primary to-primary/95 py-20 md:py-28">
+    <div className="relative overflow-hidden bg-gradient-to-b from-primary to-primary/95 py-15 md:py-20">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-success/10 rounded-full filter blur-3xl animate-pulse"></div>
@@ -217,7 +217,7 @@ const Testimonials = () => {
         backgroundRepeat: 'repeat'
       }}></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <motion.div 
@@ -227,7 +227,7 @@ const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-12"
         >
-          <motion.div 
+          {/* <motion.div 
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
@@ -237,7 +237,7 @@ const Testimonials = () => {
             <FaQuoteLeft className="text-success" size={14} />
             <span className="text-sm font-medium text-success">Client Testimonials</span>
             <FaQuoteRight className="text-success" size={14} />
-          </motion.div>
+          </motion.div> */}
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
             What Our{' '}

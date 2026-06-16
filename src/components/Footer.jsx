@@ -29,17 +29,14 @@ const Footer = () => {
     { name: "About Us", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Market Insights", href: "/insights" },
-    { name: "Contact Us", href: "/contact" },
-    { name: "FAQ", href: "/faq" },
+    { name: "Get In Touch", href: "/contact" },
+    // { name: "FAQ", href: "/faq" },
   ];
 
   const services = [
     { name: "Equity Advisory", href: "/services/equity" },
     { name: "Derivative Services", href: "/services/derivatives" },
     { name: "Index Services", href: "/services/index" },
-    { name: "Portfolio Management", href: "/services/portfolio" },
-    { name: "Market Research", href: "/services/research" },
-    { name: "Risk Management", href: "/services/risk" },
   ];
 
   const socialIcons = [
@@ -77,11 +74,11 @@ const Footer = () => {
   };
 
   return (
-    <footer className="relative bg-primary pt-16 pb-8 overflow-hidden">
+    <footer className="relative bg-slate-900 pt-16 pb-8 overflow-hidden text-slate-200">
       {/* Animated Background */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-96 h-96 bg-success/5 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-0 left-0 w-96 h-96 bg-success/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-blue-500/10 rounded-full filter blur-3xl"></div>
       </div>
 
       {/* Grid Pattern */}
@@ -105,34 +102,21 @@ const Footer = () => {
           {/* Column 1 - Brand Info */}
           <motion.div variants={itemVariants}>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-success to-secondary rounded-lg flex items-center justify-center">
-                <FaChartLine className="text-text text-xl" />
+              <div className="w-10 h-10 bg-gradient-to-r from-success to-blue-600 rounded-lg flex items-center justify-center">
+                <FaChartLine className="text-white text-xl" />
               </div>
               <div>
-                <h2 className="text-text font-bold text-xl">
+                <h2 className="text-white font-bold text-xl">
                   Tradevora<span className="text-success"> Market</span>
                 </h2>
-                <p className="text-text text-xs">Financial Advisory</p>
+                <p className="text-slate-400 text-xs">Financial Advisory</p>
               </div>
             </div>
-            <p className="text-text text-sm mb-4 leading-relaxed">
+            <p className="text-slate-300 text-sm mb-4 leading-relaxed">
               India's most trusted financial advisory platform. We help
               investors achieve their financial goals through expert guidance
               and research-backed strategies.
             </p>
-
-            {/* Certifications */}
-            <div className="flex flex-wrap gap-2 mb-4">
-              <span className="bg-card text-success text-xs px-2 py-1 rounded">
-                SEBI Registered
-              </span>
-              <span className="bg-card text-success text-xs px-2 py-1 rounded">
-                ISO Certified
-              </span>
-              <span className="bg-card text-success text-xs px-2 py-1 rounded">
-                MSME Registered
-              </span>
-            </div>
 
             {/* Social Icons */}
             <div className="flex gap-3">
@@ -142,7 +126,7 @@ const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 bg-card hover:bg-success/20 rounded-lg flex items-center justify-center text-text hover:text-success transition-all duration-300"
+                  className="w-8 h-8 bg-slate-800 hover:bg-success/20 rounded-lg flex items-center justify-center text-slate-300 hover:text-success transition-all duration-300"
                   aria-label={social.label}
                 >
                   {social.icon}
@@ -153,7 +137,7 @@ const Footer = () => {
 
           {/* Column 2 - Quick Links */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-text font-semibold text-lg mb-4 relative inline-block">
+            <h3 className="text-white font-semibold text-lg mb-4 relative inline-block">
               Quick Links
               <div className="absolute -bottom-1 left-0 w-12 h-0.5 bg-success rounded-full"></div>
             </h3>
@@ -162,7 +146,7 @@ const Footer = () => {
                 <li key={idx}>
                   <Link
                     to={link.href}
-                    className="text-text hover:text-success transition-colors duration-300 flex items-center gap-2 group"
+                    className="text-slate-300 hover:text-success transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <FaArrowRight className="text-success opacity-0 group-hover:opacity-100 transition-all duration-300 text-xs" />
                     {link.name}
@@ -174,7 +158,7 @@ const Footer = () => {
 
           {/* Column 3 - Our Services */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-text font-semibold text-lg mb-4 relative inline-block">
+            <h3 className="text-white font-semibold text-lg mb-4 relative inline-block">
               Our Services
               <div className="absolute -bottom-1 left-0 w-12 h-0.5 bg-success rounded-full"></div>
             </h3>
@@ -183,7 +167,7 @@ const Footer = () => {
                 <li key={idx}>
                   <Link
                     to={service.href}
-                    className="text-text hover:text-success transition-colors duration-300 flex items-center gap-2 group"
+                    className="text-slate-300 hover:text-success transition-colors duration-300 flex items-center gap-2 group"
                   >
                     <FaArrowRight className="text-success opacity-0 group-hover:opacity-100 transition-all duration-300 text-xs" />
                     {service.name}
@@ -195,7 +179,7 @@ const Footer = () => {
 
           {/* Column 4 - Contact Info */}
           <motion.div variants={itemVariants}>
-            <h3 className="text-text font-semibold text-lg mb-4 relative inline-block">
+            <h3 className="text-white font-semibold text-lg mb-4 relative inline-block">
               Get In Touch
               <div className="absolute -bottom-1 left-0 w-12 h-0.5 bg-success rounded-full"></div>
             </h3>
@@ -203,8 +187,8 @@ const Footer = () => {
               <div className="flex items-start gap-3 group">
                 <FaMapMarkerAlt className="text-success mt-0.5 group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-text text-sm">801, Business Hub,</p>
-                  <p className="text-text text-sm">
+                  <p className="text-slate-300 text-sm">801, Business Hub,</p>
+                  <p className="text-slate-300 text-sm">
                     Andheri East, Mumbai - 400069
                   </p>
                 </div>
@@ -214,7 +198,7 @@ const Footer = () => {
                 <FaPhoneAlt className="text-success group-hover:scale-110 transition-transform" />
                 <a
                   href="tel:+919876543210"
-                  className="text-text hover:text-success transition-colors text-sm"
+                  className="text-slate-300 hover:text-success transition-colors text-sm"
                 >
                   +91 98765 43210
                 </a>
@@ -224,7 +208,7 @@ const Footer = () => {
                 <FaEnvelope className="text-success group-hover:scale-110 transition-transform" />
                 <a
                   href="mailto:info@tradevoramarket.com"
-                  className="text-text hover:text-success transition-colors text-sm"
+                  className="text-slate-300 hover:text-success transition-colors text-sm"
                 >
                   info@tradevoramarket.com
                 </a>
@@ -234,7 +218,7 @@ const Footer = () => {
                 <FaRegEnvelope className="text-success group-hover:scale-110 transition-transform" />
                 <a
                   href="mailto:support@tradevoramarket.com"
-                  className="text-text hover:text-success transition-colors text-sm"
+                  className="text-slate-300 hover:text-success transition-colors text-sm"
                 >
                   support@tradevoramarket.com
                 </a>
@@ -243,10 +227,10 @@ const Footer = () => {
               <div className="flex items-center gap-3 group">
                 <FaClock className="text-success group-hover:scale-110 transition-transform" />
                 <div>
-                  <p className="text-text text-sm">
+                  <p className="text-slate-300 text-sm">
                     Mon - Sat: 9:00 AM - 6:00 PM
                   </p>
-                  <p className="text-text text-xs">Sunday Closed</p>
+                  <p className="text-slate-400 text-xs">Sunday Closed</p>
                 </div>
               </div>
             </div>
@@ -259,10 +243,10 @@ const Footer = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="border-t border-border pt-8"
+          className="border-t border-slate-800 pt-8"
         >
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-text text-sm text-center md:text-left flex flex-wrap items-center justify-center md:justify-start gap-1.5">
+            <div className="text-slate-400 text-sm text-center md:text-left flex flex-wrap items-center justify-center md:justify-start gap-1.5">
               <span>
                 © {currentYear} Tradevora Market Private Limited. Crafted by
               </span>
@@ -283,14 +267,14 @@ const Footer = () => {
             <div className="flex flex-wrap justify-center gap-4 text-sm">
               <Link
                 to="/privacy-policy"
-                className="text-text hover:text-success transition-colors"
+                className="text-slate-400 hover:text-success transition-colors"
               >
                 Privacy Policy
               </Link>
-              <span className="text-gray-600">|</span>
+              <span className="text-slate-600">|</span>
               <Link
                 to="/terms-conditions"
-                className="text-text hover:text-success transition-colors"
+                className="text-slate-400 hover:text-success transition-colors"
               >
                 Terms & Conditions
               </Link>
@@ -298,7 +282,7 @@ const Footer = () => {
           </div>
 
           <div className="text-center mt-4">
-            <p className="text-text text-xs">
+            <p className="text-slate-500 text-xs">
               Disclaimer: Stock market investments are subject to market risks.
               Please read all scheme related documents carefully before
               investing.
@@ -311,7 +295,7 @@ const Footer = () => {
           href="https://wa.me/919876543210"
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 bg-success hover:bg-hover text-text w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-50 group"
+          className="fixed bottom-6 right-6 bg-success hover:bg-hover text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 z-50 group"
         >
           <FaWhatsapp
             size={28}

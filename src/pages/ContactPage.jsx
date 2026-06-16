@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   FaPhoneAlt, 
@@ -22,6 +22,52 @@ import {
 import Hero from '../components/Hero';
 
 const ContactPage = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    
+    const payload = {
+      access_key: "6321f359-02b0-4e8d-be16-c120b165a4bc",
+      ...formData
+    };
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (response.ok) {
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch (error) {
+      console.error(error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
   const contactCards = [
     {
       icon: <FaPhoneAlt />,
@@ -54,9 +100,6 @@ const ContactPage = () => {
       title: "Office Address",
       details: [
         "Tradevora Market Private Limited",
-        "Business Tower, Financial District",
-        "Lucknow, Uttar Pradesh – 226010",
-        "India"
       ],
       description: "Meet our team and discuss your financial requirements in person.",
       action: "Get Directions",
@@ -78,41 +121,6 @@ const ContactPage = () => {
       color: "from-orange-500 to-red-500",
       bgColor: "bg-orange-500/10"
     }
-  ];
-
-  const services = [
-    {
-      icon: <FaChartLine />,
-      title: "Equity Advisory",
-      description: "Research-driven insights for equity market participants seeking informed investment decisions.",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: <FaChartBar />,
-      title: "Derivative Analysis",
-      description: "Market analysis and strategic guidance across futures and options segments.",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: <FaChartPie />,
-      title: "Index Insights",
-      description: "Understanding market direction through benchmark index research and trend evaluation.",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: <FaUserCheck />,
-      title: "Investment Guidance",
-      description: "Helping investors build confidence through professional market understanding.",
-      color: "from-orange-500 to-red-500"
-    }
-  ];
-
-  const socialLinks = [
-    { icon: <FaLinkedinIn />, name: "LinkedIn", link: "https://linkedin.com", color: "bg-blue-700" },
-    { icon: <FaFacebookF />, name: "Facebook", link: "https://facebook.com", color: "bg-blue-600" },
-    { icon: <FaInstagram />, name: "Instagram", link: "https://instagram.com", color: "bg-pink-600" },
-    { icon: <FaTwitter />, name: "Twitter (X)", link: "https://twitter.com", color: "bg-black" },
-    { icon: <FaYoutube />, name: "YouTube", link: "https://youtube.com", color: "bg-red-600" }
   ];
 
   const containerVariants = {
@@ -142,11 +150,15 @@ const ContactPage = () => {
       
       {/* Hero Section */}
       <Hero 
-        backgroundImage="https://t4.ftcdn.net/jpg/05/86/20/87/360_F_586208793_3KgswmfW0XqXCgbpGFSCDWQ7m1YT2lHr.jpg"
+        images={[
+          "https://www.svgrepo.com/show/324990/bubble-outcome.svg",
+          "https://www.svgrepo.com/show/421828/communication-letter-memo.svg",
+          "https://www.svgrepo.com/show/339204/financial-news.svg",
+        ]}
         badgeText="CONTACT US"
         badgeIcon={<FaPhoneAlt />}
         title="Let's Start a Conversation"
-        highlightedTitle="About Your Financial Goals"
+        // highlightedTitle="About Your Financial Goals"
         subtitle="Whether you have questions about our services, need guidance regarding market opportunities, or wish to connect with our advisory team, we're here to help. Reach out to us through the contact details below and our team will be happy to assist you."
         primaryButton={{
           text: "Call Now",
@@ -168,7 +180,7 @@ const ContactPage = () => {
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full filter blur-3xl"></div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -240,56 +252,9 @@ const ContactPage = () => {
         </div>
       </div>
 
-      {/* How We Can Help Section */}
-      <div className="relative py-20 bg-gradient-to-b from-primary to-primary/95">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <div className="inline-flex items-center gap-2 bg-success/20 rounded-full px-4 py-2 mb-4">
-              <FaUserCheck className="text-success" size={14} />
-              <span className="text-sm font-medium text-success">How We Can Help</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-text">
-              Professional Guidance For{' '}
-              <span className="text-success">Your Financial Journey</span>
-            </h2>
-            <p className="text-text mt-4 max-w-2xl mx-auto">
-              Our team provides expert insights across multiple domains to support your investment decisions
-            </p>
-          </motion.div>
-
-          <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
-          >
-            {services.map((service, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                whileHover={{ y: -5 }}
-                className="bg-card backdrop-blur-sm rounded-xl p-6 text-center border border-border hover:border-success/30 transition-all duration-300 group"
-              >
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${service.color} flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <div className="text-text text-xl">{service.icon}</div>
-                </div>
-                <h3 className="text-text font-bold text-lg mb-2">{service.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{service.description}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </div>
-
-      {/* Location & Map Section */}
-      <div className="relative py-20">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Contact Form & Map Section */}
+      <div className="relative py-20 bg-primary/30">
+        <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -298,114 +263,91 @@ const ContactPage = () => {
           >
             <div className="inline-flex items-center gap-2 bg-success/20 rounded-full px-4 py-2 mb-4">
               <FaMapMarkerAlt className="text-success" size={14} />
-              <span className="text-sm font-medium text-success">Find Us</span>
+              <span className="text-sm font-medium text-success">Get In Touch</span>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-text">
-              Visit Our{' '}
-              <span className="text-success">Office</span>
+              Send a Message or <span className="text-success">Visit Us</span>
             </h2>
-            <p className="text-text mt-4">
-              Conveniently located to serve clients and investors. Visit our office during business hours.
+            <p className="text-text/80 mt-4 max-w-2xl mx-auto">
+              Conveniently located to serve clients and investors. Fill out the form or visit our office.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Office Info */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-card backdrop-blur-sm rounded-2xl p-8 border border-border"
+              className="bg-card backdrop-blur-sm rounded-3xl p-5 md:p-6 border border-border shadow-2xl flex flex-col h-full"
             >
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-success/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <FaRegBuilding className="text-success text-xl" />
+              <form onSubmit={handleSubmit} className="space-y-5 flex-grow flex flex-col">
+                <div>
+                  <label className="block text-sm font-semibold text-text mb-1">Full Name</label>
+                  <input type="text" name="name" value={formData.name} onChange={handleChange} required placeholder="John Doe" className="w-full bg-primary/50 text-text px-4 py-2.5 rounded-xl border border-border focus:ring-2 focus:ring-success focus:border-success outline-none transition-all placeholder:text-text/30" />
                 </div>
                 <div>
-                  <h3 className="text-text font-bold text-xl mb-2">Tradevora Market Private Limited</h3>
-                  <p className="text-text leading-relaxed">
-                    Business Tower, Financial District<br />
-                    Lucknow, Uttar Pradesh – 226010<br />
-                    India
-                  </p>
-                  <div className="mt-4 pt-4 border-t border-border">
-                    <p className="text-gray-400 text-sm">
-                      <span className="text-success">Landmark:</span> Near Phoenix Mall
-                    </p>
-                  </div>
+                  <label className="block text-sm font-semibold text-text mb-1">Email Address</label>
+                  <input type="email" name="email" value={formData.email} onChange={handleChange} required placeholder="john@example.com" className="w-full bg-primary/50 text-text px-4 py-2.5 rounded-xl border border-border focus:ring-2 focus:ring-success focus:border-success outline-none transition-all placeholder:text-text/30" />
                 </div>
-              </div>
+                <div>
+                  <label className="block text-sm font-semibold text-text mb-1">Phone Number</label>
+                  <input type="tel" name="phone" value={formData.phone} onChange={handleChange} required placeholder="+91 98765 43210" className="w-full bg-primary/50 text-text px-4 py-2.5 rounded-xl border border-border focus:ring-2 focus:ring-success focus:border-success outline-none transition-all placeholder:text-text/30" />
+                </div>
+                <div className="flex-grow">
+                  <label className="block text-sm font-semibold text-text mb-1">Message</label>
+                  <textarea name="message" value={formData.message} onChange={handleChange} required rows="3" placeholder="Write your message here..." className="w-full h-[80px] bg-primary/50 text-text px-4 py-2.5 rounded-xl border border-border focus:ring-2 focus:ring-success focus:border-success outline-none transition-all resize-none placeholder:text-text/30"></textarea>
+                </div>
+                {submitStatus === 'success' && (
+                  <div className="text-green-500 text-sm font-semibold">Message sent successfully!</div>
+                )}
+                {submitStatus === 'error' && (
+                  <div className="text-red-500 text-sm font-semibold">Failed to send message. Please try again.</div>
+                )}
+                <div className="pt-1 mt-auto">
+                  <button type="submit" disabled={isSubmitting} className="bg-success hover:bg-success/90 disabled:opacity-70 disabled:cursor-not-allowed text-white px-8 py-2.5 rounded-xl font-bold transition-all shadow-lg hover:shadow-success/40 active:scale-95 text-base w-full inline-flex justify-center items-center gap-3">
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {!isSubmitting && <FaArrowRight size={14} />}
+                  </button>
+                </div>
+              </form>
             </motion.div>
 
-            {/* Map */}
+            {/* Google Map */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="bg-card backdrop-blur-sm rounded-2xl overflow-hidden border border-border h-80"
+              className="bg-card backdrop-blur-sm rounded-3xl overflow-hidden border border-border shadow-2xl h-full min-h-[350px] flex flex-col relative"
             >
+              {/* <div className="absolute top-4 left-4 right-4 z-10 bg-card/90 backdrop-blur-md rounded-2xl p-4 border border-border/50 shadow-lg flex items-start gap-4">
+                <div className="w-10 h-10 bg-success/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <FaRegBuilding className="text-success text-lg" />
+                </div>
+                <div>
+                  <h3 className="text-text font-bold text-sm mb-1">Tradevora Market Private Limited</h3>
+                  <p className="text-text/80 text-xs leading-relaxed">
+                    Business Tower, Financial District<br />
+                    Lucknow, UP 226010
+                  </p>
+                </div>
+              </div> */}
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1x3558.563454469641!2x80.9467375!3x26.8461818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd6b463c9cf9%3A0x5a2d5b9c3e3d9e3a!2sLucknow%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
-                style={{ border: 0 }}
+                style={{ border: 0, minHeight: '350px' }}
                 allowFullScreen
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="Tradevora Market Private Limited Office Location"
-                className="w-full h-full"
+                title="Office Location"
+                className="flex-grow w-full h-full"
               ></iframe>
             </motion.div>
           </div>
         </div>
       </div>
 
-      {/* Social Media Section */}
-      <div className="relative py-20 bg-gradient-to-b from-primary to-primary/95">
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center mb-12"
-          >
-            <div className="inline-flex items-center gap-2 bg-success/20 rounded-full px-4 py-2 mb-4">
-              <FaWhatsapp className="text-success" size={14} />
-              <span className="text-sm font-medium text-success">Connect With Us Online</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-text">
-              Follow Us On{' '}
-              <span className="text-success">Social Media</span>
-            </h2>
-            <p className="text-text mt-4 max-w-2xl mx-auto">
-              Stay updated with market trends, company updates, and educational content through our social channels.
-            </p>
-          </motion.div>
-
-          <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            {socialLinks.map((social, index) => (
-              <motion.a
-                key={index}
-                variants={itemVariants}
-                whileHover={{ y: -5, scale: 1.05 }}
-                href={social.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`${social.color} w-16 h-16 rounded-2xl flex flex-col items-center justify-center gap-1 transition-all duration-300 shadow-lg hover:shadow-xl`}
-              >
-                <div className="text-text text-xl">{social.icon}</div>
-                <span className="text-text text-xs font-medium">{social.name}</span>
-              </motion.a>
-            ))}
-          </motion.div>
-        </div>
-      </div>
 
       {/* Consultation CTA Section */}
       <div className="relative py-20 bg-gradient-to-r from-success to-secondary">

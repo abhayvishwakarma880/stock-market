@@ -39,7 +39,7 @@ const Home = () => {
       <WhyChooseUs />
       <Services />
       <AboutCompany />
-      <MarketInsights />
+      {/* <MarketInsights /> */}
       <Testimonials />
       <FAQ />
       <CTASection />

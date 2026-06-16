@@ -1,157 +1,151 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { 
   FaChartLine, 
   FaChartBar, 
   FaChartPie,
-  FaCheckCircle,
   FaArrowRight,
-  FaShieldAlt,
-  FaUserCheck,
-  FaRegLightbulb,
-  FaRegCommentDots,
-  FaUsers,
-  FaWhatsapp,
   FaPhoneAlt,
-  FaEye,
-  FaBrain,
-  FaTrophy
+  FaWhatsapp
 } from 'react-icons/fa';
 import Hero from '../components/Hero';
 
 const ServicesPage = () => {
-  const whyChooseUs = [
-    {
-      icon: <FaBrain />,
-      title: "Research Driven",
-      description: "Every recommendation backed by thorough market analysis",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: <FaTrophy />,
-      title: "Market Expertise",
-      description: "Years of experience in market research and analysis",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: <FaEye />,
-      title: "Transparent Approach",
-      description: "Clear, honest, and timely communication",
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: <FaShieldAlt />,
-      title: "Risk Focused",
-      description: "Capital protection alongside return generation",
-      color: "from-orange-500 to-red-500"
-    },
-    {
-      icon: <FaUserCheck />,
-      title: "Personalized Guidance",
-      description: "Strategies tailored to individual goals",
-      color: "from-teal-500 to-green-500"
-    },
-    {
-      icon: <FaRegLightbulb />,
-      title: "Long-Term Perspective",
-      description: "Focus on sustainable wealth creation",
-      color: "from-yellow-500 to-orange-500"
-    }
-  ];
+  const [activeTab, setActiveTab] = useState("All");
 
-  const services = [
+  const tabs = ["All", "Equity-Intraday", "Futures", "Options", "Equity-Positional"];
+
+  const servicesData = [
     {
       id: 1,
-      title: "Equity Services",
-      badge: "Long Term & Short Term",
-      description: "Our Equity Services are designed for investors seeking opportunities in individual stocks across various sectors. Through detailed market research, technical analysis, and fundamental evaluation, we help clients identify potential investment opportunities aligned with their financial goals and risk appetite. Whether you are a long-term investor or an active market participant, our equity research aims to provide clarity, confidence, and actionable insights.",
-      features: [
-        "Stock Research & Analysis",
-        "Investment Recommendations",
-        "Sector & Industry Insights",
-        "Long-Term Wealth Creation Strategies",
-        "Risk Assessment & Capital Protection",
-        "Portfolio Monitoring Support"
-      ],
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800",
-      imageSide: "left",
-      gradient: "from-blue-500 to-cyan-500",
-      bgGradient: "from-blue-500/10 to-cyan-500/5",
-      iconColor: "text-blue-500"
+      category: "Equity-Intraday",
+      title: "CASH INTRADAY",
+      credits: ["30 Credits: ₹ 7,100", "300 Credits: ₹ 35,000"],
+      description: "Intraday Cash Segment Stocks for Small Traders (1- 2 Trade Calls Per Day)",
+      risk: "Moderate Risk",
+      riskColor: "text-orange-500",
+      capital: "₹ 50,000",
     },
     {
       id: 2,
-      title: "Derivative Services",
-      badge: "Futures & Options",
-      description: "Our Derivative Services focus on opportunities within Futures and Options markets through research-backed analysis and market trend evaluation. We provide insights that help traders understand market movements, identify potential trading setups, and manage risk effectively in dynamic market conditions. Our approach emphasizes disciplined trading practices, strategy planning, and informed decision-making.",
-      features: [
-        "Futures Market Analysis",
-        "Options Trading Insights",
-        "Trend & Momentum Identification",
-        "Volatility Assessment",
-        "Risk Management Guidance",
-        "Strategy-Based Market Approach"
-      ],
-      image: "https://bl-i.thgim.com/public/incoming/1fi8vo/article65914840.ece/alternates/FREE_1200/IMG_Po05_markets_2_1_188UO57P.jpg",
-      imageSide: "right",
-      gradient: "from-purple-500 to-pink-500",
-      bgGradient: "from-purple-500/10 to-pink-500/5",
-      iconColor: "text-purple-500"
+      category: "Options",
+      title: "INDEX OPTIONS (B)",
+      credits: ["300 Credits: ₹ 75,000", "30 Credits: ₹ 15,000"],
+      description: "Options Trading Calls for F&O Traders (1- 2 Trade Calls Per Day)",
+      risk: "High Risk",
+      riskColor: "text-red-500",
+      capital: "₹ 50,000",
     },
     {
       id: 3,
-      title: "Index Services",
-      badge: "Nifty & Bank Nifty",
-      description: "Our Index Services focus on analyzing broader market movements through major benchmark indices. By tracking market trends, sector performance, and economic indicators, we provide valuable insights into overall market sentiment and potential opportunities. These services help investors and traders better understand market direction and make more informed strategic decisions.",
-      features: [
-        "Market Trend Analysis",
-        "Index Movement Insights",
-        "Sector Performance Tracking",
-        "Economic & Market Outlook",
-        "Sentiment-Based Research",
-        "Strategic Market Guidance"
-      ],
-      image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800",
-      imageSide: "left",
-      gradient: "from-green-500 to-emerald-500",
-      bgGradient: "from-green-500/10 to-emerald-500/5",
-      iconColor: "text-green-500"
+      category: "Options",
+      title: "STOCK OPTIONS (B)",
+      credits: ["300 Credits: ₹ 75,000", "30 Credits: ₹ 15,000"],
+      description: "Options Trading Calls for F&O Traders (1- 2 Trade Calls Per Day)",
+      risk: "High Risk",
+      riskColor: "text-red-500",
+      capital: "₹ 1,00,000",
+    },
+    {
+      id: 4,
+      category: "Options",
+      title: "INDEX OPTIONS",
+      credits: ["300 Credits: ₹ 1,25,000"],
+      description: "Options Trading Calls for F&O Traders (1- 5 Trade Calls Per Day)",
+      risk: "High Risk",
+      riskColor: "text-red-500",
+      capital: "₹ 2,00,000",
+    },
+    {
+      id: 5,
+      category: "Equity-Intraday",
+      title: "CASH PREMIUM",
+      credits: ["300 Credits: ₹ 45,000"],
+      description: "Momentum Cash Segment Calls For HNI Traders (1- 5 Trade Calls Per Day)",
+      risk: "Moderate Risk",
+      riskColor: "text-orange-500",
+      capital: "₹ 1,00,000",
+    },
+    {
+      id: 6,
+      category: "Options",
+      title: "STOCK OPTIONS",
+      credits: ["300 Credits: ₹ 1,25,000"],
+      description: "Options Trading Calls for F&O Traders (1- 5 Trade Calls Per Day)",
+      risk: "High Risk",
+      riskColor: "text-red-500",
+      capital: "₹ 2,00,000",
+    },
+    {
+      id: 7,
+      category: "Futures",
+      title: "FUTURES INTRADAY",
+      credits: ["300 Credits: ₹ 55,000", "30 Credits: ₹ 12,500"],
+      description: "Intraday Stock Futures Segment Trading Calls for F&O Traders (1- 2 Trade Calls Per Day)",
+      risk: "Moderate Risk",
+      riskColor: "text-orange-500",
+      capital: "₹ 1,00,000",
+    },
+    {
+      id: 8,
+      category: "Futures", 
+      title: "MCX ENERGY",
+      credits: ["30 Credits: ₹ 9,000", "100 Credits: ₹ 24,000"],
+      description: "Trading Calls In MCX-Commodity Segment (1- 2 Trade Calls Per Day)",
+      risk: "Moderate Risk",
+      riskColor: "text-orange-500",
+      capital: "₹ 50,000",
+    },
+    {
+      id: 9,
+      category: "Futures",
+      title: "MCX BULLION",
+      credits: ["30 Credits: ₹ 9,000", "100 Credits: ₹ 24,000"],
+      description: "Trading Calls In MCX-Bullion Segment (1- 2 Trade Calls Per Day)",
+      risk: "High",
+      riskColor: "text-red-500",
+      capital: "₹ 2,00,000",
+    },
+    {
+      id: 10,
+      category: "Equity-Positional",
+      title: "GROWTH STOCKS",
+      credits: ["60 Credits: ₹ 22,000", "20 Credits: ₹ 9,000"],
+      description: "Growth Stock For Medium-Term Investors (5- 10 Trade Calls Per Month)",
+      risk: "Low Risk",
+      riskColor: "text-green-500",
+      capital: "₹ 1,00,000",
+    },
+    {
+      id: 11,
+      category: "Equity-Positional",
+      title: "MULTIBAGGERS",
+      credits: ["20 Credits: ₹ 35,000"],
+      description: "Multibagger Stocks for Long-Term Investors (5- 10 Trade Calls Per Quarter)",
+      risk: "Low Risk",
+      riskColor: "text-green-500",
+      capital: "₹ 1,00,000",
     }
   ];
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.15
-      }
-    }
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: "easeOut"
-      }
-    }
-  };
+  const filteredServices = activeTab === "All" 
+    ? servicesData 
+    : servicesData.filter(service => service.category === activeTab);
 
   return (
-    <div className="relative overflow-hidden bg-primary">
+    <div className="relative overflow-hidden bg-white">
       
       {/* Hero Section */}
       <Hero 
-        backgroundImage="https://t4.ftcdn.net/jpg/06/41/47/45/360_F_641474594_YyvlVQ0AJamXL2ghFTNN6PbPBnRUAG4F.jpg"
+        images={[
+          "https://www.svgrepo.com/show/421840/chart-growth-invest.svg",
+          "https://www.svgrepo.com/show/421834/bag-cash-currency.svg",
+          "https://www.svgrepo.com/show/421839/briefcase-business-case.svg"
+        ]}
         badgeText="OUR SERVICES"
         badgeIcon={<FaChartLine />}
-        title="Professional Market Research &"
-        highlightedTitle="Advisory Services"
-        subtitle="At Tradevora Market Private Limited, we provide research-driven market insights and strategic guidance across equity, derivative, and index segments. Our objective is to help investors and traders make informed decisions with confidence and discipline."
+        title="Professional Market Research"
+        subtitle="Expert market research and strategic guidance across equity, derivative, and index segments to help you trade with confidence."
         primaryButton={{
           text: "Get Free Consultation",
           link: "tel:+919876543210",
@@ -165,160 +159,90 @@ const ServicesPage = () => {
         showStats={false}
       />
 
-      {/* Services Sections */}
-      {services.map((service, index) => (
-        <div key={service.id} className="relative py-12 md:py-16 overflow-hidden">
-          {/* Background Gradient */}
-          <div className={`absolute inset-0 bg-gradient-to-br ${service.bgGradient} opacity-50`}></div>
+      {/* Tabs Section */}
+      <div className="bg-white py-12 md:py-20">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Animated Background Elements */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className={`absolute top-20 ${service.imageSide === 'left' ? 'right-10' : 'left-10'} w-64 h-64 bg-gradient-to-r ${service.gradient} rounded-full filter blur-3xl opacity-10 animate-pulse`}></div>
-          </div>
-
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className={`grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-center ${
-              service.imageSide === 'right' ? 'lg:flex-row-reverse' : ''
-            }`}>
-              
-              {/* Image Section */}
-              <motion.div
-                initial={{ opacity: 0, x: service.imageSide === 'left' ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-                className="relative group"
+          {/* Tabs Navigation */}
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-16">
+            {tabs.map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`px-6 md:px-8 py-2.5 md:py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 border-2 ${
+                  activeTab === tab
+                    ? "bg-[#2563eb] border-[#2563eb] text-white shadow-lg shadow-blue-500/30 scale-105"
+                    : "bg-white border-[#2563eb] text-[#2563eb] hover:bg-blue-50"
+                }`}
               >
-                <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-                  <img loading="lazy" 
-                    src={service.image} 
-                    alt={service.title}
-                    className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className={`absolute inset-0 bg-gradient-to-r ${service.gradient} opacity-20 group-hover:opacity-10 transition-opacity`}></div>
-                  
-                  {/* Badge Overlay */}
-                  <div className={`absolute top-6 left-6 bg-primary/90 backdrop-blur-sm rounded-full px-4 py-2 border border-${service.iconColor.split('-')[1]}/30`}>
-                    <span className={`text-sm font-semibold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
-                      {service.badge}
-                    </span>
-                  </div>
-
-                  {/* Icon Overlay */}
-                  <div className={`absolute bottom-6 right-6 w-14 h-14 rounded-xl bg-gradient-to-r ${service.gradient} flex items-center justify-center shadow-lg`}>
-                    {service.id === 1 && <FaChartLine className="text-text text-2xl" />}
-                    {service.id === 2 && <FaChartBar className="text-text text-2xl" />}
-                    {service.id === 3 && <FaChartPie className="text-text text-2xl" />}
-                  </div>
-                </div>
-
-                {/* Floating Elements */}
-                <div className={`absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-r ${service.gradient} rounded-full filter blur-2xl opacity-30 -z-10`}></div>
-              </motion.div>
-
-              {/* Content Section */}
-              <motion.div
-                initial={{ opacity: 0, x: service.imageSide === 'left' ? 50 : -50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7 }}
-                className={`${service.imageSide === 'right' ? 'lg:pr-8' : 'lg:pl-8'}`}
-              >
-                {/* Title */}
-                <div className="inline-flex items-center gap-2 bg-success/20 rounded-full px-4 py-2 mb-4">
-                  {service.id === 1 && <FaChartLine className="text-success" size={14} />}
-                  {service.id === 2 && <FaChartBar className="text-success" size={14} />}
-                  {service.id === 3 && <FaChartPie className="text-success" size={14} />}
-                  <span className="text-sm font-medium text-success">{service.title}</span>
-                </div>
-
-                <h2 className={`text-3xl md:text-4xl lg:text-5xl font-bold mb-6 bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
-                  {service.title}
-                </h2>
-
-                <p className="text-text text-lg leading-relaxed mb-6">
-                  {service.description}
-                </p>
-
-                {/* Features Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
-                  {service.features.map((feature, idx) => (
-                    <motion.div 
-                      key={idx}
-                      initial={{ opacity: 0, x: -20 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: idx * 0.05 }}
-                      className="flex items-center gap-2 group"
-                    >
-                      <FaCheckCircle className={`${service.iconColor} text-sm flex-shrink-0 group-hover:scale-110 transition-transform`} />
-                      <span className="text-text text-sm">{feature}</span>
-                    </motion.div>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
+                {tab}
+              </button>
+            ))}
           </div>
-        </div>
-      ))}
-
-      {/* Why Choose Our Advisory Services Section */}
-      <div className="relative py-6 md:py-8 bg-gradient-to-b from-primary to-primary/95">
-        <div className="absolute inset-0">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-success/5 rounded-full filter blur-3xl"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary/5 rounded-full filter blur-3xl"></div>
-        </div>
-
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Section Header */}
-          <motion.div
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="text-center max-w-3xl mx-auto mb-12"
-          >
-            <div className="inline-flex items-center gap-2 bg-success/20 rounded-full px-4 py-2 mb-4">
-              <FaUsers className="text-success" size={14} />
-              <span className="text-sm font-medium text-success">Why Choose Us</span>
-            </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
-              Why Choose Our <span className="text-success">Advisory Services?</span>
-            </h2>
-            <p className="text-text text-lg">
-              Our services are built on a foundation of research, transparency, and disciplined market analysis. 
-              We focus on delivering actionable insights, helping clients understand market opportunities, manage risk, 
-              and pursue their financial objectives through informed decision-making.
-            </p>
-          </motion.div>
 
           {/* Cards Grid */}
           <motion.div 
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            layout
+            className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8"
           >
-            {whyChooseUs.map((item, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                whileHover={{ y: -5 }}
-                className="bg-card backdrop-blur-sm rounded-2xl p-6 border border-border hover:border-success/30 transition-all duration-300 group"
-              >
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${item.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <div className="text-text text-2xl">{item.icon}</div>
-                </div>
-                <h3 className="text-text font-bold text-xl mb-2">{item.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{item.description}</p>
-              </motion.div>
-            ))}
+            <AnimatePresence mode="popLayout">
+              {filteredServices.map((service) => (
+                <motion.div
+                  key={service.id}
+                  layout
+                  initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                  animate={{ opacity: 1, scale: 1, y: 0 }}
+                  exit={{ opacity: 0, scale: 0.9, y: -20 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-[#f4f7fb] rounded-2xl p-6 border border-blue-100 flex flex-col h-full hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] hover:-translate-y-1 transition-all duration-300"
+                >
+                  {/* Card Header */}
+                  <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+                    <div className="flex items-center gap-3 min-w-0 flex-1">
+                      <div className="w-10 h-10 rounded-full bg-[#2563eb] flex items-center justify-center text-white flex-shrink-0 shadow-md">
+                        <FaChartBar size={18} />
+                      </div>
+                      <h3 className="text-lg md:text-xl font-extrabold text-slate-900 leading-tight">{service.title}</h3>
+                    </div>
+                    <div className="flex flex-col items-end gap-1 flex-shrink-0 mt-1">
+                      {service.credits.map((credit, idx) => (
+                        <span key={idx} className="text-[10px] font-semibold text-slate-500 bg-slate-200/50 px-2 py-0.5 rounded">
+                          {credit}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Card Description */}
+                  <p className="text-slate-500 text-sm mb-8 flex-grow leading-relaxed">
+                    {service.description}
+                  </p>
+
+                  {/* Risk & Capital & View */}
+                  <div className="flex flex-wrap items-center justify-between border-t border-blue-200/60 pt-5 mt-auto gap-4">
+                    <div className="flex items-center gap-6">
+                      <div className="flex flex-col">
+                        <span className="text-slate-400 text-xs font-semibold mb-1">Risk</span>
+                        <span className={`text-sm font-bold ${service.riskColor}`}>{service.risk}</span>
+                      </div>
+                      
+                      <div className="w-px h-8 bg-blue-200/60"></div>
+
+                      <div className="flex flex-col">
+                        <span className="text-slate-400 text-xs font-semibold mb-1">Req. Capital</span>
+                        <span className="text-[#2563eb] text-sm font-bold">{service.capital}</span>
+                      </div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </AnimatePresence>
           </motion.div>
         </div>
       </div>
 
       {/* Final CTA Section */}
-      <div className="relative py-20 bg-gradient-to-r from-success to-secondary">
+      <div className="relative py-20 bg-gradient-to-r from-[#2563eb] to-blue-800">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0" style={{ 
             backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
@@ -333,10 +257,10 @@ const ServicesPage = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
               Ready To Take Your Market Decisions To The Next Level?
             </h2>
-            <p className="text-text/90 text-lg mb-8 max-w-2xl mx-auto">
+            <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
               Get access to professional market research, strategic guidance, and personalized advisory support designed to help you navigate financial markets with confidence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
@@ -344,7 +268,7 @@ const ServicesPage = () => {
                 href="tel:+919876543210"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-success hover:bg-gray-100 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg"
+                className="bg-white text-[#2563eb] hover:bg-gray-100 px-8 py-3 rounded-xl font-bold flex items-center gap-2 transition-all duration-300 shadow-xl"
               >
                 Get Free Consultation
                 <FaArrowRight />
@@ -352,7 +276,7 @@ const ServicesPage = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-card-hover border border-border-hover text-text hover:bg-white/20 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
+                className="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-3 rounded-xl font-bold flex items-center gap-2 transition-all duration-300"
               >
                 Contact Our Experts
                 <FaWhatsapp />

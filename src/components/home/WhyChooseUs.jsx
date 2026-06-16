@@ -7,11 +7,7 @@ import {
   FaUserCheck, 
   FaExclamationTriangle, 
   FaComments,
-  FaCheckCircle,
-  FaUsers,
-  FaRupeeSign,
-  FaHeadset,
-  FaTrophy
+  FaCheckCircle
 } from 'react-icons/fa';
 
 const WhyChooseUs = () => {
@@ -73,13 +69,6 @@ const WhyChooseUs = () => {
     }
   ];
 
-  const stats = [
-    { value: "10,000+", label: "Happy Investors", icon: <FaUsers />, delay: 0.2 },
-    { value: "₹500 Cr+", label: "Assets Managed", icon: <FaRupeeSign />, delay: 0.3 },
-    { value: "98%", label: "Satisfaction Rate", icon: <FaTrophy />, delay: 0.4 },
-    { value: "24/7", label: "Expert Support", icon: <FaHeadset />, delay: 0.5 }
-  ];
-
   // Animation Variants
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -136,7 +125,7 @@ const WhyChooseUs = () => {
       </div>
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
         
         {/* Section Header */}
         <motion.div 
@@ -146,7 +135,7 @@ const WhyChooseUs = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-10"
         >
-          <motion.div 
+          {/* <motion.div 
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
@@ -155,7 +144,7 @@ const WhyChooseUs = () => {
           >
             <FaCheckCircle className="text-success" size={16} />
             <span className="text-sm font-medium text-success">Trusted By 10,000+ Investors</span>
-          </motion.div>
+          </motion.div> */}
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
             Why Investors{' '}
@@ -179,72 +168,15 @@ const WhyChooseUs = () => {
           </p>
         </motion.div>
 
-        {/* Two Column Layout - Left Stats + Right Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          
-          {/* Left Side - Stats Section Only */}
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-            variants={containerVariants}
-            className="flex flex-col justify-center h-full"
-          >
-            <motion.h3 
-              variants={itemVariants}
-              className="text-3xl md:text-4xl font-bold text-text mb-6 text-center lg:text-left"
-            >
-              Our <span className="text-success">Achievements</span>
-            </motion.h3>
-            
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map((stat, index) => (
-                <motion.div 
-                  key={index}
-                  variants={itemVariants}
-                  whileHover={{ scale: 1.05 }}
-                  className="bg-card backdrop-blur-sm rounded-2xl p-4 text-center border border-border hover:bg-card-hover transition-all duration-300 h-[140px] flex flex-col justify-center"
-                >
-                  <motion.div 
-                    initial={{ scale: 0, rotate: -180 }}
-                    whileInView={{ scale: 1, rotate: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: stat.delay, type: "spring", duration: 0.6 }}
-                    className="text-success mb-2 flex justify-center text-2xl"
-                  >
-                    {stat.icon}
-                  </motion.div>
-                  <motion.div 
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: stat.delay }}
-                    className="text-2xl md:text-3xl font-bold text-text mb-1"
-                  >
-                    {stat.value}
-                  </motion.div>
-                  <div className="text-text text-xs">{stat.label}</div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Trust Badge */}
-            <motion.div 
-              variants={itemVariants}
-              className="mt-6 p-4 bg-success/10 rounded-xl border border-success/20 text-center"
-            >
-              <p className="text-success font-semibold">⭐ 4.9 Rating | 5000+ Google Reviews</p>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Side - 6 Cards Grid */}
+        {/* Features Grid */}
+        <div className="max-w-5xl mx-auto">
           <motion.div 
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
             variants={containerVariants}
           >
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
               {features.map((feature, index) => (
                 <motion.div
                   key={feature.id}
@@ -269,9 +201,9 @@ const WhyChooseUs = () => {
                   </h3>
                   
                   {/* Description */}
-                  <p className="text-text text-xs leading-relaxed flex-grow">
+                  {/* <p className="text-text text-xs leading-relaxed flex-grow">
                     {feature.description}
-                  </p>
+                  </p> */}
 
                   {/* Hover Effect Line */}
                   <motion.div 

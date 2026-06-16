@@ -23,7 +23,7 @@ const Services = () => {
       id: 1,
       title: "Equity Services",
       icon: <FaChartLine size={40} />,
-      image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800",
+      image: "/assets/images/equity-icon.png",
       badge: "Most Popular",
       description: "Comprehensive equity trading and investment solutions for long-term wealth creation and short-term gains.",
       features: [
@@ -49,7 +49,7 @@ const Services = () => {
       id: 2,
       title: "Derivative Services",
       icon: <FaChartBar size={40} />,
-      image: "https://mtr-cdn.com/images/mceu_64415409811618248473803.width-648.png",
+      image: "/assets/images/derivative-icon.png",
       badge: "High Returns",
       description: "Expert F&O trading strategies with proper risk management to maximize returns in volatile markets.",
       features: [
@@ -75,7 +75,7 @@ const Services = () => {
       id: 3,
       title: "Index Services",
       icon: <FaChartPie size={40} />,
-      image: "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?w=800",
+      image: "/assets/images/index-icon.png",
       badge: "Low Risk",
       description: "Diversified index-based investments for stable returns with lower volatility and market risk.",
       features: [
@@ -122,7 +122,7 @@ const Services = () => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-primary py-20 md:py-28">
+    <div className="relative overflow-hidden bg-primary py-15 md:py-20">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-0 w-96 h-96 bg-success rounded-full filter blur-3xl animate-pulse"></div>
@@ -136,7 +136,7 @@ const Services = () => {
         backgroundRepeat: 'repeat'
       }}></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <motion.div 
@@ -146,7 +146,7 @@ const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <motion.div 
+          {/* <motion.div 
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
@@ -155,7 +155,7 @@ const Services = () => {
           >
             <FaChartLine className="text-success" size={16} />
             <span className="text-sm font-medium text-success">Our Services</span>
-          </motion.div>
+          </motion.div> */}
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
             Comprehensive{' '}
@@ -197,31 +197,30 @@ const Services = () => {
               <motion.div 
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
-                className={`relative rounded-2xl overflow-hidden shadow-2xl group ${
+                className={`relative overflow-hidden group bg-transparent ${
                   index === 1 ? 'lg:order-2' : 'lg:order-1'
                 }`}
               >
-                <div className="relative h-80 lg:h-96 overflow-hidden">
+                <div className="relative h-80 lg:h-96 overflow-hidden flex items-center justify-center p-8">
                   <img loading="lazy" 
                     src={service.image} 
                     alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    className="max-w-full max-h-full object-contain transition-transform duration-700"
                   />
-                  <div className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-30 group-hover:opacity-20 transition-opacity`}></div>
                   
                   {/* Badge */}
-                  <div className={`absolute top-4 right-4 bg-primary/90 backdrop-blur-sm rounded-full px-4 py-1.5 border border-border`}>
+                  {/* <div className={`absolute top-4 right-4 bg-primary/90 backdrop-blur-sm rounded-full px-4 py-1.5 border border-border`}>
                     <span className={`text-sm font-bold bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}>
                       {service.badge}
                     </span>
-                  </div>
+                  </div> */}
 
                   {/* Icon Overlay */}
-                  <div className={`absolute bottom-4 left-4 ${service.bgColor} rounded-xl p-3 backdrop-blur-sm border ${service.borderColor}`}>
+                  {/* <div className={`absolute bottom-4 left-4 ${service.bgColor} rounded-xl p-3 backdrop-blur-sm border ${service.borderColor}`}>
                     <div className={service.iconColor}>
                       {service.icon}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </motion.div>
 
@@ -261,7 +260,7 @@ const Services = () => {
                 </div>
 
                 {/* Benefits Chips */}
-                <div className="flex flex-wrap gap-3 mb-8">
+                {/* <div className="flex flex-wrap gap-3 mb-8">
                   {service.benefits.map((benefit, idx) => (
                     <motion.div
                       key={idx}
@@ -277,17 +276,17 @@ const Services = () => {
                       <span className="text-text text-sm font-medium">{benefit.text}</span>
                     </motion.div>
                   ))}
-                </div>
+                </div> */}
 
                 {/* CTA Button */}
-                <motion.button
+                {/* <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className={`group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-text bg-gradient-to-r ${service.color} shadow-lg hover:shadow-2xl transition-all duration-300`}
                 >
                   {service.ctaText}
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-                </motion.button>
+                </motion.button> */}
               </div>
             </motion.div>
           ))}

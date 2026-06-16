@@ -11,10 +11,12 @@ import {
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { LineChart, Line } from 'recharts';
 import { Link, NavLink } from 'react-router-dom';
+import EnquiryModal from './EnquiryModal';
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isEnquiryModalOpen, setIsEnquiryModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -26,10 +28,10 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'About Us', href: '/about' },
+    // { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Market Insights', href: '/market-insights' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Get In Touch', href: '/contact' },
   ];
 
   // Sample chart data for the animated line
@@ -46,48 +48,33 @@ const Navbar = () => {
   return (
     <>
       {/* Top Bar */}
-      <div className={`hidden md:block transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`} style={{ backgroundColor: '#0F172A' }}>
-        <div className="max-w-7xl mx-auto px-4 lg:px-6 overflow-x-auto scrollbar-hide">
+      {/* <div className={`hidden md:block transition-all duration-300 ${isScrolled ? 'py-1' : 'py-2'}`} style={{ backgroundColor: '#0F172A' }}>
+        <div className="max-w-5xl mx-auto px-4 lg:px-6 overflow-x-auto scrollbar-hide">
           <div className="flex items-center justify-between min-w-max gap-8 lg:gap-0">
-            {/* Left - Contact Info */}
+            
             <div className="flex items-center gap-8">
-              <div className="flex items-center gap-2 text-muted hover:text-success transition-colors cursor-pointer group">
-                <div className="p-1 rounded-full bg-card-hover group-hover:bg-success/20 transition-colors">
+              <div className="flex items-center gap-2 text-success transition-colors cursor-pointer group">
+                <div className="p-1 rounded-full bg-success/20 transition-colors">
                   <FiPhone size={12} className="text-success" />
                 </div>
                 <span className="text-sm">+91 98765 43210</span>
               </div>
-              <div className="flex items-center gap-2 text-muted hover:text-success transition-colors cursor-pointer group">
-                <div className="p-1 rounded-full bg-card-hover group-hover:bg-success/20 transition-colors">
+              <div className="flex items-center gap-2 text-success transition-colors cursor-pointer group">
+                <div className="p-1 rounded-full bg-success/20 transition-colors">
                   <FiMail size={12} className="text-success" />
                 </div>
                 <span className="text-sm">info@tradevoramarket.com</span>
               </div>
-              <div className="flex items-center gap-2 text-muted">
-                <div className="p-1 rounded-full bg-card-hover">
+              <div className="flex items-center gap-2 text-success">
+                <div className="p-1 rounded-full bg-success/20">
                   <FiClock size={12} className="text-success" />
                 </div>
                 <span className="text-sm">Mon - Sat : 9:00 AM - 6:00 PM</span>
               </div>
             </div>
 
-            {/* Right - Live Market Ticker */}
             <div className="flex items-center gap-6">
-              <div className="flex items-center gap-3 px-3 py-1 rounded-full bg-card">
-                <div className="flex items-center gap-1">
-                  <span className="text-xs text-muted">NIFTY 50</span>
-                  <span className="text-xs text-success font-semibold">+245.30</span>
-                  <FiArrowUpRight size={10} className="text-success" />
-                </div>
-                <div className="w-px h-3 bg-nav-bg/20"></div>
-                <div className="flex items-center gap-1">
-                  <span className="text-xs text-muted">SENSEX</span>
-                  <span className="text-xs text-success font-semibold">+812.45</span>
-                  <FiArrowUpRight size={10} className="text-success" />
-                </div>
-              </div>
-              
-              {/* Social Icons */}
+
               <div className="flex items-center gap-3">
                 <a href="#" className="text-muted hover:text-success transition-colors">
                   <FaFacebookF size={13} />
@@ -105,7 +92,7 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Navbar */}
       <nav 
@@ -114,7 +101,7 @@ const Navbar = () => {
         }`}
         style={{ borderBottom: '1px solid #E2E8F0' }}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
+        <div className="max-w-5xl mx-auto px-4 md:px-6">
           <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo Section with Live Chart */}
             <div className="flex items-center gap-3">
@@ -129,14 +116,14 @@ const Navbar = () => {
               </Link>
               
               {/* Mini Live Chart */}
-              <div className="hidden lg:block ml-4 pl-4 border-l border-gray-200">
+              {/* <div className="hidden lg:block ml-4 pl-4 border-l border-gray-200">
                 <div className="flex items-center gap-2">
                   <LineChart width={80} height={30} data={chartData}>
                     <Line type="monotone" dataKey="value" stroke="#10B981" strokeWidth={2} dot={false} />
                   </LineChart>
                   <span className="text-xs font-semibold text-success">+12.4%</span>
                 </div>
-              </div>
+              </div> */}
             </div>
 
             {/* Navigation Links - Centered */}
@@ -159,10 +146,13 @@ const Navbar = () => {
 
             {/* Right Side - CTA & Mobile Menu */}
             <div className="flex items-center gap-4">
-              <a href="tel:+919876543210" className="hidden md:flex items-center gap-2 bg-success hover:bg-hover text-nav-text px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:scale-105">
-                Get Free Consultation
+              <button 
+                onClick={() => setIsEnquiryModalOpen(true)}
+                className="hidden md:flex items-center gap-2 bg-success hover:bg-hover text-white px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:scale-105"
+              >
+                Enquiry
                 <FiArrowUpRight size={16} />
-              </a>
+              </button>
 
               {/* Mobile Menu Button */}
               <button
@@ -218,10 +208,16 @@ const Navbar = () => {
                   </NavLink>
                 ))}
                 <div className="h-px bg-gray-100 my-4"></div>
-                <a href="tel:+919876543210" className="flex items-center justify-center gap-2 bg-success hover:bg-hover text-nav-text px-6 py-3 rounded-xl font-semibold transition-all duration-300 mt-2 shadow-md">
+                <button 
+                  onClick={() => {
+                    setIsMobileMenuOpen(false);
+                    setIsEnquiryModalOpen(true);
+                  }}
+                  className="flex items-center justify-center gap-2 bg-success hover:bg-hover text-nav-text px-6 py-3 rounded-xl font-semibold transition-all duration-300 mt-2 shadow-md"
+                >
                   Get Free Consultation
                   <FiArrowUpRight size={16} />
-                </a>
+                </button>
                 
                 {/* Mobile Contact Info */}
                 <div className="mt-8 pt-6 border-t border-gray-100 space-y-4">
@@ -256,6 +252,12 @@ const Navbar = () => {
           scrollbar-width: none;
         }
       `}</style>
+
+      {/* Enquiry Modal */}
+      <EnquiryModal 
+        isOpen={isEnquiryModalOpen} 
+        onClose={() => setIsEnquiryModalOpen(false)} 
+      />
     </>
   );
 };

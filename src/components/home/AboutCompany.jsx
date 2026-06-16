@@ -123,7 +123,7 @@ const AboutCompany = () => {
         backgroundRepeat: 'repeat'
       }}></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <motion.div 
@@ -133,7 +133,7 @@ const AboutCompany = () => {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-16"
         >
-          <motion.div 
+          {/* <motion.div 
             initial={{ scale: 0 }}
             whileInView={{ scale: 1 }}
             viewport={{ once: true }}
@@ -142,7 +142,7 @@ const AboutCompany = () => {
           >
             <FaStar className="text-success" size={16} />
             <span className="text-sm font-medium text-success">About Company</span>
-          </motion.div>
+          </motion.div> */}
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
             India's Most Trusted{' '}
@@ -181,7 +181,7 @@ const AboutCompany = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-text mb-4 relative">
                 Our Journey
               </h3>
-              <div className="space-y-4 text-text">
+              <div className="space-y-4 text-text text-justify">
                 <p className="leading-relaxed">
                   Founded in 2019 with a vision to simplify stock market investing, <span className="text-success font-semibold">Tradevora Market Private Limited</span> has grown into one of India's most trusted financial advisory platforms. We've helped over 10,000+ investors achieve their financial goals through our research-driven approach.
                 </p>
@@ -215,21 +215,20 @@ const AboutCompany = () => {
           {/* Right Side - Image with Experience Badge */}
           <motion.div 
             variants={itemVariants}
-            className="relative"
+            className="relative flex items-center justify-center"
           >
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative w-full bg-transparent">
               <img loading="lazy" 
-                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800"
-                alt="Trading Floor"
-                className="w-full h-96 object-cover"
+                src="/assets/images/equity-icon.png"
+                alt="About Company"
+                className="w-full h-96 object-contain"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(0,0,0,0.8)] via-[rgba(0,0,0,0.4)] to-transparent"></div>
             </div>
           </motion.div>
         </motion.div>
 
         {/* Vision Mission Values Cards */}
-        <motion.div 
+        {/* <motion.div 
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -252,7 +251,7 @@ const AboutCompany = () => {
               <p className="text-text leading-relaxed">{value.description}</p>
             </motion.div>
           ))}
-        </motion.div>
+        </motion.div> */}
 
         {/* Why Choose Us Section */}
         <motion.div 
