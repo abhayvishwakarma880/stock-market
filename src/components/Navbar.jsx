@@ -6,7 +6,8 @@ import {
   FiMenu, 
   FiX,
   FiTrendingUp,
-  FiArrowUpRight
+  FiArrowUpRight,
+  FiHome
 } from 'react-icons/fi';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import { LineChart, Line } from 'recharts';
@@ -27,7 +28,7 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '/' },
+    { name: 'Home', href: '/', isIcon: true },
     // { name: 'About Us', href: '/about' },
     { name: 'Services', href: '/services' },
     { name: 'Market Insights', href: '/market-insights' },
@@ -132,11 +133,11 @@ const Navbar = () => {
                 <NavLink
                   key={link.name}
                   to={link.href}
-                  className={({ isActive }) => `relative px-5 py-2 font-medium rounded-lg transition-all duration-200 group ${isActive ? 'text-success bg-background' : 'text-nav-text hover:text-success hover:bg-background'}`}
+                  className={({ isActive }) => `relative px-5 py-2 font-medium rounded-lg transition-all duration-200 group flex items-center justify-center ${isActive ? 'text-success bg-background' : 'text-nav-text hover:text-success hover:bg-background'}`}
                 >
                   {({ isActive }) => (
                     <>
-                      {link.name}
+                      {link.isIcon ? <FiHome size={20} /> : link.name}
                       <span className={`absolute bottom-0 left-1/2 h-0.5 bg-success transition-all duration-300 -translate-x-1/2 ${isActive ? 'w-6' : 'w-0 group-hover:w-6'}`}></span>
                     </>
                   )}
@@ -201,10 +202,10 @@ const Navbar = () => {
                   <NavLink
                     key={link.name}
                     to={link.href}
-                    className={({ isActive }) => `px-4 py-3 font-medium rounded-xl transition-all duration-200 ${isActive ? 'bg-success/10 text-success' : 'text-nav-text hover:bg-background hover:text-success'}`}
+                    className={({ isActive }) => `px-4 py-3 font-medium rounded-xl transition-all duration-200 flex items-center gap-2 ${isActive ? 'bg-success/10 text-success' : 'text-nav-text hover:bg-background hover:text-success'}`}
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
-                    {link.name}
+                    {link.isIcon ? <><FiHome size={20} /> Home</> : link.name}
                   </NavLink>
                 ))}
                 <div className="h-px bg-gray-100 my-4"></div>

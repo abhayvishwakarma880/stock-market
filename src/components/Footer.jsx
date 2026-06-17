@@ -36,7 +36,7 @@ const Footer = () => {
   const services = [
     { name: "Equity Advisory", href: "/services/equity" },
     { name: "Derivative Services", href: "/services/derivatives" },
-    { name: "Index Services", href: "/services/index" },
+    { name: "Commodities Services", href: "/services/commodities" },
   ];
 
   const socialIcons = [
@@ -186,12 +186,12 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-start gap-3 group">
                 <FaMapMarkerAlt className="text-success mt-0.5 group-hover:scale-110 transition-transform" />
-                <div>
-                  <p className="text-slate-300 text-sm">801, Business Hub,</p>
-                  <p className="text-slate-300 text-sm">
-                    Andheri East, Mumbai - 400069
+                <a href="https://maps.app.goo.gl/dE47R1rrJB76phPs5" target="_blank" rel="noopener noreferrer" className="block text-slate-300 hover:text-success transition-colors">
+                  <p className="text-sm">Sector 15A Near shree jaganath temple</p>
+                  <p className="text-sm">
+                    Faridabad Pin code 121001
                   </p>
-                </div>
+                </a>
               </div>
 
               <div className="flex items-center gap-3 group">

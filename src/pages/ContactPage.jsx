@@ -99,11 +99,12 @@ const ContactPage = () => {
       icon: <FaMapMarkerAlt />,
       title: "Office Address",
       details: [
-        "Tradevora Market Private Limited",
+        "Sector 15A Near shree jaganath temple",
+        "Faridabad Pin code 121001"
       ],
       description: "Meet our team and discuss your financial requirements in person.",
       action: "Get Directions",
-      link: "https://maps.google.com",
+      link: "https://maps.app.goo.gl/dE47R1rrJB76phPs5",
       color: "from-purple-500 to-pink-500",
       bgColor: "bg-purple-500/10"
     },

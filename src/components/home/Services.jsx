@@ -28,11 +28,11 @@ const Services = () => {
       description: "Comprehensive equity trading and investment solutions for long-term wealth creation and short-term gains.",
       features: [
         "Cash Market Trading (Delivery & Intraday)",
-        "IPO Investments & Allotment Support",
+        // "IPO Investments & Allotment Support",
         "Portfolio Management Services (PMS)",
         "Smallcase & Stock Basket Investments",
         "Fundamental & Technical Research Reports",
-        "SIP in Stocks (Systematic Investment Plan)"
+        // "SIP in Stocks (Systematic Investment Plan)"
       ],
       benefits: [
         { icon: <FaRocket />, text: "High Growth Potential" },
@@ -57,8 +57,8 @@ const Services = () => {
         "Hedging Strategies for Portfolio Protection",
         "Options Selling Strategies (Theta Decay)",
         "Index & Stock Futures Trading",
-        "Advanced Option Greeks Analysis",
-        "Spread Trading & Arbitrage Opportunities"
+        // "Advanced Option Greeks Analysis",
+        // "Spread Trading & Arbitrage Opportunities"
       ],
       benefits: [
         { icon: <FaGem />, text: "Leverage Benefits" },
@@ -71,27 +71,27 @@ const Services = () => {
       borderColor: "border-purple-500/20",
       iconColor: "text-purple-500"
     },
-    {
+     {
       id: 3,
-      title: "Index Services",
+      title: "Commodities Services",
       icon: <FaChartPie size={40} />,
       image: "/assets/images/index-icon.png",
-      badge: "Low Risk",
-      description: "Diversified index-based investments for stable returns with lower volatility and market risk.",
+      badge: "Diversified Asset",
+      description: "Trade in precious metals, energy, and agricultural commodities to diversify your portfolio and hedge against inflation.",
       features: [
-        "Nifty 50 & Sensex Investment Strategies",
-        "Bank Nifty & Sectoral Index Trading",
-        "Index ETFs & Index Funds Advisory",
-        "Passive Investment Portfolio Design",
-        "Index Options Hedging",
-        "Benchmark Index Tracking & Rebalancing"
+        "Gold, Silver & Precious Metals Trading",
+        "Crude Oil & Natural Gas Strategies",
+        "Agri-Commodities Investment",
+        "MCX & NCDEX Market Analysis",
+        "Commodity Options Hedging",
+        "Global Commodity Trends Tracking"
       ],
       benefits: [
-        { icon: <FaUsers />, text: "Diversified Risk" },
-        { icon: <FaTrophy />, text: "Stable Returns" },
-        { icon: <FaMobileAlt />, text: "Easy Tracking" }
+        { icon: <FaGem />, text: "Inflation Hedge" },
+        { icon: <FaShieldAlt />, text: "Portfolio Diversification" },
+        { icon: <FaChartLine />, text: "Market Trends" }
       ],
-      ctaText: "Invest in Index",
+      ctaText: "Invest in Commodities",
       color: "from-green-500 to-emerald-500",
       bgColor: "bg-green-500/10",
       borderColor: "border-green-500/20",

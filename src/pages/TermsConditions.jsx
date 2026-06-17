@@ -346,7 +346,7 @@ const TermsConditions = () => {
             </div>
             <div>
               <p className="text-gray-400 text-sm">📱 WhatsApp: <a href="https://wa.me/919876543210" className="text-success hover:underline">+91 98765 43210</a></p>
-              <p className="text-gray-400 text-sm mt-2">🏢 Address: 801, Business Hub, Andheri East, Mumbai - 400069</p>
+              <p className="text-gray-400 text-sm mt-2">🏢 Address: <a href="https://maps.app.goo.gl/dE47R1rrJB76phPs5" target="_blank" rel="noopener noreferrer" className="text-success hover:underline">Sector 15A Near shree jaganath temple Faridabad Pin code 121001</a></p>
             </div>
           </div>
         </motion.div>
