@@ -196,14 +196,14 @@ const WhyChooseUs = () => {
                   </motion.div>
                   
                   {/* Title */}
-                  <h3 className="text-text font-bold text-base mb-1">
+                  <h3 className="text-text font-bold text-base">
                     {feature.title}
                   </h3>
                   
                   {/* Description */}
-                  {/* <p className="text-text text-xs leading-relaxed flex-grow">
+                  <p className="text-text text-xs leading-relaxed flex-grow">
                     {feature.description}
-                  </p> */}
+                  </p>
 
                   {/* Hover Effect Line */}
                   <motion.div 

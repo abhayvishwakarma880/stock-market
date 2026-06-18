@@ -153,8 +153,8 @@ const ContactPage = () => {
       <Hero 
         images={[
           "https://www.svgrepo.com/show/324990/bubble-outcome.svg",
-          "https://www.svgrepo.com/show/421828/communication-letter-memo.svg",
-          "https://www.svgrepo.com/show/339204/financial-news.svg",
+          "https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/contact-us-icon.png",
+          "https://uxwing.com/wp-content/themes/uxwing/download/location-travel-map/phone-calling-location-icon.png",
         ]}
         badgeText="CONTACT US"
         badgeIcon={<FaPhoneAlt />}
