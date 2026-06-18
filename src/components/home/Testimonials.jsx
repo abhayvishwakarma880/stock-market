@@ -203,7 +203,7 @@ const Testimonials = () => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-primary to-primary/95 py-15 md:py-20">
+    <div className="relative overflow-hidden bg-gradient-to-b from-primary to-primary/95 py-4 md:py-8">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-0 w-96 h-96 bg-success/10 rounded-full filter blur-3xl animate-pulse"></div>
@@ -217,7 +217,7 @@ const Testimonials = () => {
         backgroundRepeat: 'repeat'
       }}></div>
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-5xl md:max-w-[85%] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <motion.div 

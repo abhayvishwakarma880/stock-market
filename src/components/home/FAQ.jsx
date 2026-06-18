@@ -147,7 +147,7 @@ const FAQ = () => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-primary py-20 md:py-28">
+    <div className="relative overflow-hidden bg-primary py-4 md:py-8">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-96 h-96 bg-success/10 rounded-full filter blur-3xl animate-pulse"></div>

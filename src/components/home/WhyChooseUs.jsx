@@ -125,7 +125,7 @@ const WhyChooseUs = () => {
       </div>
 
       {/* Content */}
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+      <div className="relative max-w-5xl md:max-w-[85%] mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
         
         {/* Section Header */}
         <motion.div 
@@ -169,7 +169,7 @@ const WhyChooseUs = () => {
         </motion.div>
 
         {/* Features Grid */}
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-[85%] mx-auto">
           <motion.div 
             initial="hidden"
             whileInView="visible"

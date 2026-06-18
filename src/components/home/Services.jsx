@@ -122,7 +122,7 @@ const Services = () => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-primary py-15 md:py-20">
+    <div className="relative overflow-hidden bg-primary py-7 md:py-10">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-0 w-96 h-96 bg-success rounded-full filter blur-3xl animate-pulse"></div>
@@ -136,7 +136,7 @@ const Services = () => {
         backgroundRepeat: 'repeat'
       }}></div>
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-5xl md:max-w-[85%] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <motion.div 
@@ -191,7 +191,7 @@ const Services = () => {
             <motion.div
               key={service.id}
               variants={cardVariants}
-              className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center"
             >
               {/* Image Section */}
               <motion.div 
@@ -207,20 +207,6 @@ const Services = () => {
                     alt={service.title}
                     className="max-w-full max-h-full object-contain transition-transform duration-700"
                   />
-                  
-                  {/* Badge */}
-                  {/* <div className={`absolute top-4 right-4 bg-primary/90 backdrop-blur-sm rounded-full px-4 py-1.5 border border-border`}>
-                    <span className={`text-sm font-bold bg-gradient-to-r ${service.color} bg-clip-text text-transparent`}>
-                      {service.badge}
-                    </span>
-                  </div> */}
-
-                  {/* Icon Overlay */}
-                  {/* <div className={`absolute bottom-4 left-4 ${service.bgColor} rounded-xl p-3 backdrop-blur-sm border ${service.borderColor}`}>
-                    <div className={service.iconColor}>
-                      {service.icon}
-                    </div>
-                  </div> */}
                 </div>
               </motion.div>
 
@@ -258,35 +244,6 @@ const Services = () => {
                     </motion.div>
                   ))}
                 </div>
-
-                {/* Benefits Chips */}
-                {/* <div className="flex flex-wrap gap-3 mb-8">
-                  {service.benefits.map((benefit, idx) => (
-                    <motion.div
-                      key={idx}
-                      initial={{ opacity: 0, scale: 0 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.3 + idx * 0.1 }}
-                      className={`flex items-center gap-2 px-3 py-1.5 rounded-full ${service.bgColor} border ${service.borderColor} backdrop-blur-sm`}
-                    >
-                      <span className={service.iconColor}>
-                        {benefit.icon}
-                      </span>
-                      <span className="text-text text-sm font-medium">{benefit.text}</span>
-                    </motion.div>
-                  ))}
-                </div> */}
-
-                {/* CTA Button */}
-                {/* <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className={`group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-text bg-gradient-to-r ${service.color} shadow-lg hover:shadow-2xl transition-all duration-300`}
-                >
-                  {service.ctaText}
-                  <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-                </motion.button> */}
               </div>
             </motion.div>
           ))}

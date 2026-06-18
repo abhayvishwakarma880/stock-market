@@ -123,7 +123,7 @@ const AboutCompany = () => {
         backgroundRepeat: 'repeat'
       }}></div>
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-5xl md:max-w-[85%] mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
         <motion.div 

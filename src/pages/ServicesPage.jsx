@@ -161,7 +161,7 @@ const ServicesPage = () => {
 
       {/* Tabs Section */}
       <div className="bg-white py-12 md:py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl md:max-w-[85%] mx-auto px-4 sm:px-6 lg:px-8">
           
           {/* Tabs Navigation */}
           <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mb-16">

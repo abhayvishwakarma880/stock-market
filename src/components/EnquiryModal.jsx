@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaArrowRight, FaTimes } from 'react-icons/fa';
+import toast from 'react-hot-toast';
 
 const EnquiryModal = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
@@ -13,11 +14,31 @@ const EnquiryModal = ({ isOpen, onClose }) => {
   const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    let { name, value } = e.target;
+    if (name === 'phone') {
+      // Allow only numbers and the + sign
+      value = value.replace(/[^\d+]/g, '');
+    }
+    setFormData({ ...formData, [name]: value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    // Validations
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      toast.error("Please enter a valid email address.");
+      return;
+    }
+
+    const cleanPhone = formData.phone.replace(/[\s-()]/g, '');
+    const phoneRegex = /^[1-9]\d{9,14}$/;
+    if (!phoneRegex.test(cleanPhone)) {
+      toast.error("Please enter a valid international mobile number starting with '0' (e.g., 09876543210).");
+      return;
+    }
+
     setIsSubmitting(true);
     setSubmitStatus(null);
     

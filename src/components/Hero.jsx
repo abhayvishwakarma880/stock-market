@@ -40,21 +40,20 @@ const Hero = ({
   }, [displayImages.length]);
 
   return (
-    <div className="relative bg-white overflow-hidden min-h-[calc(100vh-80px)] lg:min-h-[calc(100vh-116px)] flex items-center">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-7 w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div className="relative bg-white overflow-hidden min-h-[calc(100vh-80vh)] lg:min-h-[calc(100vh-116px)] flex items-center">
+      <div className="max-w-5xl md:max-w-[85%] mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-7 w-full">
+        {/* Mobile: grid-cols-2, Desktop: lg:grid-cols-2 */}
+        <div className="grid grid-cols-2 gap-4 lg:gap-12 items-center">
           
           {/* Left Side - Content */}
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            className="max-w-2xl"
+            className="col-span-1"
           >
-
-
-            {/* Title */}
-            <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-slate-900 leading-tight mb-6">
+            {/* Title - Mobile pe chhota */}
+            <h1 className="text-lg sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-slate-900 leading-tight mb-2 sm:mb-3 lg:mb-6">
               {title}
               {highlightedTitle && (
                 <>
@@ -66,17 +65,17 @@ const Hero = ({
               )}
             </h1>
 
-            {/* Subtitle */}
-            <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
+            {/* Subtitle - Mobile pe chhota */}
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-slate-600 mb-2 sm:mb-3 lg:mb-8 leading-relaxed">
               {subtitle}
             </p>
 
-            {/* Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            {/* Buttons - Mobile pe vertical */}
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-4 mb-4 sm:mb-6 lg:mb-12">
               {primaryButton && (
                 <a
                   href={primaryButton.link}
-                  className="group inline-flex items-center justify-center gap-2 bg-success hover:bg-success/90 text-white px-6 py-3 text-sm rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-success/30 hover:-translate-y-1"
+                  className="group inline-flex items-center justify-center gap-1 sm:gap-2 bg-success hover:bg-success/90 text-white px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 text-[10px] sm:text-xs lg:text-sm rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-success/30 hover:-translate-y-1"
                 >
                   {primaryButton.text}
                   <span className="group-hover:translate-x-1 transition-transform">
@@ -88,19 +87,17 @@ const Hero = ({
               {secondaryButton && (
                 <Link
                   to={secondaryButton.link}
-                  className="inline-flex items-center justify-center gap-2 bg-white hover:bg-slate-50 text-slate-700 px-6 py-3 text-sm rounded-xl font-semibold transition-all duration-300 border border-slate-200 shadow-sm"
+                  className="inline-flex items-center justify-center gap-1 sm:gap-2 bg-white hover:bg-slate-50 text-slate-700 px-3 sm:px-4 lg:px-6 py-1.5 sm:py-2 lg:py-3 text-[10px] sm:text-xs lg:text-sm rounded-xl font-semibold transition-all duration-300 border border-slate-200 shadow-sm"
                 >
                   {secondaryButton.icon}
                   {secondaryButton.text}
                 </Link>
               )}
             </div>
-
-
           </motion.div>
 
           {/* Right Side - Image Slider */}
-          <div className="relative h-[300px] lg:h-[400px] w-full flex items-center justify-center">
+          <div className="relative h-[180px] sm:h-[220px] md:h-[280px] lg:h-[400px] w-full flex items-center justify-center col-span-1">
             <AnimatePresence mode="wait">
               <motion.img
                 key={currentImage}
@@ -116,12 +113,12 @@ const Hero = ({
             
             {/* Slider Dots */}
             {displayImages.length > 1 && (
-              <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 flex gap-3">
+              <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3">
                 {displayImages.map((_, index) => (
                   <button
                     key={index}
                     onClick={() => setCurrentImage(index)}
-                    className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
                       currentImage === index ? 'bg-success scale-125' : 'bg-slate-300 hover:bg-slate-400'
                     }`}
                   />

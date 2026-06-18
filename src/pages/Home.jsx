@@ -9,6 +9,7 @@ import MarketInsights from "../components/home/MarketInsights";
 import Testimonials from "../components/home/Testimonials";
 import FAQ from "../components/home/FAQ";
 import CTASection from "../components/home/CTASection";
+import { GrContact } from "react-icons/gr";
 
 const Home = () => {
   return (
@@ -33,7 +34,7 @@ const Home = () => {
         secondaryButton={{
           text: "Contact",
           link: "/contact",
-          icon: <FiPlay />,
+          icon: <GrContact />,
         }}
       />
       <WhyChooseUs />
