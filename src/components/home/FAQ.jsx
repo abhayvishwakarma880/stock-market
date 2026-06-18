@@ -219,7 +219,7 @@ const FAQ = () => {
               }}
               className={`flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium transition-all duration-300 ${
                 activeCategory === category.id
-                  ? 'bg-success text-text shadow-lg'
+                  ? 'bg-success text-white shadow-lg'
                   : 'bg-card text-text hover:bg-card-hover border border-border'
               }`}
             >
@@ -332,7 +332,7 @@ const FAQ = () => {
           <div className="flex flex-wrap justify-center gap-4">
             <a 
               href="tel:+919876543210"
-              className="inline-flex items-center gap-2 bg-success hover:bg-hover text-text px-6 py-3 rounded-xl font-semibold transition-all duration-300"
+              className="inline-flex items-center gap-2 bg-success hover:bg-hover text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300"
             >
               <FaPhoneAlt />
               Call Us Now
