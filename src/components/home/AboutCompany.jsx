@@ -18,6 +18,7 @@ import {
   FaGlobe,
   FaRegSmile
 } from 'react-icons/fa';
+import journey from '../../assets/journey.png'
 
 const AboutCompany = () => {
   const achievements = [
@@ -219,9 +220,9 @@ const AboutCompany = () => {
           >
             <div className="relative w-full bg-transparent">
               <img loading="lazy" 
-                src="/assets/images/equity-icon.png"
+                src={journey}
                 alt="About Company"
-                className="w-full h-96 object-contain"
+                className="w-full h-[480px] object-contain"
               />
             </div>
           </motion.div>

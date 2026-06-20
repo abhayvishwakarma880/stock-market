@@ -303,7 +303,7 @@ const Testimonials = () => {
         </motion.div>
 
         {/* Main Testimonial Carousel */}
-        <div className="relative max-w-4xl mx-auto mb-16">
+        <div className="relative max-w-full mx-auto mb-16">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}

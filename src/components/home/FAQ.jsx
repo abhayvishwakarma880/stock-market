@@ -242,24 +242,20 @@ const FAQ = () => {
             <motion.div
               key={faq.id}
               variants={itemVariants}
-              className="mb-4"
+              className="border-b"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className={`w-full text-left p-5 rounded-xl transition-all duration-300 ${
-                  openIndex === index
-                    ? 'bg-gradient-to-r from-success/20 to-secondary/20 border border-success/30'
-                    : 'bg-card border border-border hover:border-success/20'
-                }`}
+                className="w-full text-left py-5 transition-all duration-300 group"
               >
                 <div className="flex items-center justify-between gap-4">
-                  <h3 className={`font-semibold ${
-                    openIndex === index ? 'text-success' : 'text-text'
+                  <h3 className={`text-lg font-medium transition-colors duration-300 ${
+                    openIndex === index ? 'text-success' : 'text-text group-hover:text-success'
                   }`}>
                     {faq.question}
                   </h3>
-                  <div className={`flex-shrink-0 w-6 h-6 rounded-full flex items-center justify-center transition-all duration-300 ${
-                    openIndex === index ? 'bg-success text-text' : 'bg-card-hover text-text'
+                  <div className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+                    openIndex === index ? 'bg-success/20 text-success' : 'bg-border/30 text-text group-hover:bg-success/10 group-hover:text-success'
                   }`}>
                     {openIndex === index ? <FaMinus size={12} /> : <FaPlus size={12} />}
                   </div>
@@ -272,10 +268,10 @@ const FAQ = () => {
                     initial={{ opacity: 0, height: 0 }}
                     animate={{ opacity: 1, height: 'auto' }}
                     exit={{ opacity: 0, height: 0 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.3, ease: "easeInOut" }}
                     className="overflow-hidden"
                   >
-                    <div className="p-5 pt-2 text-text leading-relaxed border-l-2 border-success/30 ml-5">
+                    <div className="pb-5 text-text/80 leading-relaxed pr-10">
                       {faq.answer}
                     </div>
                   </motion.div>

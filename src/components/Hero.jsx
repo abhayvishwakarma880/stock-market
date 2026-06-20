@@ -41,6 +41,13 @@ const Hero = ({
 
   return (
     <div className="relative bg-white overflow-hidden min-h-[calc(100vh-70vh)] lg:min-h-[calc(100vh-116px)] flex items-center">
+      {/* Background banner image with very low opacity */}
+      <img
+        src="/src/assets/banner.webp"
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 w-full h-full object-cover opacity-[0.05] pointer-events-none select-none"
+      />
       <div className="max-w-5xl md:max-w-[85%] mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-7 w-full">
         {/* Mobile: grid-cols-2, Desktop: lg:grid-cols-2 */}
         <div className="grid grid-cols-2 gap-4 lg:gap-12 items-center">
