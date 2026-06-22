@@ -197,10 +197,10 @@ const Footer = () => {
               <div className="flex items-center gap-3 group">
                 <FaPhoneAlt className="text-success group-hover:scale-110 transition-transform" />
                 <a
-                  href="tel:+919876543210"
+                  href="tel:+917839564218"
                   className="text-slate-300 hover:text-success transition-colors text-sm"
                 >
-                  +91 98765 43210
+                  +91 78395 64218
                 </a>
               </div>
 

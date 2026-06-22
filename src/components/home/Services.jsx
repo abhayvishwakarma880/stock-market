@@ -33,7 +33,7 @@ const Services = () => {
       features: [
         "Cash Market Trading (Delivery & Intraday)",
         // "IPO Investments & Allotment Support",
-        "Portfolio Management Services (PMS)",
+        // "Portfolio Management Services (PMS)",
         "Smallcase & Stock Basket Investments",
         "Fundamental & Technical Research Reports",
         // "SIP in Stocks (Systematic Investment Plan)"

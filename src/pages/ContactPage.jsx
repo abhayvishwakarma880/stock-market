@@ -73,12 +73,11 @@ const ContactPage = () => {
       icon: <FaPhoneAlt />,
       title: "Call Us",
       details: [
-        "+91 98765 43210",
-        "+91 98765 43211"
+        "+91 78395 64218",
       ],
       description: "Speak directly with our advisory team during business hours.",
       action: "Call Now",
-      link: "tel:+919876543210",
+      link: "tel:+917839564218",
       color: "from-green-500 to-emerald-500",
       bgColor: "bg-green-500/10"
     },
@@ -163,7 +162,7 @@ const ContactPage = () => {
         subtitle="Whether you have questions about our services, need guidance regarding market opportunities, or wish to connect with our advisory team, we're here to help. Reach out to us through the contact details below and our team will be happy to assist you."
         primaryButton={{
           text: "Call Now",
-          link: "tel:+919876543210",
+          link: "tel:+917839564218",
           icon: <FaPhoneAlt />
         }}
         secondaryButton={{
@@ -376,7 +375,7 @@ const ContactPage = () => {
               <motion.a
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                href="tel:+919876543210"
+                href="tel:+917839564218"
                 className="bg-white text-success hover:bg-gray-100 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg"
               >
                 <FaPhoneAlt />
