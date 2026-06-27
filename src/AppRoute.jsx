@@ -12,6 +12,10 @@ const EquityServices = lazy(() => import("./pages/EquityServices"));
 const DerivativeServices = lazy(() => import("./pages/DerivativeServices"));
 const IndexServices = lazy(() => import("./pages/IndexServices"));
 
+const PortfolioReview = lazy(() => import("./pages/PortfolioReview"));
+const MarketResearch = lazy(() => import("./pages/MarketResearch"));
+const InvestmentConsultation = lazy(() => import("./pages/InvestmentConsultation"));
+
 const AppRoute = [
     { path: "/", element: Home, name: "Home" },
     { path: "/color-check", element: ColorCheck, name: "ColorCheck" },
@@ -22,6 +26,10 @@ const AppRoute = [
     { path: "/services/equity", element: EquityServices, name: "EquityServices" },
     { path: "/services/derivatives", element: DerivativeServices, name: "DerivativeServices" },
     { path: "/services/index", element: IndexServices, name: "IndexServices" },
+    { path: "/services/commodities", element: IndexServices, name: "CommoditiesServices" },
+    { path: "/services/portfolio-review", element: PortfolioReview, name: "PortfolioReview" },
+    { path: "/services/market-research", element: MarketResearch, name: "MarketResearch" },
+    { path: "/services/investment-consultation", element: InvestmentConsultation, name: "InvestmentConsultation" },
     { path: "/market-insights", element: MarketInsights, name: "MarketInsights" },
     { path: "/contact", element: ContactPage, name: "Contact" },
 ]

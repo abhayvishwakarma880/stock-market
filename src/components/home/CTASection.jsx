@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   FaArrowRight, 
@@ -7,15 +7,21 @@ import {
   FaChartLine,
   FaShieldAlt,
   FaUsers,
-  FaRegClock
+  FaRegClock,
+  FaHandshake
 } from 'react-icons/fa';
+import { VscGraphLine } from 'react-icons/vsc';
+import { IoMdCall } from 'react-icons/io';
+import EnquiryModal from '../EnquiryModal';
 
 const CTASection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const benefits = [
-    { icon: <FaChartLine />, text: "Expert Guidance" },
-    { icon: <FaShieldAlt />, text: "SEBI Registered" },
-    { icon: <FaRegClock />, text: "24/7 Support" },
-    { icon: <FaUsers />, text: "10,000+ Investors" }
+    { icon: <FaChartLine />, text: "Research-Driven Strategies" },
+    { icon: <FaShieldAlt />, text: "Risk Management" },
+    { icon: <VscGraphLine />, text: "Market Insights" },
+    { icon: <FaHandshake />, text: "Dedicated Relationship Manager" }
   ];
 
   return (
@@ -58,9 +64,9 @@ const CTASection = () => {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4"
         >
-          Ready to Start Your{' '}
+          Ready to Grow Your{' '}
           <span className="relative inline-block">
-            Investment Journey?
+            Wealth with Confidence?
             <svg className="absolute -bottom-2 left-0 w-full h-3 text-text/30" viewBox="0 0 100 10">
               <path d="M0 5 Q 25 0, 50 5 T 100 5" stroke="currentColor" fill="none" strokeWidth="2"/>
             </svg>
@@ -75,7 +81,7 @@ const CTASection = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-text/90 text-lg md:text-xl max-w-2xl mx-auto mb-8"
         >
-          Join 10,000+ successful investors and start your wealth creation journey with expert guidance
+          Get professional stock market solutions, research-driven insights, and personalized support to help you achieve your financial goals.
         </motion.p>
 
         {/* Benefits */}
@@ -102,19 +108,19 @@ const CTASection = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex flex-wrap justify-center gap-4"
         >
-          <a href="tel:+919876543210" className="group bg-white text-success hover:bg-gray-100 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl">
-            Get Started for Free
+          <button onClick={() => setIsModalOpen(true)} className="group cursor-pointer bg-white text-success hover:bg-gray-100 px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300 shadow-lg hover:shadow-xl">
+            Book Free Consultation
             <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
-          </a>
+          </button>
           
           <a 
-            href="https://wa.me/919876543210"
+            href="tel:+919876543210"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-card-hover hover:bg-white/20 border border-border-hover text-text px-8 py-3 rounded-xl font-semibold flex items-center gap-2 transition-all duration-300"
           >
-            <FaWhatsapp />
-            Chat on WhatsApp
+            <IoMdCall />
+            Request a Callback
           </a>
         </motion.div>
 
@@ -138,6 +144,11 @@ const CTASection = () => {
           <span>Trusted by 10,000+ Investors</span>
         </motion.div>
       </div>
+
+      <EnquiryModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 };

@@ -19,6 +19,9 @@ import {
   FaRegSmile
 } from 'react-icons/fa';
 import journey from '../../assets/journey.png'
+import { VscGraphLine } from 'react-icons/vsc';
+import { GoGoal } from 'react-icons/go';
+import { SiBookstack } from 'react-icons/si';
 
 const AboutCompany = () => {
   const achievements = [
@@ -51,30 +54,30 @@ const AboutCompany = () => {
 
   const whyChooseUs = [
     {
-      icon: <FaShieldAlt />,
-      title: "SEBI Registered",
-      description: "Fully compliant with SEBI regulations, ensuring your investments are safe and secure.",
+      icon: <VscGraphLine />,
+      title: "Research-Driven Result",
+      description: "Learn through practical market analysis, structured trading concepts, and real-world strategies.",
       color: "text-blue-500",
       bgColor: "bg-blue-500/10"
     },
     {
-      icon: <FaRocket />,
-      title: "5+ Years Experience",
-      description: "Over half a decade of expertise in Indian stock markets with proven track record.",
+      icon: <GoGoal />,
+      title: "Experienced Market Professionals",
+      description: "Guidance from experienced market practitioners focused on disciplined trading and continuous learning.",
       color: "text-green-500",
       bgColor: "bg-green-500/10"
     },
     {
-      icon: <FaClock />,
-      title: "24/7 Support",
-      description: "Round-the-clock customer support for all your trading and investment queries.",
+      icon: <SiBookstack />,
+      title: "Beginner to Advanced Programs",
+      description: "Comprehensive learning paths designed for both new and experienced traders.",
       color: "text-purple-500",
       bgColor: "bg-purple-500/10"
     },
     {
-      icon: <FaRegSmile />,
-      title: "100% Transparency",
-      description: "Complete transparency in transactions, charges, and advisory recommendations.",
+      icon: <FaHandshake />,
+      title: "Dedicated Support",
+      description: "Get prompt assistance and continuous guidance throughout your learning journey.",
       color: "text-orange-500",
       bgColor: "bg-orange-500/10"
     }
@@ -146,9 +149,9 @@ const AboutCompany = () => {
           </motion.div> */}
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
-            India's Most Trusted{' '}
+            Empowering the Next Generation of{' '}
             <span className="text-success relative inline-block">
-              Financial Partner
+              Smart Traders
               <motion.svg 
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
@@ -163,7 +166,7 @@ const AboutCompany = () => {
           </h2>
           
           <p className="text-text text-lg">
-            Empowering investors since 2019 with expert advisory and innovative financial solutions
+            Learn, analyze, and grow with expert-led stock market education, research-driven insights, and practical trading strategies.
           </p>
         </motion.div>
 
@@ -184,13 +187,13 @@ const AboutCompany = () => {
               </h3>
               <div className="space-y-4 text-text text-justify">
                 <p className="leading-relaxed">
-                  Founded in 2019 with a vision to simplify stock market investing, <span className="text-success font-semibold">Tradevora Market Private Limited</span> has grown into one of India's most trusted financial advisory platforms. We've helped over 10,000+ investors achieve their financial goals through our research-driven approach.
+                  Building Smarter Traders Since 2019, Founded in 2019, <span className="text-success font-semibold">Tradevora Market Private Limited</span> was established with a vision to make stock market learning simple, practical, and accessible for everyone.
                 </p>
                 <p className="leading-relaxed">
-                  Our team of SEBI-registered experts combines decades of market experience with cutting-edge technology to provide actionable insights and personalized investment strategies.
+                  Over the years, we've helped thousands of aspiring traders and investors strengthen their market knowledge through research-driven learning, practical strategies, and continuous guidance.
                 </p>
                 <p className="leading-relaxed">
-                  We believe that everyone deserves access to quality financial advice. That's why we've made it our mission to democratize wealth creation and make stock market investing transparent, simple, and profitable for all.
+                  Our focus is to empower individuals with the skills, discipline, and confidence needed to make informed financial decisions in today's dynamic markets.
                 </p>
               </div>
 
@@ -222,7 +225,7 @@ const AboutCompany = () => {
               <img loading="lazy" 
                 src={journey}
                 alt="About Company"
-                className="w-full h-[480px] object-contain"
+                className="w-full h-[380px] object-contain"
               />
             </div>
           </motion.div>
@@ -264,9 +267,9 @@ const AboutCompany = () => {
         >
           <motion.div variants={itemVariants} className="text-center mb-12">
             <h3 className="text-2xl md:text-3xl font-bold text-text mb-3">
-              Why Choose <span className="text-success">Tradevora Market Private Limited</span>
+              Why Choose <span className="text-success">Tradevora?</span>
             </h3>
-            <p className="text-text">What makes us different from the rest</p>
+            <p className="text-text">Empowering traders with practical learning, research-driven insights, and dedicated support for long-term success.</p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -287,54 +290,7 @@ const AboutCompany = () => {
           </div>
         </motion.div>
 
-        {/* Team Stats Section */}
-        <motion.div 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="bg-gradient-to-r from-success/10 to-secondary/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-border"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {teamStats.map((stat, index) => (
-              <motion.div
-                key={index}
-                variants={itemVariants}
-                whileHover={{ scale: 1.1 }}
-                className="text-center"
-              >
-                <div className="text-3xl md:text-4xl font-bold text-success mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-text text-sm">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
-          
-          <motion.div 
-            variants={itemVariants}
-            className="text-center mt-8 pt-8 border-t border-border"
-          >
-            <div className="flex flex-wrap justify-center gap-6 text-sm text-text">
-              <span className="flex items-center gap-2">
-                <FaCheckCircle className="text-success" size={14} />
-                SEBI Registered
-              </span>
-              <span className="flex items-center gap-2">
-                <FaCheckCircle className="text-success" size={14} />
-                ISO Certified
-              </span>
-              <span className="flex items-center gap-2">
-                <FaCheckCircle className="text-success" size={14} />
-                MSME Registered
-              </span>
-              <span className="flex items-center gap-2">
-                <FaCheckCircle className="text-success" size={14} />
-                DPIIT Recognized
-              </span>
-            </div>
-          </motion.div>
-        </motion.div>
+       
 
         {/* CTA Section */}
         <motion.div

@@ -24,18 +24,21 @@ const Services = () => {
   const services = [
     {
       id: 1,
-      title: "Equity Services",
+      title: "Equity Trading & Investment",
       icon: <FaChartLine size={40} />,
       image: equity,
       badge: "Most Popular",
       description:
-        "Comprehensive equity trading and investment solutions for long-term wealth creation and short-term gains.",
+        "Build long-term wealth with research-driven equity trading and investment solutions. Our expert guidance helps you identify quality opportunities, manage risk effectively, and make informed investment decisions.",
       features: [
-        "Cash Market Trading (Delivery & Intraday)",
+        "Equity Delivery Trading",
         // "IPO Investments & Allotment Support",
         // "Portfolio Management Services (PMS)",
-        "Smallcase & Stock Basket Investments",
-        "Fundamental & Technical Research Reports",
+        "Intraday Equity Trading",
+        "Fundamental & Technical Analysis",
+        "Smallcase & Curated Stock Baskets",
+        "Portfolio Review & Risk Management",
+        "Research-Backed Market Insights",
         // "SIP in Stocks (Systematic Investment Plan)"
       ],
       benefits: [
@@ -51,19 +54,19 @@ const Services = () => {
     },
     {
       id: 2,
-      title: "Derivative Services",
+      title: "Derivatives (F&O) Learning",
       icon: <FaChartBar size={40} />,
       image: derivative,
       badge: "High Returns",
       description:
-        "Expert F&O trading strategies with proper risk management to maximize returns in volatile markets.",
+        "Develop a strong understanding of Futures & Options through structured learning, practical strategies, and disciplined risk management techniques designed for today's markets.",
       features: [
-        "Futures & Options (F&O) Trading",
-        "Hedging Strategies for Portfolio Protection",
-        "Options Selling Strategies (Theta Decay)",
-        "Index & Stock Futures Trading",
-        // "Advanced Option Greeks Analysis",
-        // "Spread Trading & Arbitrage Opportunities"
+        "Futures Trading Fundamentals",
+        "Options Buying & Selling Concepts",
+        "Hedging & Risk Management",
+        "Index & Stock Derivatives",
+        "Option Greeks (Delta, Theta, Vega)",
+        "Strategy Building & Trade Planning"
       ],
       benefits: [
         { icon: <FaGem />, text: "Leverage Benefits" },
@@ -78,19 +81,19 @@ const Services = () => {
     },
     {
       id: 3,
-      title: "Commodities Services",
+      title: "Commodity Market Solutions",
       icon: <FaChartPie size={40} />,
       image: commodities,
       badge: "Diversified Asset",
       description:
-        "Trade in precious metals, energy, and agricultural commodities to diversify your portfolio and hedge against inflation.",
+        "Gain practical insights into commodity markets with research-driven analysis, market trends, and structured learning for informed decision-making.",
       features: [
-        "Gold, Silver & Precious Metals Trading",
-        "Crude Oil & Natural Gas Strategies",
-        "Agri-Commodities Investment",
-        "MCX & NCDEX Market Analysis",
-        "Commodity Options Hedging",
-        "Global Commodity Trends Tracking",
+        "Precious Metals Market Analysis",
+        "Energy Market Insights",
+        "Agricultural Commodity Research",
+        "MCX Market Updates",
+        "Global Commodity Trends",
+        "Risk Management Concepts",
       ],
       benefits: [
         { icon: <FaGem />, text: "Inflation Hedge" },
@@ -152,7 +155,7 @@ const Services = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-[85%] mx-auto mb-16"
         >
           {/* <motion.div 
             initial={{ scale: 0 }}
@@ -166,9 +169,9 @@ const Services = () => {
           </motion.div> */}
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
-            Comprehensive{" "}
+            Comprehensive Trading &{" "}
             <span className="text-success relative inline-block">
-              Trading Solutions
+              Investment Solutions
               <motion.svg
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
@@ -188,8 +191,7 @@ const Services = () => {
           </h2>
 
           <p className="text-text text-lg">
-            Professional trading and investment services tailored to your
-            financial goals
+            Empowering traders and investors with expert guidance, practical learning, and data-driven market strategies.
           </p>
         </motion.div>
 

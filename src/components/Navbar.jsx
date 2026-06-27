@@ -107,7 +107,7 @@ const Navbar = () => {
             {/* Logo Section with Live Chart */}
             <div className="flex items-center gap-3">
               <Link to="/" className="flex items-center gap-3">
-                {/* <img loading="lazy" src="/logo.png" alt="Tradevora Market Private Limited" className="h-10 md:h-12 object-contain" /> */}
+                <img loading="lazy" src="/assets/images/logo.png" alt="Tradevora Market" className="h-10 md:h-12 object-contain" />
                 <div>
                   <h1 className="font-bold text-lg md:text-xl tracking-tight text-nav-text">
                     Tradevora<span className="text-success"> Market</span>
@@ -149,9 +149,9 @@ const Navbar = () => {
             <div className="flex items-center gap-4">
               <button 
                 onClick={() => setIsEnquiryModalOpen(true)}
-                className="hidden md:flex items-center gap-2 bg-success hover:bg-hover text-white px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:scale-105"
+                className="hidden cursor-pointer md:flex items-center gap-2 bg-success hover:bg-hover text-white px-6 py-2.5 rounded-xl font-semibold text-sm transition-all duration-300 hover:shadow-lg hover:scale-105"
               >
-                Enquiry
+                Enroll Now
                 <FiArrowUpRight size={16} />
               </button>
 

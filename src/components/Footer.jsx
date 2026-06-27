@@ -29,14 +29,18 @@ const Footer = () => {
     { name: "About Us", href: "/about" },
     { name: "Services", href: "/services" },
     { name: "Market Insights", href: "/insights" },
-    { name: "Get In Touch", href: "/contact" },
-    // { name: "FAQ", href: "/faq" },
+    { name: "Contact Us", href: "/contact" },
+    { name: "Privacy Policy", href: "/privacy-policy" },
+    { name: "Terms & Conditions", href: "/terms-conditions" },
   ];
 
   const services = [
-    { name: "Equity Advisory", href: "/services/equity" },
-    { name: "Derivative Services", href: "/services/derivatives" },
-    { name: "Commodities Services", href: "/services/commodities" },
+    { name: "Equity Services", href: "/services/equity" },
+    { name: "Derivatives (F&O)", href: "/services/derivatives" },
+    { name: "Commodities", href: "/services/commodities" },
+    { name: "Portfolio Review", href: "/services/portfolio-review" },
+    { name: "Market Research", href: "/services/market-research" },
+    { name: "Investment Consultation", href: "/services/investment-consultation" },
   ];
 
   const socialIcons = [
@@ -102,9 +106,7 @@ const Footer = () => {
           {/* Column 1 - Brand Info */}
           <motion.div variants={itemVariants}>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-r from-success to-blue-600 rounded-lg flex items-center justify-center">
-                <FaChartLine className="text-white text-xl" />
-              </div>
+              <img loading="lazy" src="/assets/images/logo.png" alt="Tradevora Market" className="h-10 object-contain" />
               <div>
                 <h2 className="text-white font-bold text-xl">
                   Tradevora<span className="text-success"> Market</span>
@@ -113,9 +115,7 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-slate-300 text-sm mb-4 leading-relaxed">
-              India's most trusted financial advisory platform. We help
-              investors achieve their financial goals through expert guidance
-              and research-backed strategies.
+              Tradevora Market Private Limited provides professional stock market solutions, including Equity, Derivatives, and Commodities services. Our focus is on research-driven strategies, transparency, and long-term client relationships.
             </p>
 
             {/* Social Icons */}
@@ -187,9 +187,9 @@ const Footer = () => {
               <div className="flex items-start gap-3 group">
                 <FaMapMarkerAlt className="text-success mt-0.5 group-hover:scale-110 transition-transform" />
                 <a href="https://maps.app.goo.gl/dE47R1rrJB76phPs5" target="_blank" rel="noopener noreferrer" className="block text-slate-300 hover:text-success transition-colors">
-                  <p className="text-sm">Sector 15A Near shree jaganath temple</p>
+                  <p className="text-sm">Sector 15A, Near Shree Jagannath Temple</p>
                   <p className="text-sm">
-                    Faridabad Pin code 121001
+                    Faridabad – 121001, Haryana, India
                   </p>
                 </a>
               </div>
@@ -210,11 +210,11 @@ const Footer = () => {
                   href="mailto:info@tradevoramarket.com"
                   className="text-slate-300 hover:text-success transition-colors text-sm"
                 >
-                  info@tradevoramarket.com
+                   info@tradevorafinancials.com
                 </a>
               </div>
 
-              <div className="flex items-center gap-3 group">
+              {/* <div className="flex items-center gap-3 group">
                 <FaRegEnvelope className="text-success group-hover:scale-110 transition-transform" />
                 <a
                   href="mailto:support@tradevoramarket.com"
@@ -222,13 +222,13 @@ const Footer = () => {
                 >
                   support@tradevoramarket.com
                 </a>
-              </div>
+              </div> */}
 
               <div className="flex items-center gap-3 group">
                 <FaClock className="text-success group-hover:scale-110 transition-transform" />
                 <div>
                   <p className="text-slate-300 text-sm">
-                    Mon - Sat: 9:00 AM - 6:00 PM
+                    Mon – Sat | 9:00 AM – 6:00 PM
                   </p>
                   <p className="text-slate-400 text-xs">Sunday Closed</p>
                 </div>
@@ -245,10 +245,16 @@ const Footer = () => {
           viewport={{ once: true }}
           className="border-t border-slate-800 pt-8"
         >
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <div className="text-slate-400 text-sm text-center md:text-left flex flex-wrap items-center justify-center md:justify-start gap-1.5">
+          <div className="flex flex-col items-center gap-4">
+            <div className="text-center max-w-[85%]">
+              <p className="text-slate-500 text-xs">
+                Disclaimer: Investments in the securities market are subject to market risks. Past performance is not indicative of future results. Please read all related documents carefully before making any investment decisions.
+              </p>
+            </div>
+
+            <div className="text-slate-400 text-sm flex flex-wrap items-center justify-center gap-1.5">
               <span>
-                © {currentYear} Tradevora Market Private Limited. Crafted by
+                © {currentYear} Tradevora Market Private Limited. All Rights Reserved. Crafted by
               </span>
               <a
                 target="_blank"
@@ -263,30 +269,6 @@ const Footer = () => {
                 />
               </a>
             </div>
-
-            <div className="flex flex-wrap justify-center gap-4 text-sm">
-              <Link
-                to="/privacy-policy"
-                className="text-slate-400 hover:text-success transition-colors"
-              >
-                Privacy Policy
-              </Link>
-              <span className="text-slate-600">|</span>
-              <Link
-                to="/terms-conditions"
-                className="text-slate-400 hover:text-success transition-colors"
-              >
-                Terms & Conditions
-              </Link>
-            </div>
-          </div>
-
-          <div className="text-center mt-4">
-            <p className="text-slate-500 text-xs">
-              Disclaimer: Stock market investments are subject to market risks.
-              Please read all scheme related documents carefully before
-              investing.
-            </p>
           </div>
         </motion.div>
 

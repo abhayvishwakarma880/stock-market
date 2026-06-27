@@ -22,12 +22,17 @@ const Hero = ({
   secondaryButton,
   image,
   images = [],
+  backgroundImage,
 }) => {
-  const displayImages = image ? [image] : (images.length > 0 ? images : [
-    "/assets/images/equity-icon.png",
-    "/assets/images/derivative-icon.png",
-    "/assets/images/index-icon.png",
-  ]);
+  const displayImages = image
+    ? [image]
+    : images.length > 0
+      ? images
+      : [
+          "/assets/images/equity-icon.png",
+          "/assets/images/derivative-icon.png",
+          "/assets/images/index-icon.png",
+        ];
 
   const [currentImage, setCurrentImage] = useState(0);
 
@@ -41,19 +46,18 @@ const Hero = ({
 
   return (
     <div className="relative bg-white overflow-hidden min-h-[calc(100vh-70vh)] lg:min-h-[calc(100vh-116px)] flex items-center">
-      {/* Background banner image with very low opacity */}
+      {/* Background banner image */}
       <img
-        src="/src/assets/banner.webp"
+        src={backgroundImage || "/src/assets/banner.webp"}
         alt=""
         aria-hidden="true"
-        className="absolute inset-0 w-full h-full object-cover opacity-[0.05] pointer-events-none select-none"
+        className="absolute inset-0 w-full h-full object-cover opacity-[0.15] pointer-events-none select-none"
       />
       <div className="max-w-5xl md:max-w-[85%] mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-7 w-full">
         {/* Mobile: grid-cols-2, Desktop: lg:grid-cols-2 */}
         <div className="grid grid-cols-2 gap-4 lg:gap-12 items-center">
-          
           {/* Left Side - Content */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -117,7 +121,7 @@ const Hero = ({
                 alt="Hero Illustration"
               />
             </AnimatePresence>
-            
+
             {/* Slider Dots */}
             {displayImages.length > 1 && (
               <div className="absolute -bottom-6 sm:-bottom-8 left-1/2 -translate-x-1/2 flex gap-2 sm:gap-3">
@@ -126,14 +130,15 @@ const Hero = ({
                     key={index}
                     onClick={() => setCurrentImage(index)}
                     className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
-                      currentImage === index ? 'bg-success scale-125' : 'bg-slate-300 hover:bg-slate-400'
+                      currentImage === index
+                        ? "bg-success scale-125"
+                        : "bg-slate-300 hover:bg-slate-400"
                     }`}
                   />
                 ))}
               </div>
             )}
           </div>
-
         </div>
       </div>
     </div>

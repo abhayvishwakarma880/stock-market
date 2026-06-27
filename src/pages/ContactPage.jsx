@@ -85,8 +85,8 @@ const ContactPage = () => {
       icon: <FaEnvelope />,
       title: "Email Us",
       details: [
-        "info@tradevoramarket.com",
-        "support@tradevoramarket.com"
+        "info@tradevorafinancials.com",
+        // "support@tradevoramarket.com"
       ],
       description: "Send your queries and receive professional assistance from our team.",
       action: "Send Email",
@@ -98,8 +98,8 @@ const ContactPage = () => {
       icon: <FaMapMarkerAlt />,
       title: "Office Address",
       details: [
-        "Sector 15A Near shree jaganath temple",
-        "Faridabad Pin code 121001"
+        "Sector 15A, Near Shree Jagannath Temple",
+        "Faridabad – 121001, Haryana, India"
       ],
       description: "Meet our team and discuss your financial requirements in person.",
       action: "Get Directions",
@@ -167,7 +167,7 @@ const ContactPage = () => {
         }}
         secondaryButton={{
           text: "Email Us",
-          link: "mailto:info@tradevoramarket.com",
+          link: "mailto:info@tradevorafinancials.com",
           icon: <FaEnvelope />
         }}
         showStats={false}

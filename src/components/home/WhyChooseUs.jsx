@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { 
   FaShieldAlt, 
@@ -9,15 +9,18 @@ import {
   FaComments,
   FaCheckCircle
 } from 'react-icons/fa';
+import EnquiryModal from '../EnquiryModal';
 
 const WhyChooseUs = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   // Features Data - Right Side Cards
   const features = [
     {
       id: 1,
       icon: <FaShieldAlt size={32} />,
       title: "SEBI Registered Experts",
-      description: "All our advisors are certified SEBI registered professionals with years of market experience",
+      description: "Certified professionals with years of experience in financial markets.",
       color: "from-blue-500 to-blue-600",
       bgColor: "bg-blue-500/10",
       iconColor: "text-blue-500"
@@ -25,8 +28,8 @@ const WhyChooseUs = () => {
     {
       id: 2,
       icon: <FaChartLine size={32} />,
-      title: "Research Driven Strategy",
-      description: "Data-backed investment strategies powered by advanced analytics and market research",
+      title: "Research-Based Strategies",
+      description: "Trade using proven data-driven market analysis.",
       color: "from-green-500 to-green-600",
       bgColor: "bg-green-500/10",
       iconColor: "text-green-500"
@@ -34,8 +37,8 @@ const WhyChooseUs = () => {
     {
       id: 3,
       icon: <FaClock size={32} />,
-      title: "Real Time Market Insights",
-      description: "Live market updates and instant alerts for better decision making",
+      title: "Live Market Insights",
+      description: "Receive real-time updates and actionable trading ideas.",
       color: "from-purple-500 to-purple-600",
       bgColor: "bg-purple-500/10",
       iconColor: "text-purple-500"
@@ -43,8 +46,8 @@ const WhyChooseUs = () => {
     {
       id: 4,
       icon: <FaUserCheck size={32} />,
-      title: "Personalized Advisory",
-      description: "Customized investment plans tailored to your financial goals and risk appetite",
+      title: "Personalized Mentorship",
+      description: "One-on-one guidance tailored to your goals.",
       color: "from-orange-500 to-orange-600",
       bgColor: "bg-orange-500/10",
       iconColor: "text-orange-500"
@@ -52,8 +55,8 @@ const WhyChooseUs = () => {
     {
       id: 5,
       icon: <FaExclamationTriangle size={32} />,
-      title: "Risk Management Focus",
-      description: "Systematic approach to minimize risks and maximize returns on investment",
+      title: "Risk Management",
+      description: "Learn disciplined trading with proper risk control.",
       color: "from-red-500 to-red-600",
       bgColor: "bg-red-500/10",
       iconColor: "text-red-500"
@@ -61,8 +64,8 @@ const WhyChooseUs = () => {
     {
       id: 6,
       icon: <FaComments size={32} />,
-      title: "Transparent Communication",
-      description: "Regular portfolio updates and clear communication at every step of your journey",
+      title: "Transparent Support",
+      description: "Honest guidance with continuous assistance.",
       color: "from-teal-500 to-teal-600",
       bgColor: "bg-teal-500/10",
       iconColor: "text-teal-500"
@@ -125,7 +128,7 @@ const WhyChooseUs = () => {
       </div>
 
       {/* Content */}
-      <div className="relative max-w-5xl md:max-w-[85%] mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-16">
+      <div className="relative max-w-5xl md:max-w-[85%] mx-auto px-4 sm:px-6 lg:px-3 py-10 md:py-16">
         
         {/* Section Header */}
         <motion.div 
@@ -133,7 +136,7 @@ const WhyChooseUs = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-10"
+          className="text-center max-w-5xl mx-auto mb-10"
         >
           {/* <motion.div 
             initial={{ scale: 0 }}
@@ -147,9 +150,9 @@ const WhyChooseUs = () => {
           </motion.div> */}
           
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text mb-4">
-            Why Investors{' '}
+            Why Thousands of Traders{' '}
             <span className="text-success relative inline-block">
-              Choose Us
+              Trust Tradevora
               <motion.svg 
                 initial={{ width: 0 }}
                 whileInView={{ width: "100%" }}
@@ -164,7 +167,7 @@ const WhyChooseUs = () => {
           </h2>
           
           <p className="text-text text-lg">
-            Experience the difference with our comprehensive approach to wealth management
+            Learn from experienced market professionals with practical strategies, real-time insights, and dedicated mentorship.
           </p>
         </motion.div>
 
@@ -218,6 +221,25 @@ const WhyChooseUs = () => {
           </motion.div>
           
         </div>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-16 text-center z-10 relative"
+        >
+          <h3 className="text-2xl md:text-3xl font-bold text-text mb-6">
+            Ready to Master the Stock Market?
+          </h3>
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="group cursor-pointer inline-flex items-center justify-center gap-2 bg-success hover:bg-success/90 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 shadow-lg hover:shadow-success/30 hover:-translate-y-1"
+          >
+            Enroll Now
+          </button>
+        </motion.div>
       </div>
 
       {/* Bottom Wave */}
@@ -241,6 +263,12 @@ const WhyChooseUs = () => {
           />
         </svg>
       </div>
+
+      {/* Enquiry Modal */}
+      <EnquiryModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </div>
   );
 };
